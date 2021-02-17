@@ -12,7 +12,7 @@
 
 While we all had our set roles, this project was a collective collaboration of creativity and developement. 
 
-[Project Roadmap - Development](https://docs.google.com/document/d/1jKIRC5lcCswV4oYbWX_9gKDXRhS4yAtBTiNUOvjJfyc/edit?usp=sharing
+[Project Roadmap - Development](https://docs.google.com/document/d/1jKIRC5lcCswV4oYbWX_9gKDXRhS4yAtBTiNUOvjJfyc/edit?usp=sharing)
 
 [Marketing Plan - Development](https://docs.google.com/document/d/1mXgVSh-t-D2KV3_ycXga1dkLhaD8fwbzfEb9f9763lo/edit)
 
