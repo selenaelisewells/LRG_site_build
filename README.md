@@ -16,6 +16,8 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Marketing Plan - Development](https://docs.google.com/document/d/1mXgVSh-t-D2KV3_ycXga1dkLhaD8fwbzfEb9f9763lo/edit)
 
+[Meeting NOTES Feb 17th](https://docs.google.com/document/d/1ufjK0t2ib5CgUB48CiGjx5CjOTLOJMI6bJh7QMMoPdI/edit?usp=sharing)
+
 ## Description:
 A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
 
