@@ -8,12 +8,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
         .partnersLogo {
             padding: 15px;
+            display: none;
+            @media(min-width: 650px) {
+                display: flex;
+            }
             img {
                 width: auto;
-                height: 30px;
+                max-height: 30px;
+                flex: 1;
                 -webkit-filter: grayscale(100%);
                 filter: grayscale(100%);
             }
@@ -37,10 +43,17 @@
     align-items: flex-end;
     justify-content: space-between;
     height: 60px;
+    .mainLogo {
+        height: 100%;
+        margin-left: 15px;
+    }
     .mainNav {
-        display: flex;
+        display: none;
         color: $main-black;
         height: 100%;
+        @media(min-width: 770px) {
+            display: flex;
+        }
         .navItem {
             height: 100%;
             box-sizing: border-box;

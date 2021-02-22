@@ -8,14 +8,16 @@ include  './templates/head.php'
 <main class="mainContentWrap">
     <section id="heroWrap">
         <h2 class="hidden">Hero Image</h2>
-        <div class="heroTitle">Insert Catchy Phrase</div>
-        <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
-        <button class="button">Become A Referee</button>
+        <div class="heroTextWrap">
+            <div class="heroTitle">Insert Catchy Phrase</div>
+            <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
+            <button class="button">Become A Referee</button>
+        </div>
     </section>
 
     <section id="whoWeAre">
         <div class="banner">
-            <h2 class="bannerTitle">Who We Are</h2>
+            <h2 class="bannerTitle White">Who We Are</h2>
         </div>
         <div class="sectionContent">
             <div class="sectionText">
