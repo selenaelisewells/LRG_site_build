@@ -1,4 +1,18 @@
 .hidden {
     display: none;
-    background-color: red;
+}
+
+a {
+    font-family: $main-font;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    font-family: $main-font;
 }
