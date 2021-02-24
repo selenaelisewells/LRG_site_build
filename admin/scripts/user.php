@@ -129,3 +129,46 @@ function isUsernameExists($username){
 
     return !$user_exists_result || $user_exists_set->fetchColumn()>0;
 }
+
+
+// reference https://www.studentstutorial.com/php/php-mysql-data-delete.php
+
+function getAllUsers()
+{
+    $pdo = Database::getInstance()->getConnection();
+    $user_delete_query = "SELECT user_id, user_fname, user_email FROM tbl_user";
+
+    $user_delete_set = $pdo->prepare($user_delete_query);
+    $user_delete_set->execute();
+
+    return $user_delete_set;
+}
+
+function deleteUser($id)
+{
+    $pdo = Database::getInstance()->getConnection();
+    if (isset($_SESSION['user_id'])) {
+        if ($_SESSION['user_id'] == $id) {
+            return 'cannot delete yourself';
+        } else {
+            $user_delete_query = "DELETE FROM tbl_user WHERE user_id = :id";
+
+            $user_delete_set = $pdo->prepare($user_delete_query);
+
+            $result_user_delete = $user_delete_set->execute(
+                array(
+                    ":id" => $id
+                )
+            );
+
+
+            if ($result_user_delete  && $user_delete_set->rowCount() > 0) {
+                redirect_to('admin_deleteuser.php');
+            } else {
+                return false;
+            }
+        }
+    } else {
+        return "There is a problem";
+    }
+}
