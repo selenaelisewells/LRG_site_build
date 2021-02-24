@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 24, 2021 at 01:26 AM
+-- Generation Time: Feb 24, 2021 at 02:21 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -19,6 +19,114 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_lrg`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_about`
+--
+
+CREATE TABLE `tbl_about` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `image` varchar(150) NOT NULL,
+  `page_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_contact`
+--
+
+CREATE TABLE `tbl_contact` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `image` varchar(150) NOT NULL,
+  `page_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_index`
+--
+
+CREATE TABLE `tbl_index` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `image` varchar(150) NOT NULL,
+  `page_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_junior_officials`
+--
+
+CREATE TABLE `tbl_junior_officials` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `image` varchar(150) NOT NULL,
+  `page_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_looking_for_officials`
+--
+
+CREATE TABLE `tbl_looking_for_officials` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `image` varchar(150) NOT NULL,
+  `page_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_membership`
+--
+
+CREATE TABLE `tbl_membership` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `image` varchar(150) NOT NULL,
+  `page_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pages`
+--
+
+CREATE TABLE `tbl_pages` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `path` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_pages`
+--
+
+INSERT INTO `tbl_pages` (`ID`, `title`, `path`) VALUES
+(1, 'index', 'index.thml'),
+(2, 'about', 'about.html'),
+(3, 'membership', 'membership.html'),
+(4, 'junior_officails', 'junior_officails.html'),
+(5, 'looking_for_officials', 'looking_for_officials.html'),
+(6, 'contact', 'contact.html');
 
 -- --------------------------------------------------------
 
@@ -43,13 +151,54 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_level`, `user_lname`) VALUES
-(1, 'admin', 'admin', 'admin123', 'chechulina.e@yahoo.com', '2021-01-26 23:14:42', '::1', '0', ''),
-(54, 'Test', 'guest_test', '123456', 'test@test.ca', '2021-02-24 01:14:30', 'no', '0', ''),
-(55, 'NewTest', 'NewTest', '123456', 'newTest@test.ca', '2021-02-24 01:22:30', 'no', '0', '');
+(1, 'Admin', 'admin', 'admin123', 'admin@lrg.ca', '2021-02-24 02:08:43', '::1', '0', 'Admin'),
+(2, 'Test', 'Test', '123456', 'test@test.ca', '2021-02-24 02:09:35', 'no', '0', 'Test');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tbl_about`
+--
+ALTER TABLE `tbl_about`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_contact`
+--
+ALTER TABLE `tbl_contact`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_index`
+--
+ALTER TABLE `tbl_index`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_junior_officials`
+--
+ALTER TABLE `tbl_junior_officials`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_looking_for_officials`
+--
+ALTER TABLE `tbl_looking_for_officials`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_membership`
+--
+ALTER TABLE `tbl_membership`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_pages`
+--
+ALTER TABLE `tbl_pages`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `tbl_user`
@@ -62,10 +211,52 @@ ALTER TABLE `tbl_user`
 --
 
 --
+-- AUTO_INCREMENT for table `tbl_about`
+--
+ALTER TABLE `tbl_about`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_contact`
+--
+ALTER TABLE `tbl_contact`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_index`
+--
+ALTER TABLE `tbl_index`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_junior_officials`
+--
+ALTER TABLE `tbl_junior_officials`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_looking_for_officials`
+--
+ALTER TABLE `tbl_looking_for_officials`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_membership`
+--
+ALTER TABLE `tbl_membership`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_pages`
+--
+ALTER TABLE `tbl_pages`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
