@@ -14,6 +14,7 @@ confirm_logged_in();
 </head>
 <body>
     <h2 class="dash">Welcome to dashboard page, <?php echo $_SESSION['user_name'];?>!</h2>
+    <p class="pipi">Your last login time: <?php echo $_SESSION['user_date'];?></p>
     <h3>Your status is <?php echo getCurrentUserLevel();?>
     <ul>
     

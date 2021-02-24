@@ -23,9 +23,10 @@ function login($username, $password, $ip)
                 $_SESSION['user_id'] = $found_user_id;
                 $_SESSION['user_name'] = $found_user['user_fname'];
                 $_SESSION['user_level'] = $found_user['user_level'];
+                $_SESSION['user_date'] = $found_user['user_date'];
 
                 // update the user IP by the current login in
-                $update_user_query = 'UPDATE tbl_user SET user_ip= :user_ip WHERE user_id= :user_id';
+                $update_user_query = 'UPDATE tbl_user SET user_ip= :user_ip,  user_date = now() WHERE user_id= :user_id';
                
 
                 $update_user_set = $pdo->prepare($update_user_query);
