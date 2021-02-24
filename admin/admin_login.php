@@ -25,19 +25,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <title>Welcome to admin panel</title>
+ 
+    <title>Admin Panel</title>
 </head>
 <body>
 <?php echo !empty($message)?$message:'';?>
-<form action="admin_login.php" method="post" class="login">
+<form action="admin_login.php" method="post">
 <label for="username">Username</label>
 <input id="username" type="text" name="username" value="">
 <br><br>
 <label for="password">Password:</label>
 <input id="password" type="password" name="password">
 <br><br>
-<button class="log" type="submit" name="submit" >LOGIN</button>
+<button type="submit" name="submit" >LOGIN</button>
 </form>
     
 </body>
