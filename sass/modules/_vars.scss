@@ -1,9 +1,28 @@
+//global vars
 $main-gray: rgb(58, 58, 58);
 $main-red: rgb(177, 26, 26);
 $main-black: rgb(24, 24, 24);
 $main-white: white;
-$main-font: Arial,
+$main-font: GothamPro,
+Arial,
 Helvetica,
 sans-serif;
+//hero vars
 $hero-title: 1.5rem;
 $hero-text: 1rem;
+//heading vars
+$heading-font: GothamPro,
+Arial,
+Helvetica,
+sans-serif;
+$heading-weight: 600;
+$heading-font-size: 35px;
+//page width vars
+$max-page-width: 1200px;
+$standard-box-width: 650px;
+//paragraph vars
+$tagline-weight: 400;
+$tagline-font-size: 24px;
+$paragraph-weight: 100;
+$paragraphy-font-size: 1rem;
+$p-line-height: 30px;

@@ -107,9 +107,11 @@ include  './templates/head.php'
             <img src="./images/<?php echo $the_referee_section['image']; ?>" 
                  alt="<?php echo $the_referee_section['alt'] ?? $the_referee_section['title']; ?>">
         </div>
-        <p class="text">
-            <?php echo $the_referee_section['body'];?>
-        </p>
+        <div class="sectionText">
+             <p class="text">
+                <?php echo $the_referee_section['body'];?>
+             </p>
+        </div>
         <button class="button">Learn More</button>    
         </div>
     </section>

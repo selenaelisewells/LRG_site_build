@@ -12,7 +12,7 @@
         align-items: center;
         .heroTextWrap {
             padding: 15px;
-            max-width: 1200px;
+            max-width: $max-page-width;
             .heroTitle {
                 font-size: $hero-title;
                 color: $main-white;

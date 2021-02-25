@@ -4,12 +4,12 @@
         <div class="footerContainer">
             <nav class="footerNavWrap">
                 <ul class="footerNav">
-                <li class="navItem"><a href="/about.php">About Us</a></li>
-                    <li class="navItem"><a href="/membership.php">Membership</a></li>
-                    <li class="navItem"><a href="/jr-officials.php">Jr. Officials</a></li>
-                    <li class="navItem"><a href="/hire.php">Hire Officials</a></li>
-                    <li class="navItem"><a href="/contact.php">Contact</a></li>
-                    <li class="navItem Login"><a href="/login.php">Login</a></li>
+                <li class="navItem"><a href="about.php">About Us</a></li>
+                    <li class="navItem"><a href="membership.php">Membership</a></li>
+                    <li class="navItem"><a href="jr-officials.php">Jr. Officials</a></li>
+                    <li class="navItem"><a href="hire.php">Hire Officials</a></li>
+                    <li class="navItem"><a href="contact.php">Contact</a></li>
+                    <li class="navItem Login"><a href="login.php">Login</a></li>
                 </ul>
             </nav>
 
