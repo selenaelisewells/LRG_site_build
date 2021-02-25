@@ -1,0 +1,26 @@
+@mixin banner-title( $text-colour:$main-white, $banner-colour:$main-black, $font:$heading-font, $font-weight:$heading-weight, $font-size:$heading-font-size) {
+    color: $text-colour;
+    background-color: $banner-colour;
+    font-family: $font;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+@mixin tagline( $text-colour:$main-black, $font:$main-font, $font-weight:$tagline-weight, $font-size:$tagline-font-size) {
+    color: $text-colour;
+    font-family: $font;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+@mixin paragraph($text-colour:$main-white, $font:$main-font, $font-weight:$paragraph-weight, $font-size:$paragraphy-font-size, $line-height: $p-line-height) {
+    colour: $text-colour;
+    font-family: $font;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+// h1 {
+//     @include banner-title($banner-colour: purple, $text-colour: red);
+// }
