@@ -1,7 +1,7 @@
 <?php
 require_once '../load.php';
-//confirm_logged_in();
-ini_set('display_errors', 1);
+confirm_logged_in();
+// ini_set('display_errors', 1);
 
     if (isset($_POST['submit'])) {
 
@@ -16,7 +16,6 @@ ini_set('display_errors', 1);
          $message = createUser($data);
 
     }
-
 
 ?>
 
@@ -45,18 +44,10 @@ ini_set('display_errors', 1);
     <label for="email">Email</label>
     <input id="email" type="email" name="email" value=""><br><br> 
 
-    <h4>Please, use the generated password to create a New User.</h4>
+    <h4>The password will be generated automatically.</h4>
 
-    <label for="password">Password</label>
-    <input id="password" type="text" name="password" value=""><br>
-
-    <?php  echo "<left>
-            <font face=Marsellus color=white size=3>
-            Generated password:
-            <br><br>
-            <font face=Marsellus color=black size=3><b>".$random_password."</b><br><br></font>
-            <a href=&#63;>Create new password</a></left>";
-    ?><br><br>
+    <!-- <label for="password">Password</label>
+    <input id="password" type="text" name="password" value=""><br> -->
 
     <label for="user_level">User Status</label>
     <select id="user_level" name="user_level">

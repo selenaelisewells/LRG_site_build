@@ -28,6 +28,7 @@ function createUser($user_data){
 
     $random_password= createRandomPassword();
 
+
     $encrypted_password = createEncryptedPassword($random_password);
 
    ## 1. Run the proper SQL query to insert user
@@ -55,8 +56,10 @@ function createUser($user_data){
    # otherwise, showing the error message
 
    if ($create_user_result){
-
-        
+        // sendRegistrationEmail($user_data["username"],$random_password,$user_data["email"]);
+        // test the random password
+        // var_dump($random_password);
+        // die;
         redirect_to('index.php');
         
     } 
@@ -85,6 +88,19 @@ function createEncryptedPassword($password){
 }
 
 
+// function sendRegistrationEmail($username, $password, $email){
+   
+//    $email_subject = 'New User Credentials for '. $username;
+//    $email_message = sprintf('Username: %s, Password: %s, Login Here: %s', $username, $password, $admin_url);
+  
+//    $email_headers = array(
+//        'From' =>'donotreply@moviescms.com',
+//        'Reply-To'=> $email
+//    );
+
+//   return mail($email,$email_subject,$email_message,$email_headers);  
+
+// }
 
 
 function getSingleUser($id){
