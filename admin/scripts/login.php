@@ -1,9 +1,6 @@
 <?php 
 function login($username, $password, $ip)
-{ // return 'U are trying to login with u:'.$username.'p:'.$password;
-
-        
-
+{ 
         $pdo = Database::getInstance()->getConnection();
 
         #TODO: Finish the following query to chec
@@ -11,8 +8,7 @@ function login($username, $password, $ip)
         $user_set = $pdo->prepare($get_user_query);
         $user_set->execute(
                 array(
-                        ':username'=>$username
-                        
+                        ':username'=>$username     
 
                 )
         );
@@ -52,14 +48,7 @@ function login($username, $password, $ip)
                 return 'Wrong password, try again';
         }
 
-        
-
-
 }
-
-
-
-
 
 
 function confirm_logged_in($admin_above_only=false)

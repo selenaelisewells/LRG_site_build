@@ -87,7 +87,7 @@ function createEncryptedPassword($password){
         return password_hash($password, PASSWORD_DEFAULT);  
 }
 
-
+// it doesn't work
 // function sendRegistrationEmail($username, $password, $email){
    
 //    $email_subject = 'New User Credentials for '. $username;
