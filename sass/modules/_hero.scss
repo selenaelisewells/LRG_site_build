@@ -1,7 +1,7 @@
 .mainContentWrap {
     width: 100%;
     #heroWrap {
-        height: 640px;
+        height: calc(100vh - 110px);
         width: 100%;
         background-image: url(../images/hero.jpg);
         background-size: cover;
@@ -11,8 +11,8 @@
         justify-content: center;
         align-items: center;
         .heroTextWrap {
-            padding: 15px;
-            max-width: $max-page-width;
+            @include global-margin;
+            max-width: $max-page-width-lg;
             .heroTitle {
                 font-size: $hero-title;
                 color: $main-white;
@@ -23,6 +23,7 @@
                 margin: 50px 0;
                 font-size: $hero-text;
                 color: $main-white;
+                line-height: 32px;
             }
         }
     }

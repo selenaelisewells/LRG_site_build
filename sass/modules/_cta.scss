@@ -1,0 +1,13 @@
+.ctaBanner {
+    display: flex;
+    flex-direction: column;
+    @include banner-title($banner-colour: $main-gray);
+    background: repeating-linear-gradient( to right, #0e0e0e, #0e0e0e 100px, #424242 100px, #424242 200px);
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        @include global-margin;
+        padding-bottom: 50px;
+    }
+}

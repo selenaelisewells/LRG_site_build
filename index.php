@@ -63,8 +63,7 @@ $referee_camp_section = [
  
 $title = "London Referees Group";
 //chang the title for each page
-include  './templates/head.php'
-?>
+include  './templates/head.php';?>
 
 <?php include './templates/header.php';?>
 <main class="mainContentWrap">
@@ -79,7 +78,7 @@ include  './templates/head.php'
     
     <section id="whoWeAre">
         <div class="banner">
-            <h2 class="bannerTitle White">
+            <h2 class="bannerTitle">
                 <?php echo $who_we_are_section['title']; ?>
             </h2>
         </div>
@@ -88,11 +87,13 @@ include  './templates/head.php'
                 <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
                 <p class="text"><?php echo $who_we_are_section['body']; ?></p>
             </div>
-            <div class="Image">
-                <img src="./images/<?php echo $who_we_are_section['image']; ?>" 
-                     alt="<?php echo $who_we_are_section['alt'] ?? $who_we_are_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
+            
+                <div class="Image">
+                    <img src="./images/<?php echo $who_we_are_section['image']; ?>" 
+                        alt="<?php echo $who_we_are_section['alt'] ?? $who_we_are_section['title']; ?>">
+                </div>
+                <button class="button">Learn More</button>
+            
         </div>
     </section>
     
@@ -107,12 +108,14 @@ include  './templates/head.php'
             <img src="./images/<?php echo $the_referee_section['image']; ?>" 
                  alt="<?php echo $the_referee_section['alt'] ?? $the_referee_section['title']; ?>">
         </div>
-        <div class="sectionText">
-             <p class="text">
-                <?php echo $the_referee_section['body'];?>
-             </p>
-        </div>
-        <button class="button">Learn More</button>    
+       
+            <div class="sectionText">
+                <p class="text">
+                    <?php echo $the_referee_section['body'];?>
+                </p>
+            </div>
+            <button class="button">Learn More</button>  
+         
         </div>
     </section>
 
@@ -124,19 +127,19 @@ include  './templates/head.php'
         </div>
         <div class="servicesContent">
             <div class="service">
-                <img src="./images/placeholder.jpg" alt="">
+                
                 <div class="serviceTitle">
                     <span>TITLE</span>
                 </div>
             </div>
             <div class="service">
-                <img src="./images/placeholder.jpg" alt="">
+                
                 <div class="serviceTitle">
                     <span>TITLE</span>
                 </div>
             </div>
             <div class="service">
-                <img src="./images/placeholder.jpg" alt="">
+               
                 <div class="serviceTitle">
                     <span>TITLE</span>
                 </div>
@@ -144,14 +147,14 @@ include  './templates/head.php'
         </div>
 
         <div class="refereeCamp">
-            <img src="#" alt="referee camp photo">
             <div class="campContent">
-            <!--put this heading in the database and include a span-->
-            <h2 class="campTitle"><span class="orange">Don Koharski</span>Officiating and Development referee camp</h2>
-            <p class="text"> 
-                <?php echo $referee_camp_section['body'];?>
-            </p>
-            <button class="button">Sign Up Today</button> 
+                <!--put this heading in the database and include a span-->
+                <h2 class="campTitle"><span><span class="red">Don Koharski</span>Officiating and Development referee camp</span></h2>
+                <img src="./images/placeholder.jpg" alt="referee camp photo">
+                <p class="text"> 
+                    <?php echo $referee_camp_section['body'];?>
+                </p>
+                <button class="button">Sign Up Today</button> 
             </div>
         </div>
     </section>

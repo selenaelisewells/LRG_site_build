@@ -1,9 +1,10 @@
-@mixin banner-title( $text-colour:$main-white, $banner-colour:$main-black, $font:$heading-font, $font-weight:$heading-weight, $font-size:$heading-font-size) {
+@mixin banner-title( $text-colour:$main-white, $banner-colour:$main-black, $font:$heading-font, $font-weight:$heading-weight, $font-size:$heading-font-size, $capitalize: uppercase) {
     color: $text-colour;
     background-color: $banner-colour;
     font-family: $font;
     font-weight: $font-weight;
     font-size: $font-size;
+    text-transform: uppercase;
 }
 
 @mixin tagline( $text-colour:$main-black, $font:$main-font, $font-weight:$tagline-weight, $font-size:$tagline-font-size) {
@@ -19,6 +20,10 @@
     font-weight: $font-weight;
     font-size: $font-size;
     line-height: $line-height;
+}
+
+@mixin global-margin {
+    margin: 0 20px;
 }
 
 // h1 {

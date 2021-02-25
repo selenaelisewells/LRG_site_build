@@ -15,7 +15,7 @@
         <div class="bottomNavWrap">      
         <nav class="navListWrap">
             <div class="mainLogo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="./images/mainLogo" alt="">
                 </a>
             </div>
