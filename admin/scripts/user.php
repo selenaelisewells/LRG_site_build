@@ -26,6 +26,10 @@ function createUser($user_data){
         return 'Username is invalid!!';
     }
 
+    $random_password= createRandomPassword();
+
+    $encrypted_password = createEncryptedPassword($random_password);
+
    ## 1. Run the proper SQL query to insert user
     $pdo = Database::getInstance()->getConnection();
 
@@ -40,7 +44,7 @@ function createUser($user_data){
             ':fname'=>$user_data['fname'],
             ':lname'=>$user_data['lname'],
             ':username'=>$user_data['username'],
-            ':password'=>$user_data['password'],
+            ":password"=>$encrypted_password,
             ':email'=>$user_data['email'],
             ':user_level'=>$user_data['user_level'],
 
@@ -52,6 +56,7 @@ function createUser($user_data){
 
    if ($create_user_result){
 
+        
         redirect_to('index.php');
         
     } 
@@ -60,6 +65,27 @@ function createUser($user_data){
     }
 
 }
+
+function createRandomPassword(){
+    $characterOptions = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    $rand_password = array();
+    //account for index lengths
+    $optionsLength = strlen($characterOptions) - 1;
+    //loop over and choose a random character
+    for ($i = 0; $i < 7; $i++) {
+        $number = rand(0, $optionsLength);
+        $rand_password[] = $characterOptions[$number];
+    }
+    return implode($rand_password);
+}
+
+function createEncryptedPassword($password){
+        //the has of the password that can be stored in a database
+        return password_hash($password, PASSWORD_DEFAULT);  
+}
+
+
+
 
 function getSingleUser($id){
     $pdo = Database::getInstance()->getConnection();

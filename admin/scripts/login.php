@@ -2,20 +2,25 @@
 function login($username, $password, $ip)
 { // return 'U are trying to login with u:'.$username.'p:'.$password;
 
+        
+
         $pdo = Database::getInstance()->getConnection();
 
         #TODO: Finish the following query to chec
-        $get_user_query = 'SELECT * FROM tbl_user WHERE user_name= :username AND user_pass= :password';
+        $get_user_query = 'SELECT * FROM tbl_user WHERE user_name= :username';
         $user_set = $pdo->prepare($get_user_query);
         $user_set->execute(
                 array(
-                        ':username'=>$username,
-                        ':password'=>$password
+                        ':username'=>$username
+                        
 
                 )
         );
 
-        if($found_user = $user_set->fetch(PDO::FETCH_ASSOC)){
+        $found_user = $user_set->fetch(PDO::FETCH_ASSOC);
+        $verify = password_verify($password, $found_user['user_pass']);
+
+        if($found_user && $verify){
                 // we found user in the DB, get him in
                 $found_user_id = $found_user['user_id'];
 
@@ -47,8 +52,15 @@ function login($username, $password, $ip)
                 return 'Wrong password, try again';
         }
 
+        
+
 
 }
+
+
+
+
+
 
 function confirm_logged_in($admin_above_only=false)
 {

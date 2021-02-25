@@ -3,10 +3,6 @@ require_once '../load.php';
 //confirm_logged_in();
 ini_set('display_errors', 1);
 
-// The hash of the password that 
-// random password set up
-$random_pass = random_pass(12);
-
     if (isset($_POST['submit'])) {
 
         $data = array(
@@ -14,22 +10,14 @@ $random_pass = random_pass(12);
             'lname' => trim($_POST['lname']),
             'username' => trim($_POST['username']),
             'email' => trim($_POST['email']),
-            'user_level'=>trim($_POST['user_level']),
-            // 'password' => trim($_POST['password']),
+            'user_level'=>trim($_POST['user_level']),          
         );
-// trying to emplement into the code
-         if(empty($_POST['password'])){
-            $data['password'] = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
-         } else {
-             $data['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-         }
 
          $message = createUser($data);
 
     }
 
-//   hash will be stored in the database 
-  $hash = password_hash($random_pass,  PASSWORD_DEFAULT); 
+
 ?>
 
 
@@ -66,7 +54,7 @@ $random_pass = random_pass(12);
             <font face=Marsellus color=white size=3>
             Generated password:
             <br><br>
-            <font face=Marsellus color=black size=3><b>".$random_pass."</b><br><br></font>
+            <font face=Marsellus color=black size=3><b>".$random_password."</b><br><br></font>
             <a href=&#63;>Create new password</a></left>";
     ?><br><br>
 

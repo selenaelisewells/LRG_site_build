@@ -2,6 +2,8 @@
     require_once '../load.php';
     ini_set('display_errors', 1);
 
+    // var_dump(password_hash('admin123', PASSWORD_DEFAULT));
+
     $ip = $_SERVER['REMOTE_ADDR'];
 
     if(isset($_SESSION['user_id'])) {
@@ -29,6 +31,7 @@
     <title>Admin Panel</title>
 </head>
 <body>
+    <h2>Please, enter your username and password.</h2>
 <?php echo !empty($message)?$message:'';?>
 <form action="admin_login.php" method="post">
 <label for="username">Username</label>
