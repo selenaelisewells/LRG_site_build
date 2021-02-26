@@ -31,7 +31,7 @@ TO DO
 TO DO 
 
 ## MIT License:
-#MIT License
+# MIT License
 
 Copyright © [2021] [Andres Gallo, Elena Chechulina, Sandro Guedes, Selena Wells, Viktoria Tyschuk]
 
