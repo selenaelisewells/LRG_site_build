@@ -30,11 +30,10 @@ TO DO
 ## Installation:
 TO DO 
 
-
 ## MIT License:
-MIT License
+#MIT License
 
-Copyright (c) [2020] [Selena Wells & Elena Chechulina]
+Copyright © [2021] [Andres Gallo, Elena Chechulina, Sandro Guedes, Selena Wells, Viktoria Tyschuk]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
