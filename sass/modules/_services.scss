@@ -1,0 +1,23 @@
+.servicesContent {
+    display: flex;
+    flex-direction: column;
+    .service {
+        display: flex;
+        align-items: flex-end;
+        height: 225px;
+        width: 100%;
+        background-size: cover;
+        background-image: url(../images/placeholder.jpg);
+        .serviceTitle {
+            width: 100%;
+            background-color: rgba($main-red, .90);
+            height: 42px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            span {
+                @include banner-title($banner-colour: none)
+            }
+        }
+    }
+}

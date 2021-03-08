@@ -1,0 +1,68 @@
+.banner {
+    background-color: $main-black;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    .bannerTitle {
+        @include banner-title;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        @include global-margin;
+        @media( min-width: 700px) {
+            max-width: $max-page-width-lg;
+            @include banner-title($font-size: $heading-font-size-lg)
+        }
+    }
+}
+
+.sectionContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    @media( min-width: 700px) {
+        max-width: $max-page-width-lg;
+        justify-content: space-between;
+    }
+    .Image {
+        width: 100%;
+        height: 260px;
+        img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+    }
+    .button {
+        order: 3;
+        margin-bottom: 50px;
+    }
+    .sectionText {
+        order: 2;
+        @include global-margin;
+        padding: 50px 0;
+        ;
+        @media( min-width: 700px) {
+            max-width: $max-page-width-lg;
+            max-width: $standard-box-width-lg;
+            height: 350px;
+            width: 100%;
+        }
+    }
+    .tagline {
+        @include tagline;
+        padding-bottom: 32px
+    }
+}
+
+.text {
+    @include paragraph;
+}
+
+#theReferee {
+    background-color: $main-gray;
+    color: $main-white;
+}

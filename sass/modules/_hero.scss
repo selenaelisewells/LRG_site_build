@@ -1,0 +1,30 @@
+.mainContentWrap {
+    width: 100%;
+    #heroWrap {
+        height: calc(100vh - 110px);
+        width: 100%;
+        background-image: url(../images/hero.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .heroTextWrap {
+            @include global-margin;
+            max-width: $max-page-width-lg;
+            .heroTitle {
+                font-size: $hero-title;
+                color: $main-white;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .heroTagline {
+                margin: 50px 0;
+                font-size: $hero-text;
+                color: $main-white;
+                line-height: 32px;
+            }
+        }
+    }
+}
