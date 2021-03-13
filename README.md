@@ -18,9 +18,11 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Sorting Content for the Site](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
 
-[Meeting NOTES Feb 17th](https://docs.google.com/document/d/1ufjK0t2ib5CgUB48CiGjx5CjOTLOJMI6bJh7QMMoPdI/edit?usp=sharing)
+[Meeting NOTES Feb 17](https://docs.google.com/document/d/1ufjK0t2ib5CgUB48CiGjx5CjOTLOJMI6bJh7QMMoPdI/edit?usp=sharing)
 
-[Meeting NOTES Feb 22nd](https://docs.google.com/document/d/1JXk8sp-JowswwIr3EKPb8rQCac5NEShnfKaCwbxyoNg/edit)
+[Meeting NOTES Feb 22](https://docs.google.com/document/d/1JXk8sp-JowswwIr3EKPb8rQCac5NEShnfKaCwbxyoNg/edit)
+
+[Meeting NOTES Mar 12](https://docs.google.com/document/d/1LFbnOm-QZyJpMPssL4PQGl7aJ6nzlhfRTGENRmVnupE/edit)
 
 
 ## Description:
