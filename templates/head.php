@@ -11,6 +11,16 @@
     <!--insert any google fonts here-->
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <div id="google_translate_element"></div><script>function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+
+pageLanguage: 'en'
+
+}, 'google_translate_element');
+
+}
+
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
