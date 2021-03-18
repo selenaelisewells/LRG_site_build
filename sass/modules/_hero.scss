@@ -10,9 +10,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
         .heroTextWrap {
-            @include global-margin;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 34px;
             max-width: $max-page-width-lg;
+            width: 100%;
+            padding: 20px;
+            // @media(min-width: 770px) {
+            //     //align-self: flex-start;
+            // }
             .heroTitle {
                 font-size: $hero-title;
                 color: $main-white;
