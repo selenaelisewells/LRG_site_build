@@ -15,6 +15,7 @@
             align-items: center;
             display: flex;
             justify-content: center;
+            color: $main-white;
             span {
                 @include banner-title($banner-colour: none)
             }

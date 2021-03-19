@@ -16,7 +16,7 @@
         <nav class="navListWrap">
             <div class="mainLogo">
                 <a href="index.php">
-                    <img src="./images/mainLogo" alt="">
+                    <img src="./images/mainLogo.svg" alt="">
                 </a>
             </div>
             <ul class="mainNav">

@@ -1,15 +1,22 @@
 .banner {
-    background-color: $main-black;
+    //background-color: $main-black;
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    @media(min-width: 700px) {
+        padding: 20px 0;
+    }
     .bannerTitle {
-        @include banner-title;
+        //@include banner-title;
         width: 100%;
         display: flex;
         align-items: center;
         align-self: center;
+        border-left: 5px solid $main-red;
+        max-width: 1200px;
+        padding-left: 20px;
         @include global-margin;
         @media( min-width: 700px) {
             max-width: $max-page-width-lg;
@@ -26,6 +33,8 @@
     @media( min-width: 700px) {
         max-width: $max-page-width-lg;
         justify-content: space-between;
+        display: grid;
+        //flex-wrap: wrap;
     }
     .Image {
         width: 100%;
@@ -35,10 +44,17 @@
             height: 260px;
             object-fit: cover;
         }
+        @media(min-width: 700px) {
+            order: 3;
+        }
     }
     .button {
         order: 3;
         margin-bottom: 50px;
+        @media( min-width: 700px) {
+            display: block;
+            flex: 100%;
+        }
     }
     .sectionText {
         order: 2;
@@ -65,4 +81,14 @@
 #theReferee {
     background-color: $main-gray;
     color: $main-white;
+}
+
+.blackBanner {
+    @include black-section;
+    //@include banner-title($text-colour: $main-white, $banner-colour: $main-black);
+}
+
+.whiteBanner {
+    @include white-section;
+    //@include banner-title($text-colour: $main-black, $banner-colour: $main-white);
 }
