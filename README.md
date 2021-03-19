@@ -24,6 +24,7 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Meeting NOTES Mar 12](https://docs.google.com/document/d/1LFbnOm-QZyJpMPssL4PQGl7aJ6nzlhfRTGENRmVnupE/edit)
 
+[Meeting NOTES Mar 17](https://docs.google.com/document/d/1m77js28Qy9HIKKT3DTVqp3PPR91-zth3w0Xs9ywdmHM/edit)
 
 ## Description:
 A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
