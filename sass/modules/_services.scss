@@ -1,6 +1,10 @@
 #ourServices {
     .banner {
-        margin-left: 50px;
+        @media(min-width: 900px) {
+            padding-left: 50px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
     }
 }
 
@@ -8,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media(min-width: 700px) {
+    @media(min-width: 600px) {
         flex-direction: row;
         width: 100%;
     }
@@ -25,12 +29,9 @@
             max-width: 100%;
             align-self: center;
         }
-        // @media (min-width: 700px) {
-        //     height: 400px;
-        // }
         @media (min-width: 1000px) {
             //flex-basis: 33%;
-            height: 600px;
+            height: 400px;
             width: 100%;
             max-width: 100%;
             margin: 0;

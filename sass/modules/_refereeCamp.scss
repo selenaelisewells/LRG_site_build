@@ -3,12 +3,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media(min-width: 900px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, min-max(min-content, min-content));
+        column-gap: 30px;
+        //max-width: $max-page-width-lg;
+        margin: 0 auto;
+        padding-right: 30px;
+    }
     .campTitle {
         height: 80px;
         @include banner-title;
         display: flex;
         align-items: center;
         padding-left: 20px;
+        max-width: 600px;
+        @media (min-width: 900px) {
+            padding: 50px 0 0 0;
+            // margin: 0;
+            @include banner-title($font-size: $heading-font-size-lg);
+            height: 100%;
+        }
         .red {
             color: $main-red;
             padding-right: 5px;
@@ -18,10 +34,20 @@
         width: 100%;
         height: 260px;
         object-fit: cover;
+        @media(min-width: 900px) {
+            grid-column: 1/2;
+            grid-row: 1/4;
+            height: 100%;
+        }
     }
     .text {
         @include global-margin;
         padding: 50px 0;
+        max-width: 600px;
+        @media (min-width: 900px) {
+            padding: 20px 0;
+            margin: 0;
+        }
     }
     .button {
         margin-bottom: 50px;
