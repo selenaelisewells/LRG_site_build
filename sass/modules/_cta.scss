@@ -10,5 +10,8 @@
     h2 {
         @include global-margin;
         padding-bottom: 50px;
+        @media (min-width: 900px) {
+            @include banner-title($font-size: $heading-font-size-lg);
+        }
     }
 }
