@@ -1,0 +1,44 @@
+.partnersLogos {
+    display: flex;
+    max-width: $max-page-width-lg;
+    flex-direction: row;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        flex: 1;
+        max-width: 60px;
+        padding: 10px;
+        @media(min-width: 700px) {
+            max-width: 80px;
+        }
+        @media(min-width: 900px) {
+            max-width: 100px;
+        }
+        @media(min-width: 1200px) {
+            max-width: 150px;
+        }
+    }
+    img:hover {
+        -webkit-filter: none;
+        filter: none;
+    }
+}
+
+// img {
+//     width: auto;
+//     max-height: 35px;
+//     flex: 1;
+//     -webkit-filter: grayscale(100%) brightness(2.5);
+//     filter: grayscale(100%) brightness(2.5);
+//     //background: whitesmoke;
+//     //background-blend-mode: color-dodge;
+// }
+// img:hover {
+//     -webkit-filter: none;
+//     filter: none;
+// }

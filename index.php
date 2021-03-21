@@ -10,7 +10,7 @@ $who_we_are_section = [
     Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
     veniam, quis tincidunt ut nostrud consequat.
     To know more about us and what we do, you can visit our About section',
-    'image' => 'placeholder.jpg',
+    'image' => 'referee.jpg',
     'tagline' => 'INSERT SUPER CATCHY PHRASE',
     'alt' => 'My awesome image'
 ];
@@ -70,13 +70,13 @@ include  './templates/head.php';?>
     <section id="heroWrap">
         <h2 class="hidden">Hero Image</h2>
         <div class="heroTextWrap">
-            <div class="heroTitle">Insert Catchy Phrase</div>
+            <div class="heroTitle">Ready to play it Safe?</div>
             <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
             <button class="button">Become A Referee</button>
         </div>
     </section>
     
-    <section id="whoWeAre">
+    <section id="whoWeAre" class="whiteBanner bannerWrapper">
         <div class="banner">
             <h2 class="bannerTitle">
                 <?php echo $who_we_are_section['title']; ?>
@@ -97,8 +97,8 @@ include  './templates/head.php';?>
         </div>
     </section>
     
-    <section id="theReferee">
-        <div class="banner">
+    <section id="theReferee" class="blackBanner bannerWrapper">
+        <div class="banner blackBanner">
             <h2 class="bannerTitle"> 
                 <?php echo $the_referee_section['title']; ?>
             </h2>
@@ -110,6 +110,7 @@ include  './templates/head.php';?>
         </div>
        
             <div class="sectionText">
+                <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
                 <p class="text">
                     <?php echo $the_referee_section['body'];?>
                 </p>
@@ -119,7 +120,7 @@ include  './templates/head.php';?>
         </div>
     </section>
 
-    <section id="ourServices">
+    <section id="ourServices" class="whiteBanner">
         <div class="banner">
             <h2 class="bannerTitle">
                 <?php echo $our_services_section['title'];?>
@@ -168,16 +169,16 @@ include  './templates/head.php';?>
         <div class="banner">
             <h2 class="bannerTitle">Partners</h2>
         </div>
-       <div class="partnersLogos">
-        <ul>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-            <li class="partnerLogo"><a href="#">LOGO</a></li>
-        </ul>
+       <div class="partnersLogosWrapper">
+            <ul  class="partnersLogos">
+                <li class="partnersLogo"><a href="https://www.hockeycanada.ca/en-ca/home"><img src="./images/partners/hockeyCanada.png" alt="hockey canada logo"></a></li>
+                <li class="partnersLogo"><a href="https://www.ohf.on.ca/"><img src="./images/partners/OHF.png" alt="ohf logo"></a></li>
+                <li class="partnersLogo"><a href="https://alliancehockey.com/"><img src="./images/partners/ALLIANCE.png" alt="allience logo"></a></li>
+                <li class="partnersLogo"><a href="https://www.omha.net/"><img src="./images/partners/OMHA.png" alt="omha logo"></a></li>
+                <li class="partnersLogo"><a href="https://www.owha.on.ca/"><img src="./images/partners/OWHA.png" alt="owha logo"></a></li>
+                <li class="partnersLogo"><a href="http://www.ohahockey.ca/view/oha"><img src="./images/partners/OHA.png" alt="oha logo"></a></li>
+                <li class="partnersLogo"><a href="https://sportabilitybc.ca/"><img src="./images/partners/sportAbility.png" alt="sport ability logo"></a></li>
+            </ul>
        </div>
     </section>
 
