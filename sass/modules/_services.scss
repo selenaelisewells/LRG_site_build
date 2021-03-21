@@ -50,3 +50,69 @@
         }
     }
 }
+
+// #ourServices {
+//     .banner {
+//         @media(min-width: 900px) {
+//             padding-left: 50px;
+//             max-width: 100%;
+//             box-sizing: border-box;
+//         }
+//     }
+// }
+// .servicesContent {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     @media(min-width: 600px) {
+//         flex-direction: row;
+//         width: 100%;
+//     }
+//     .serviceTitle {
+//         width: 100%;
+//         background-color: rgba($main-red, .90);
+//         height: 42px;
+//         align-items: center;
+//         display: flex;
+//         justify-content: center;
+//         color: $main-white;
+//         span {
+//             @include banner-title($banner-colour: none)
+//         }
+//         @media (min-width: 500px) {
+//             @include banner-title($font-size: $heading-font-size-lg)
+//         }
+//     }
+//     .service {
+//         display: flex;
+//         align-items: flex-end;
+//         height: 250px;
+//         width: 100%;
+//         max-width: 100%;
+//         background-size: cover;
+//         background-image: url(../images/placeholder.jpg);
+//         @media (min-width: 500px) {
+//             height: 300px;
+//             max-width: 100%;
+//             align-self: center;
+//         }
+//         @media (min-width: 1000px) {
+//             filter: grayscale(100%);
+//             //flex-basis: 33%;
+//             height: 400px;
+//             width: 100%;
+//             max-width: 100%;
+//             margin: 0;
+//             .serviceTitle {
+//                 display: none;
+//             }
+//             .service:hover {
+//                 filter: none;
+//                 .serviceTitle {
+//                     height: 100px;
+//                     display: flex;
+//                 }
+//             }
+//         }
+//     }
+// }

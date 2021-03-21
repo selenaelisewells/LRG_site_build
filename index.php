@@ -173,7 +173,7 @@ include  './templates/head.php';?>
             <ul  class="partnersLogos">
                 <li class="partnersLogo"><a href="https://www.hockeycanada.ca/en-ca/home"><img src="./images/partners/hockeyCanada.png" alt="hockey canada logo"></a></li>
                 <li class="partnersLogo"><a href="https://www.ohf.on.ca/"><img src="./images/partners/OHF.png" alt="ohf logo"></a></li>
-                <li class="partnersLogo"><a href="https://alliancehockey.com/"><img src="./images/partners/ALLIANCE.png" alt="allience logo"></a></li>
+                <li class="partnersLogo"><a href="https://alliancehockey.com/"><img src="./images/partners/alliance.png" alt="alliance logo"></a></li>
                 <li class="partnersLogo"><a href="https://www.omha.net/"><img src="./images/partners/OMHA.png" alt="omha logo"></a></li>
                 <li class="partnersLogo"><a href="https://www.owha.on.ca/"><img src="./images/partners/OWHA.png" alt="owha logo"></a></li>
                 <li class="partnersLogo"><a href="http://www.ohahockey.ca/view/oha"><img src="./images/partners/OHA.png" alt="oha logo"></a></li>
