@@ -10,7 +10,7 @@ $who_we_are_section = [
     Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
     veniam, quis tincidunt ut nostrud consequat.
     To know more about us and what we do, you can visit our About section',
-    'image' => 'placeholder.jpg',
+    'image' => 'referee.jpg',
     'tagline' => 'INSERT SUPER CATCHY PHRASE',
     'alt' => 'My awesome image'
 ];
@@ -76,7 +76,7 @@ include  './templates/head.php';?>
         </div>
     </section>
     
-    <section id="whoWeAre" class="whiteBanner">
+    <section id="whoWeAre" class="whiteBanner bannerWrapper">
         <div class="banner">
             <h2 class="bannerTitle">
                 <?php echo $who_we_are_section['title']; ?>
@@ -97,7 +97,7 @@ include  './templates/head.php';?>
         </div>
     </section>
     
-    <section id="theReferee " class="blackBanner">
+    <section id="theReferee" class="blackBanner bannerWrapper">
         <div class="banner blackBanner">
             <h2 class="bannerTitle"> 
                 <?php echo $the_referee_section['title']; ?>
@@ -110,6 +110,7 @@ include  './templates/head.php';?>
         </div>
        
             <div class="sectionText">
+                <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
                 <p class="text">
                     <?php echo $the_referee_section['body'];?>
                 </p>
