@@ -1,10 +1,10 @@
 //global vars
-$main-gray: rgb(58, 58, 58);
-$main-red: rgb(215, 32, 39);
+$main-gray: #323232;
+$main-red: #D71D24;
 $main-black: rgb(24, 24, 24);
 $main-white: white;
-$main-font: GothamPro,
-Arial,
+$main-font: 'Gotham-Book',
+serif,
 Helvetica,
 sans-serif;
 //hero vars
@@ -13,20 +13,22 @@ $hero-text: 24px;
 $hero-title-lg: 50px;
 $hero-text-lg: 40px;
 //heading/banner vars
-$heading-font: GothamPro,
-Arial,
+$heading-font: 'Gotham-Black',
+serif,
 Helvetica,
 sans-serif;
 $heading-weight: 600;
-$heading-font-size-lg: 35px;
+$heading-font-size-lg: 30px;
 $heading-font-size:20px;
 //page width vars
 $max-page-width-lg: 1200px;
 $standard-box-width-lg: 650px;
 //paragraph vars
+$p-font: 'Gotham-Light',
+sans-serif;
 $tagline-weight: 400;
 $tagline-font-size-lg: 24px;
-$tagline-font-size: 20px;
+$tagline-font-size: 18px;
 $paragraph-weight: 100;
 $paragraphy-font-size: 1rem;
 $p-line-height: 30px;

@@ -1,19 +1,46 @@
+.bannerWrapper {
+    @media (min-width: 900px) {
+        padding: 0 50px;
+    }
+}
+
 .banner {
-    background-color: $main-black;
+    //background-color: $main-black;
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    @media(min-width: 900px) {
+        padding: 20px 0;
+    }
     .bannerTitle {
-        @include banner-title;
         width: 100%;
         display: flex;
         align-items: center;
         align-self: center;
+        border-left: 5px solid $main-red;
+        max-width: 1200px;
+        padding-left: 20px;
+        @include banner-title($font-size: $heading-font-size);
         @include global-margin;
-        @media( min-width: 700px) {
+        @media( min-width: 900px) {
+            margin: 0;
             max-width: $max-page-width-lg;
-            @include banner-title($font-size: $heading-font-size-lg)
+            @include banner-title($font-size: $heading-font-size-lg);
+        }
+    }
+}
+
+#theReferee {
+    .button {
+        @media(min-width: 900px) {
+            grid-column: 2 / 3;
+        }
+    }
+    .sectionText {
+        @media(min-width: 900px) {
+            order: 3;
         }
     }
 }
@@ -23,33 +50,58 @@
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
-    @media( min-width: 700px) {
+    @media( min-width: 900px) {
+        box-sizing: border-box;
         max-width: $max-page-width-lg;
         justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr auto;
+        column-gap: 30px;
+        //flex-wrap: wrap;
     }
     .Image {
         width: 100%;
         height: 260px;
+        @media(min-width: 900px) {
+            order: 3;
+            height: auto;
+            width: auto;
+            align-self: stretch;
+        }
         img {
             width: 100%;
             height: 260px;
             object-fit: cover;
+            @media(min-width: 900px) {
+                align-self: stretch;
+                height: 100%;
+                width: 100%;
+            }
         }
     }
     .button {
         order: 3;
         margin-bottom: 50px;
+        @media( min-width: 900px) {
+            margin-top: 50px;
+            //place-self: center;
+            //margin-bottom: 43px;
+            // grid-row: 2/3;
+            // grid-column: 2 / 3;
+        }
     }
     .sectionText {
         order: 2;
         @include global-margin;
         padding: 50px 0;
-        ;
-        @media( min-width: 700px) {
+        @media( min-width: 900px) {
+            margin: 0;
+            padding: 0;
             max-width: $max-page-width-lg;
             max-width: $standard-box-width-lg;
-            height: 350px;
-            width: 100%;
+            // height: 350px;
+            // width: 100%;
         }
     }
     .tagline {
@@ -63,6 +115,16 @@
 }
 
 #theReferee {
-    background-color: $main-gray;
+    // background-color: $main-gray;
     color: $main-white;
+}
+
+.blackBanner {
+    @include black-section;
+    //@include banner-title($text-colour: $main-white, $banner-colour: $main-black);
+}
+
+.whiteBanner {
+    @include white-section;
+    //@include banner-title($text-colour: $main-black, $banner-colour: $main-white);
 }
