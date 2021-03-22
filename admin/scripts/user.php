@@ -58,8 +58,8 @@ function createUser($user_data){
    if ($create_user_result){
         // sendRegistrationEmail($user_data["username"],$random_password,$user_data["email"]);
         // test the random password
-        // var_dump($random_password);
-        // die;
+        var_dump($random_password);
+        die;
         redirect_to('index.php');
         
     } 

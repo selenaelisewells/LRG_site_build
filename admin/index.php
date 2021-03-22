@@ -20,10 +20,9 @@ confirm_logged_in();
     <ul>
     
     <li><?php if (isCurrentUserAdminAbove()):?><a href="admin_createuser.php">Create User</a><?php endif;?></li>
-    
-    <li><a href="admin_edituser.php">Edit User</a></li>
-    
+    <li><?php if (isCurrentUserAdminAbove()):?><a href="admin_editallusers.php">Edit All Users</a><?php endif;?></li>
     <li><?php if (isCurrentUserAdminAbove()):?><a href='admin_deleteuser.php'>Delete User</a><?php endif;?></li>
+    <li><a href="admin_edituser.php">Edit Profile</a></li>
     </ul>    
     <a href="admin_logout.php">Sign Out</a>
 </body>

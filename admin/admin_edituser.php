@@ -34,6 +34,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <h2>Edit User</h2>
+    
     <?php echo !empty($message)?$message:'';?>
     <?php if(!empty($current_user)):?>
     <form action="admin_edituser.php" method="post">

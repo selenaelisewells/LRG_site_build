@@ -23,7 +23,7 @@ $results = getAllUsers();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Table</title>
+    <title>Delete User</title>
 </head>
 
 <body>
@@ -41,6 +41,7 @@ $results = getAllUsers();
                 <td><?php echo $row['user_id']; ?></td>
                 <td><?php echo $row['user_fname']; ?></td>
                 <td><?php echo $row['user_email']; ?></td>
+                
                 <td><a href="admin_deleteuser.php?id=<?php echo $row['user_id']; ?>">Delete</a></td>
             </tr>
         <?php endwhile; ?>
