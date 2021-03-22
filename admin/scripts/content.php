@@ -91,3 +91,34 @@ function addContent($content)
 
 }
 
+function getAllContentForDelete(){
+    $pdo = Database::getInstance()->getConnection();
+
+    $get_content_query = 'SELECT * FROM tbl_sections';
+    $contents = $pdo->query($get_content_query);
+
+    if($contents){
+        return $contents;
+    }else{
+        return false;
+    }
+}
+
+function deleteContent($content_id){
+    $pdo = Database::getInstance()->getConnection();
+    $delete_content_query = 'DELETE FROM tbl_sections WHERE ID = ID';
+    $delete_content_set = $pdo->prepare($delete_content_query);
+    $delete_content_result = $delete_content_set->execute(
+        array(
+            'ID'=>$content_id
+        )
+    );
+
+    if($delete_content_result && $delete_content_set->rowCount()>0){
+        redirect_to('admin_deletecontent.php');
+    }else{
+        return false;
+    }
+}
+
+
