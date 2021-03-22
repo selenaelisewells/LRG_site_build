@@ -18,11 +18,19 @@ confirm_logged_in();
     
     <h3>Your status is <?php echo getCurrentUserLevel();?>
     <ul>
-    
-    <li><?php if (isCurrentUserAdminAbove()):?><a href="admin_createuser.php">Create User</a><?php endif;?></li>
-    <li><?php if (isCurrentUserAdminAbove()):?><a href="admin_editallusers.php">Edit All Users</a><?php endif;?></li>
-    <li><?php if (isCurrentUserAdminAbove()):?><a href='admin_deleteuser.php'>Delete User</a><?php endif;?></li>
+
     <li><a href="admin_edituser.php">Edit Profile</a></li>
+    <li><a href="admin_addcontent.php">Add Content</a></li>  
+
+    
+    <?php if (isCurrentUserAdminAbove()):?>
+    <li><a href="admin_createuser.php">Create User</a></li>
+    <li><a href="admin_editallusers.php">Edit All Users</a></li>
+    <li><a href='admin_deleteuser.php'>Delete User</a></li>
+    <li><a href="admin_deletecontent.php">Delete Movie</a></li>
+    <?php endif;?>
+    
+
     </ul>    
     <a href="admin_logout.php">Sign Out</a>
 </body>

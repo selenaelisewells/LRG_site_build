@@ -1,6 +1,6 @@
 <?php
 
-// reference https://www.studentstutorial.com/php/php-mysql-data-delete.php
+
 
 require_once '../load.php';
 confirm_logged_in();

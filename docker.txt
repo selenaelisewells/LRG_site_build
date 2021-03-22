@@ -9,9 +9,7 @@ This is the Docker environment set up for Movie Review
 
 #### Set up
 1. Clone the repo
-   ```
-   
-   ```
+
 2. Open the folder and run docker-compose
    ```
    docker-compose up
