@@ -1,13 +1,9 @@
 # London Referees Group - Site Redesign
 
 #### Front-End Development - Selena Wells
-
 #### Back-End Development - Elena Chechulina
-
 #### Project Management - Andres Gallo
-
 #### Graphic Design - Sandro Guedes
-
 #### Motion Graphics - Viktoria Tyschuk
 
 While we all had our set roles, this project was a collective collaboration of creativity and developement. 
@@ -18,6 +14,18 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Sorting Content for the Site](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
 
+
+## Description
+A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
+
+
+## Demo
+This repo is synced to Heroku for testing purposes, you can see what that looks like by using the following link:
+
+[HEROKU TEST SITE](https://london-referees-group.herokuapp.com/)
+
+
+## Meetings
 [Meeting NOTES Feb 17](https://docs.google.com/document/d/1ufjK0t2ib5CgUB48CiGjx5CjOTLOJMI6bJh7QMMoPdI/edit?usp=sharing)
 
 [Meeting NOTES Feb 22](https://docs.google.com/document/d/1JXk8sp-JowswwIr3EKPb8rQCac5NEShnfKaCwbxyoNg/edit)
@@ -28,8 +36,6 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Meeting NOTES Mar 22](https://docs.google.com/document/d/1o7dtYS9odcDAIB0CcF3NuML71CcB0ZxZHxojAxiwW-k/edit)
 
-## Description:
-A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
 
 ## Prototypes
 
@@ -37,13 +43,16 @@ WEB: https://xd.adobe.com/view/d222f6ef-6349-4aa3-b077-e26b7fd315dd-8771/
 
 MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
 
+
 ## Additional Resources:
 TO DO
 
-## Installation:
+
+## Installation
 TO DO 
 
-## MIT License:
+
+## License
 ### MIT License
 
 Copyright © [2021] [Andres Gallo, Elena Chechulina, Sandro Guedes, Selena Wells, Viktoria Tyschuk]
