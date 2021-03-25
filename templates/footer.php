@@ -9,7 +9,7 @@
                     <li class="navItem"><a href="jr-officials.php">Jr. Officials</a></li>
                     <li class="navItem"><a href="hire.php">Hire Officials</a></li>
                     <li class="navItem"><a href="contact.php">Contact</a></li>
-                    <li class="navItem Login"><a href="login.php">Login</a></li>
+                    <li class="navItem Bottom-Login"><a href="login.php">Login</a></li>
                 </ul>
             </nav>
 
@@ -21,11 +21,13 @@
                 </ul>
             </nav>
             <div class="backToTop">
-            <button aria-labelledby="toTopText" class="toTopBtn">
-                <i class="fas fa-arrow-alt-circle-up"></i>
+            <button id="scrollToTopBtn" aria-labelledby="toTopText" class="toTopBtn">
+                <img src="./images/ARROW.svg" alt="back to top arrow">
             </button>
             <span id="toTopText" class="toTopText">BACK TO TOP</span>
             </div>
         </div>
     </div>
 </footer>
+
+</div>

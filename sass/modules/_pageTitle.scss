@@ -1,0 +1,32 @@
+.miniHeader {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .imageBanner {
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+    }
+}
+
+.titleWrap {
+    margin: 0 auto;
+    max-width: $max-page-width-lg;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .miniHeaderTitle {
+        width: 100%;
+        text-transform: uppercase;
+        color: $main-white;
+        font-size: 30px;
+        font-family: $page-title;
+        align-self: flex-end;
+        transform: translateY(5px);
+        //@include global-margin;
+    }
+}

@@ -1,22 +1,15 @@
 <?php
 $who_we_are_section = [
     'id' => 25,
-    'title' => 'TITLE PLACEHOLDER',
-    'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-    minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
-    molestie consequat, praesent luptatum ut laoreet dolore magna aliquam erat
-    volutpatzzril delenit augue duis dolore te feugait nulla facilisi.
-    Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
-    veniam, quis tincidunt ut nostrud consequat.
-    To know more about us and what we do, you can visit our About section',
+    'title' => 'who we are',
+    'body' => '  They are often described as the third team on the ice.The basic role of the on-ice officials can be broken down into two simple words – safe and fair. For a referee to view and officiate the game with these two words in mind, they should be able to call a game that is acceptable to all of the participants.',
     'image' => 'referee.jpg',
-    'tagline' => 'INSERT SUPER CATCHY PHRASE',
+    'tagline' => 'Officials play a vital role in the game.',
     'alt' => 'My awesome image'
 ];
 $the_referee_section = [
     'id' => 25,
-    'title' => 'TITLE PLACEHOLDER',
+    'title' => 'the referee',
     'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
     euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
     minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
@@ -47,14 +40,7 @@ $our_services_section = [
 $referee_camp_section = [
     'id' => 25,
     'title' => 'TITLE PLACEHOLDER',
-    'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-    minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
-    molestie consequat, praesent luptatum ut laoreet dolore magna aliquam erat
-    volutpatzzril delenit augue duis dolore te feugait nulla facilisi.
-    Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
-    veniam, quis tincidunt ut nostrud consequat.
-    To know more about us and what we do, you can visit our About section',
+    'body' => 'Officials play a vital role in the game, they are often described as the third team on the ice. The basic role of the on-ice officials can be broken down into two simple words – safe and fair. For a referee to view and officiate the game with these two words in mind, they should be able to call a game that is acceptable to all of the participants.',
     'image' => 'placeholder.jpg',
     'tagline' => 'INSERT SUPER CATCHY PHRASE',
     'alt' => 'My awesome image'
@@ -68,46 +54,50 @@ include  './templates/head.php';?>
 <?php include './templates/header.php';?>
 <main class="mainContentWrap">
     <section id="heroWrap">
-        <h2 class="hidden">Hero Image</h2>
-        <div class="heroTextWrap">
-            <div class="heroTitle">Ready to play it Safe?</div>
-            <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
-            <button class="button">Become A Referee</button>
+        <video src="./images/HERO.mp4" loop autoplay playsinline muted></video>
+        <div class="heroContent">
+            <h2 class="hidden">Hero Image</h2>
+            <div class="heroTextWrap">
+                <div class="heroTitle">Ready to play it Safe?</div>
+                <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
+                <button class="button">Become A Referee</button>
+            </div>
         </div>
     </section>
-    
-    <section id="whoWeAre" class="whiteBanner bannerWrapper">
-        <div class="banner">
-            <h2 class="bannerTitle">
-                <?php echo $who_we_are_section['title']; ?>
-            </h2>
-        </div>
-        <div class="sectionContent">
-            <div class="sectionText">
-                <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
-                <p class="text"><?php echo $who_we_are_section['body']; ?></p>
+
+
+        <section id="whoWeAre" class="whiteBanner bannerWrapper">
+            <div class="banner">
+                <h2 class="bannerTitle">
+                    <?php echo $who_we_are_section['title']; ?>
+                </h2>
             </div>
-            
+            <div class="sectionContent">
+                <div class="sectionText">
+                    <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
+                    <p class="text"><?php echo $who_we_are_section['body']; ?></p>
+                </div>
+                
                 <div class="Image">
                     <img src="./images/<?php echo $who_we_are_section['image']; ?>" 
-                        alt="<?php echo $who_we_are_section['alt'] ?? $who_we_are_section['title']; ?>">
+                    alt="<?php echo $who_we_are_section['alt'] ?? $who_we_are_section['title']; ?>">
                 </div>
                 <button class="button">Learn More</button>
-            
-        </div>
-    </section>
-    
-    <section id="theReferee" class="blackBanner bannerWrapper">
-        <div class="banner blackBanner">
-            <h2 class="bannerTitle"> 
-                <?php echo $the_referee_section['title']; ?>
-            </h2>
-        </div>
-        <div class="sectionContent">
-        <div class="Image">
-            <img src="./images/<?php echo $the_referee_section['image']; ?>" 
-                 alt="<?php echo $the_referee_section['alt'] ?? $the_referee_section['title']; ?>">
-        </div>
+                
+            </div>
+        </section>
+        
+        <section id="theReferee" class="blackBanner bannerWrapper">
+            <div class="banner blackBanner">
+                <h2 class="bannerTitle"> 
+                    <?php echo $the_referee_section['title']; ?>
+                </h2>
+            </div>
+            <div class="sectionContent">
+            <div class="Image">
+                <img src="./images/<?php echo $the_referee_section['image']; ?>" 
+                    alt="<?php echo $the_referee_section['alt'] ?? $the_referee_section['title']; ?>">
+            </div>
        
             <div class="sectionText">
                 <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
@@ -173,7 +163,7 @@ include  './templates/head.php';?>
             <ul  class="partnersLogos">
                 <li class="partnersLogo"><a href="https://www.hockeycanada.ca/en-ca/home"><img src="./images/partners/hockeyCanada.png" alt="hockey canada logo"></a></li>
                 <li class="partnersLogo"><a href="https://www.ohf.on.ca/"><img src="./images/partners/OHF.png" alt="ohf logo"></a></li>
-                <li class="partnersLogo"><a href="https://alliancehockey.com/"><img src="./images/partners/ALLIANCE.png" alt="allience logo"></a></li>
+                <li class="partnersLogo"><a href="https://alliancehockey.com/"><img src="./images/partners/alliance.png" alt="alliance logo"></a></li>
                 <li class="partnersLogo"><a href="https://www.omha.net/"><img src="./images/partners/OMHA.png" alt="omha logo"></a></li>
                 <li class="partnersLogo"><a href="https://www.owha.on.ca/"><img src="./images/partners/OWHA.png" alt="owha logo"></a></li>
                 <li class="partnersLogo"><a href="http://www.ohahockey.ca/view/oha"><img src="./images/partners/OHA.png" alt="oha logo"></a></li>
