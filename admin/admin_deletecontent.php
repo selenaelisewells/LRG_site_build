@@ -2,10 +2,12 @@
 require_once '../load.php';
 confirm_logged_in(true);
 
+
+
 if(isset($_GET['id'])){
     $delete_content_id = $_GET['id'];
 
-    $delete_result = deleteMovie($delete_content_id);
+    $delete_result = deleteContent($delete_content_id);
 
     if(!$delete_result){
         $message = 'Failed to delete movie';
@@ -32,7 +34,6 @@ if(!$contents){
 <h2>Delete content</h2>
 <?php echo !empty($message) ? $message : ''; ?>
 
-<a href="index.php">Back to Dashboard</a>
 
 <table>
     <thead>
@@ -50,12 +51,14 @@ if(!$contents){
             <td><?php echo $single_content['title'];?></td>
             
             <td>
-                <a href="admin_deletecontent.php?id=<?php echo $single_movie['ID'];?>">Delete</a>
+                <a href="admin_deletecontent.php?id=<?php echo $single_content['ID'];?>">Delete</a>
             </td>
         </tr>
         <?php endwhile;?>
     </tbody>
 </table>
+
+<a href="index.php">Back</a>
 
 </body>
 </html>

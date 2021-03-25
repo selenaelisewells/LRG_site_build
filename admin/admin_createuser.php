@@ -40,6 +40,7 @@ confirm_logged_in();
 
     <label for="username">Username</label>
     <input id="username" type="text" name="username" value=""><br><br>
+    
 
     <label for="email">Email</label>
     <input id="email" type="email" name="email" value=""><br><br> 
