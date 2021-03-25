@@ -21,11 +21,13 @@
                 </ul>
             </nav>
             <div class="backToTop">
-            <button aria-labelledby="toTopText" class="toTopBtn">
-                <i class="fas fa-arrow-alt-circle-up"></i>
+            <button id="scrollToTopBtn" aria-labelledby="toTopText" class="toTopBtn">
+                <img src="./images/ARROW.svg" alt="back to top arrow">
             </button>
             <span id="toTopText" class="toTopText">BACK TO TOP</span>
             </div>
         </div>
     </div>
 </footer>
+
+</div>

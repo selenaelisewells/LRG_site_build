@@ -17,7 +17,7 @@
 @mixin paragraph($text-colour:$main-white, $font:$main-font, $font-weight:$paragraph-weight, $font-size:$paragraphy-font-size, $line-height: $p-line-height) {
     //colour: $text-colour;
     font-family: $font;
-    font-weight: $font-weight;
+    // font-weight: $font-weight;
     font-size: $font-size;
     line-height: $line-height;
 }

@@ -19,6 +19,7 @@
                     <img src="./images/mainLogo.svg" alt="">
                 </a>
             </div>
+            <button class="menuButton" id="js-navbar-toggle"><img src="./images/BURGER.svg" alt="menu button"></button>
             <ul class="mainNav">
                 <li class="navItem"><a href="about.php">About Us</a></li>
                 <li class="navItem"><a href="membership.php">Membership</a></li>
@@ -32,3 +33,4 @@
         
     </div>
 </header>
+

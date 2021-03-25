@@ -32,19 +32,6 @@
     }
 }
 
-#theReferee {
-    .button {
-        @media(min-width: 900px) {
-            grid-column: 2 / 3;
-        }
-    }
-    .sectionText {
-        @media(min-width: 900px) {
-            order: 3;
-        }
-    }
-}
-
 .sectionContent {
     display: flex;
     flex-direction: column;
@@ -114,17 +101,27 @@
     @include paragraph;
 }
 
-#theReferee {
-    // background-color: $main-gray;
-    color: $main-white;
-}
-
 .blackBanner {
     @include black-section;
+    color: $main-white;
+    .button {
+        @media(min-width: 900px) {
+            grid-column: 2 / 3;
+        }
+    }
+    .sectionText {
+        @media(min-width: 900px) {
+            order: 3;
+        }
+    }
     //@include banner-title($text-colour: $main-white, $banner-colour: $main-black);
 }
 
 .whiteBanner {
     @include white-section;
     //@include banner-title($text-colour: $main-black, $banner-colour: $main-white);
+}
+
+.tagline {
+    text-transform: uppercase;
 }

@@ -4,6 +4,7 @@
     width: 100%;
     height: 36px;
     color: $main-white;
+    padding: 5px;
     .headerRibbon {
         display: flex;
         align-items: center;
@@ -36,6 +37,10 @@
 
 .bottomNavWrap {
     border-bottom: 8px solid $main-red;
+}
+
+.selected {
+    display: flex !important;
 }
 
 .navListWrap {
@@ -85,4 +90,15 @@
 .Login:hover {
     color: $main-white !important;
     background-color: rgba($color: $main-red, $alpha: 1);
+}
+
+.menuButton {
+    align-self: center;
+    margin-right: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    @media(min-width: 770px) {
+        display: none;
+    }
 }
