@@ -15,7 +15,7 @@ $overview_section = [
     'alt' => 'My awesome image'
 ];
 //chang the title for each page
-$title = "Hire";?>
+$title = "Hire Officials";?>
 
 <?php include  './templates/head.php';?>
 <?php include './templates/header.php';?>
@@ -51,134 +51,8 @@ $title = "Hire";?>
     </div>
 </section>
 
+<sections-container></sections-container>
 
-
-<section id="minor-hockey">
-    <div class="banner">
-        <h2 class="bannerTitle">
-            <?php echo $overview_section['title']; ?>
-        </h2>
-    </div>
-    <div class="sectionContent">
-        <div class="sectionText">
-            <h3 class="tagline"><?php echo $overview_section['tagline']; ?></h3>
-            <p class="text"><?php echo $overview_section['body']; ?></p>
-        </div>
-        
-            <div class="Image">
-                <img src="./images/<?php echo $overview_section['image']; ?>" 
-                    alt="<?php echo $overview_section['alt'] ?? $overview_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
-        
-    </div>
-</section>
-
-
-<section id="sledge-hockey">
-    <div class="banner">
-        <h2 class="bannerTitle">
-            <?php echo $overview_section['title']; ?>
-        </h2>
-    </div>
-    <div class="sectionContent">
-        <div class="sectionText">
-            <h3 class="tagline"><?php echo $overview_section['tagline']; ?></h3>
-            <p class="text"><?php echo $overview_section['body']; ?></p>
-        </div>
-        
-            <div class="Image">
-                <img src="./images/<?php echo $overview_section['image']; ?>" 
-                    alt="<?php echo $overview_section['alt'] ?? $overview_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
-        
-    </div>
-</section>
-
-<section id="rec-hockey">
-    <div class="banner">
-        <h2 class="bannerTitle">
-            <?php echo $overview_section['title']; ?>
-        </h2>
-    </div>
-    <div class="sectionContent">
-        <div class="sectionText">
-            <h3 class="tagline"><?php echo $overview_section['tagline']; ?></h3>
-            <p class="text"><?php echo $overview_section['body']; ?></p>
-        </div>
-        
-            <div class="Image">
-                <img src="./images/<?php echo $overview_section['image']; ?>" 
-                    alt="<?php echo $overview_section['alt'] ?? $overview_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
-        
-    </div>
-</section>
-
-<section id="season">
-    <div class="banner">
-        <h2 class="bannerTitle">
-            <?php echo $overview_section['title']; ?>
-        </h2>
-    </div>
-    <div class="sectionContent">
-        <div class="sectionText">
-            <h3 class="tagline"><?php echo $overview_section['tagline']; ?></h3>
-            <p class="text"><?php echo $overview_section['body']; ?></p>
-        </div>
-        
-            <div class="Image">
-                <img src="./images/<?php echo $overview_section['image']; ?>" 
-                    alt="<?php echo $overview_section['alt'] ?? $overview_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
-        
-    </div>
-</section>
-
-<section id="tounaments">
-    <div class="banner">
-        <h2 class="bannerTitle">
-            <?php echo $overview_section['title']; ?>
-        </h2>
-    </div>
-    <div class="sectionContent">
-        <div class="sectionText">
-            <h3 class="tagline"><?php echo $overview_section['tagline']; ?></h3>
-            <p class="text"><?php echo $overview_section['body']; ?></p>
-        </div>
-        
-            <div class="Image">
-                <img src="./images/<?php echo $overview_section['image']; ?>" 
-                    alt="<?php echo $overview_section['alt'] ?? $overview_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
-        
-    </div>
-</section>
-
-<section id="winter-summer">
-    <div class="banner">
-        <h2 class="bannerTitle">
-            <?php echo $overview_section['title']; ?>
-        </h2>
-    </div>
-    <div class="sectionContent">
-        <div class="sectionText">
-            <h3 class="tagline"><?php echo $overview_section['tagline']; ?></h3>
-            <p class="text"><?php echo $overview_section['body']; ?></p>
-        </div>
-        
-            <div class="Image">
-                <img src="./images/<?php echo $overview_section['image']; ?>" 
-                    alt="<?php echo $overview_section['alt'] ?? $overview_section['title']; ?>">
-            </div>
-            <button class="button">Learn More</button>
-        
-    </div>
-</section>
 
 </div>
 

@@ -54,11 +54,14 @@ include  './templates/head.php';?>
 <?php include './templates/header.php';?>
 <main class="mainContentWrap">
     <section id="heroWrap">
-        <h2 class="hidden">Hero Image</h2>
-        <div class="heroTextWrap">
-            <div class="heroTitle">Ready to play it Safe?</div>
-            <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
-            <button class="button">Become A Referee</button>
+        <video src="./images/HERO.mp4" loop autoplay playsinline muted></video>
+        <div class="heroContent">
+            <h2 class="hidden">Hero Image</h2>
+            <div class="heroTextWrap">
+                <div class="heroTitle">Ready to play it Safe?</div>
+                <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
+                <button class="button">Become A Referee</button>
+            </div>
         </div>
     </section>
 

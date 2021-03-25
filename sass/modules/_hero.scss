@@ -3,36 +3,49 @@
     #heroWrap {
         height: calc(100vh - 110px);
         width: 100%;
-        background-image: url(../images/hero.jpg);
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         box-sizing: border-box;
-        .heroTextWrap {
-            box-sizing: border-box;
+        position: relative;
+        video {
+            object-fit: cover;
+            height: 100%;
             width: 100%;
-            margin: 0 34px;
-            max-width: $max-page-width-lg;
+            z-index: -10;
+        }
+        .heroContent {
+            height: 100%;
             width: 100%;
-            padding: 20px;
-            // @media(min-width: 770px) {
-            //     //align-self: flex-start;
-            // }
-            .heroTitle {
-                font-size: $hero-title;
-                color: $main-white;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-            .heroTagline {
-                margin: 50px 0;
-                font-size: $hero-text;
-                color: $main-white;
-                line-height: 32px;
-                max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            .heroTextWrap {
+                background-color: rgba(0, 0, 0, 0.75);
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0 34px;
+                max-width: $max-page-width-lg;
+                width: 100%;
+                padding: 20px;
+                // @media(min-width: 770px) {
+                //     //align-self: flex-start;
+                // }
+                .heroTitle {
+                    font-size: $hero-title;
+                    color: $main-white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                .heroTagline {
+                    margin: 50px 0;
+                    font-size: $hero-text;
+                    color: $main-white;
+                    line-height: 32px;
+                    max-width: 600px;
+                }
             }
         }
     }
