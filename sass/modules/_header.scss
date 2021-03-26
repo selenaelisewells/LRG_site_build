@@ -67,6 +67,7 @@
             padding: 10px 15px;
             &:hover {
                 color: $main-red;
+                transition: all .5s ease-in-out;
                 // background-color: rgba($color: $main-gray, $alpha: .5);
             }
         }
@@ -86,6 +87,7 @@
 .Login:hover {
     color: $main-white !important;
     background-color: rgba($color: $main-red, $alpha: 1);
+    transition: all .5s ease-in-out;
 }
 
 .menuButton {

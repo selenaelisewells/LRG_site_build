@@ -10,4 +10,10 @@
     height: 65px;
     font-size: 1rem;
     cursor: pointer;
+    &:hover {
+        color: $main-red;
+        background-color: $main-white;
+        border: 1px solid $main-red;
+        transition: all .5s ease-in-out;
+    }
 }
