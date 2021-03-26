@@ -6,11 +6,11 @@ $title = "Contact";?>
 <?php include './templates/header.php';?>
 
 <section class="miniHeader">
-    <div class="imageBanner">
-        <h2 class="miniHeaderTitle">About</h2>
-    </div>
-    <h3 class="miniHeaderTagline">Join our ever growing roster of Junior Officials</h3>        
-</section>
+        <div class="imageBanner" style="background-image: url(./images/HEADER_01_ABOUT.jpg)">
+            <div class="titleWrap"><h2 class="miniHeaderTitle">Contact</h2></div>
+        </div>
+        <h3 class="miniHeaderTagline">An orangization of more than 200 hockey referees proudly serving london and surrounding areas</h3>        
+    </section>
 <section class="contactFormWrap">
     <form action="./includes/mail/send.php" method="POST" id="mail-form">
             <label for="firstname">Full Name</label>
