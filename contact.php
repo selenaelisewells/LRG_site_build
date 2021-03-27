@@ -17,15 +17,17 @@ $title = "Contact";?>
 
 <section class="contactFormWrap">
 
-    <form class="contactFormWrap" action="./includes/mail/send.php" method="POST" id="mail-form">
+    <form  action="./includes/mail/send.php" method="POST" id="mail-form">
     
-         <p class="contactFormParagraph">Are you interested in becoming a Referee, hire some of ours to your league or even just would like to know a bit more about who we are and what we do? You’ve come to the right place, then! Fill out the following contact form and ask away, we will get back to you as soon as 1 business day to set up an appointment.</p>
-
-        <label for="firstname" class="hidden">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Name" required>
-
-        <label for="email" class="hidden">Email</label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
+        <p class="contactFormParagraph">Are you interested in becoming a Referee, hire some of ours to your league or even just would like to know a bit more about who we are and what we do? You’ve come to the right place, then! Fill out the following contact form and ask away, we will get back to you as soon as 1 business day to set up an appointment.</p>
+        
+        <div class="textInputWrapper">
+            <label for="firstname" class="hidden">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            
+            <label for="email" class="hidden">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
 
         <label for="message" class="hidden">Your Message</label>
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..."></textarea>
