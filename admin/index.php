@@ -20,14 +20,16 @@ confirm_logged_in();
     <ul>
 
     <li><a href="admin_edituser.php">Edit Users</a></li>
-    <li><a href="admin_addcontent.php">Add Content</a></li>  
+    <li><a href="admin_editsectiontext.php">Edit Section Text</a></li>  
+    <li><a href="admin_addemployee.php">Add Employee</a></li>
+    <li><a href="admin_editemployee.php">Edit Employee</a></li>
+    <li><a href="admin_deleteemployee.php">Delete Employee Info</a></li> 
 
     
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href="admin_createuser.php">Create User</a></li>
     <li><a href='admin_deleteuser.php'>Delete User</a></li>
-    <li><a href="admin_editcontent.php">Edit Content</a></li>
-    <li><a href="admin_deletecontent.php">Delete Content</a></li>
+
     <?php endif;?>
     
 

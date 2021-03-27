@@ -1,6 +1,6 @@
 <?php
     require_once '../load.php';
-    ini_set('display_errors', 1);
+    // ini_set('display_errors', 1);
 
     // var_dump(password_hash('admin123', PASSWORD_DEFAULT));
 

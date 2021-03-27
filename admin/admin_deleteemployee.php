@@ -28,18 +28,19 @@ if(!$contents){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete content</title>
+    <title>Delete Employee</title>
 </head>
 <body>
-<h2>Delete content</h2>
+<h2>Delete Employee</h2>
 <?php echo !empty($message) ? $message : ''; ?>
 
 
 <table>
     <thead>
         <tr>
-            <th>content ID</th>
-            <th>content Title</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
             <th>Delete</th>
         </tr>
     </thead>
@@ -47,11 +48,12 @@ if(!$contents){
     <tbody>
         <?php while($single_content = $contents->fetch(PDO::FETCH_ASSOC)): ?>
         <tr>
-            <td><?php echo $single_content['ID'];?></td>
-            <td><?php echo $single_content['title'];?></td>
+            <td><?php echo $single_content['employee_id'];?></td>
+            <td><?php echo $single_content['name'];?></td>
+            <td><?php echo $single_content['position'];?></td>
             
             <td>
-                <a href="admin_deletecontent.php?id=<?php echo $single_content['ID'];?>">Delete</a>
+                <a href="admin_deleteemployee.php?id=<?php echo $single_content['employee_id'];?>">Delete</a>
             </td>
         </tr>
         <?php endwhile;?>
