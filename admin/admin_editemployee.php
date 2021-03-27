@@ -4,7 +4,7 @@ confirm_logged_in();
 $all_content = getAllContent();
 $id = $_SESSION['employee_id'];
 
-$current_user = getSingleContent($id);
+$current_content = getSingleContent($id);
 
 if (empty($current_content)) {
     $message = 'Failed to get employee info!';

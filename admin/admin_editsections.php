@@ -2,7 +2,7 @@
 require_once '../load.php';
 confirm_logged_in();
 
-ini_set('display_errors', 1);
+// ini_set('display_errors', 1);
 $all_sections = getAllSections();
 $id = $_SESSION['ID'];
 
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
     
 
     <?php if (!empty($current_section)): ?>
-    <form action="admin_editbsections.php" method="post">
+    <form action="admin_editsections.php" method="post">
         <?php while ($section_info = $current_section->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_section_id" name="current_section_id" value="<?php echo $id?>">
             <label for="title">Title</label>
