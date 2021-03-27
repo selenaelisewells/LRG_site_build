@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
     <h2>Edit Section Body Text</h2>
     <?php echo !empty($message) ? $message : ''; ?>
 
-        <form action="admin_editbodytext.php" method="get">
+        <form action="admin_editsections.php" method="get">
             <label for="ID">Selected Section</label>
             <select name="ID" id="ID">
                 <?php foreach ($all_sections as $section): ?>
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
     
 
     <?php if (!empty($current_section)): ?>
-    <form action="admin_editbodytext.php" method="post">
+    <form action="admin_editbsections.php" method="post">
         <?php while ($section_info = $current_section->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_section_id" name="current_section_id" value="<?php echo $id?>">
             <label for="title">Title</label>

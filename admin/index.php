@@ -19,19 +19,21 @@ confirm_logged_in();
     <h3>Your status is <?php echo getCurrentUserLevel();?>
     <ul>
 
+    <h3>Edit User</h3>
     <li><a href="admin_edituser.php">Edit Users</a></li>
-    <li><a href="admin_editsectiontext.php">Edit Section Text</a></li>  
-    <li><a href="admin_addemployee.php">Add Employee</a></li>
-    <li><a href="admin_editemployee.php">Edit Employee</a></li>
-    <li><a href="admin_deleteemployee.php">Delete Employee Info</a></li> 
 
-    
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href="admin_createuser.php">Create User</a></li>
     <li><a href='admin_deleteuser.php'>Delete User</a></li>
-
     <?php endif;?>
+
+    <h3>Edit Section's Text</h3>
+    <li><a href="admin_editsections.php">Edit Section Text</a></li> 
     
+    <h3>Edit Employee Info</h3>
+    <li><a href="admin_addemployee.php">Add Employee Info</a></li>
+    <li><a href="admin_editemployee.php">Edit Employee Info</a></li>
+    <li><a href="admin_deleteemployee.php">Delete Employee Info</a></li> 
 
     </ul>    
     <a href="admin_logout.php">Sign Out</a>

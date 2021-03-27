@@ -15,7 +15,7 @@ if(isset($_GET['id'])){
 }
 
 
-$contents = getAllContentForDelete();
+$contents = getAllContent();
 
 if(!$contents){
     $message = 'Failed to get movie list';
@@ -49,8 +49,8 @@ if(!$contents){
         <?php while($single_content = $contents->fetch(PDO::FETCH_ASSOC)): ?>
         <tr>
             <td><?php echo $single_content['employee_id'];?></td>
-            <td><?php echo $single_content['name'];?></td>
-            <td><?php echo $single_content['position'];?></td>
+            <td><?php echo $single_content['employee_name'];?></td>
+            <td><?php echo $single_content['employee_position'];?></td>
             
             <td>
                 <a href="admin_deleteemployee.php?id=<?php echo $single_content['employee_id'];?>">Delete</a>

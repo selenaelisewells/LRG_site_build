@@ -10,5 +10,5 @@ require_once ABSPATH.'/config/database.php';
 require_once ADMIN_SCRIPT_PATH.'/functions.php';
 require_once ADMIN_SCRIPT_PATH.'/login.php';
 require_once ADMIN_SCRIPT_PATH.'/user.php';
-require_once ADMIN_SCRIPT_PATH.'/employee.php';
-require_once ADMIN_SCRIPT_PATH.'/sectiontext.php';
+require_once ADMIN_SCRIPT_PATH.'/employees.php';
+require_once ADMIN_SCRIPT_PATH.'/sections.php';
