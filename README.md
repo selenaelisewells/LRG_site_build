@@ -12,6 +12,8 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Marketing Plan - Development](https://docs.google.com/document/d/1mXgVSh-t-D2KV3_ycXga1dkLhaD8fwbzfEb9f9763lo/edit)
 
+[Site's Text Content - Development](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
+
 [Sorting Content for the Site](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
 
 
