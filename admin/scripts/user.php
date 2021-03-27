@@ -51,6 +51,7 @@ function createUser($user_data){
  
 
     if($create_user_result){
+        
         var_dump($random_password);
         die;
         redirect_to('index.php');
@@ -58,6 +59,8 @@ function createUser($user_data){
         return 'The user did not go through!!';
     }
 }
+
+
 
 
 
@@ -78,6 +81,7 @@ function createEncryptedPassword($password){
     
     return password_hash($password, PASSWORD_DEFAULT);  
 }
+
 
 
 

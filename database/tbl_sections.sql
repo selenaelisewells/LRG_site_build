@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: mysql
--- Generation Time: Mar 27, 2021 at 09:14 PM
--- Server version: 10.3.27-MariaDB-1:10.3.27+maria~focal
--- PHP Version: 7.4.11
+-- Host: localhost:8889
+-- Generation Time: Mar 27, 2021 at 07:26 PM
+-- Server version: 5.7.32
+-- PHP Version: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,60 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_lrg`
+-- Database: `db_lrg_2`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_employees`
---
-
-CREATE TABLE `tbl_employees` (
-  `employee_id` int(11) NOT NULL,
-  `employee_name` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `employee_position` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `employee_email` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `employee_avatar` varchar(30) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_employees`
---
-
-INSERT INTO `tbl_employees` (`employee_id`, `employee_name`, `employee_position`, `employee_email`, `employee_avatar`) VALUES
-(1, 'Josh Ackworth', 'President ', 'president@londonrefereesgroup.com', ''),
-(2, 'Joe Masse', 'VP', 'vp@londonrefereesgroup.com', ''),
-(3, 'Bobby Wright', 'Referee In Chief', 'ric@londonrefereesgroup.com', ''),
-(4, 'Mark Lemieux', 'Secretary', 'secretary@londonrefereesgroup.com', ''),
-(5, 'Rob Neable', 'Treasurer', 'treasurer@londonrefereesgroup.com', ''),
-(6, 'Paul Raes', 'Membership Rep1', 'rep1@londonrefereesgroup.com', ''),
-(9, 'Melanie Alexander', 'Membership Rep2', 'rep2@londonrefereesgroup.com', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_pages`
---
-
-CREATE TABLE `tbl_pages` (
-  `ID` int(11) NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `path` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_pages`
---
-
-INSERT INTO `tbl_pages` (`ID`, `title`, `path`) VALUES
-(1, 'index', 'index.php'),
-(2, 'about', 'about.php'),
-(3, 'membership', 'membership.php'),
-(4, 'junior_officails', 'jr-officials.php'),
-(5, 'hiring_officials', 'hire.php'),
-(6, 'contact', 'contact.php'),
-(7, 'login', 'login.php');
 
 -- --------------------------------------------------------
 
@@ -86,7 +33,7 @@ CREATE TABLE `tbl_sections` (
   `image` varchar(150) NOT NULL DEFAULT 'image.jpg',
   `page_id` int(11) NOT NULL,
   `tagline` varchar(600) NOT NULL,
-  `alt_text` text DEFAULT NULL,
+  `alt_text` text,
   `component_type` varchar(80) NOT NULL,
   `button_text` varchar(80) DEFAULT NULL,
   `section_id` varchar(80) NOT NULL,
@@ -112,51 +59,12 @@ INSERT INTO `tbl_sections` (`ID`, `title`, `body`, `image`, `page_id`, `tagline`
 (25, 'Sledge Hockey', ' By the nature of the sport, some rules vary from ice hockey. Tied to the sleds, the participants glide across the field with the help of two sticks.\r\nIf you need a referee for one or more sledge hockey matches, contact us by filling the form in our contact page.\r\nWant to know more about sledge hockey? Click the button\r\n', 'SledgeHockey.jpg', 5, 'Sledge hockey is a sport that is designed for players with physical disabilities.', 'Sledge Hockey', 'black', 'LEARN MORE', 'sledgeHockey', 12),
 (26, 'Recreational Hockey', 'Whoever you are we will help you, if you play recreational games and you are looking for a referee to help you direct a healthy and safe game, we are willing and able to referee your and your team\'s hockey game. Want to learn more about recreational hockey?', 'RecreationalHockey.jpg', 5, 'Are you a 26-year-old beginner or a 42-year-old former pro that plays recreational hockey?', 'Recreational Hockey', 'white', 'LEARN MORE', 'recreationalHockey', 13),
 (27, 'City of london regular season', 'Because the best hockey players are not those who only score goals but also those who play responsibly and with all the precautions and clear rules, that\'s what we are for, we will take care of your team and your game.', 'RegularSeason.jpg', 5, 'Play responsibly, we are the best referees in London, and we serve the best players, that is, you!', 'London Regular Season', 'black', '', 'regularSeason', 14),
-(28, 'Tournaments', 'We assure you a fair and safe game, we have years of experience in the field of referee hockey. Contact us and let\'s start the tournament in a big way.', 'Tournaments.jpg', 5, 'You are organizing a hockey tournament and you have everything ready, the teams, the prize and the hockey fields ready to go, but Do you have the best referees in London?', 'Tournaments', 'white', '', 'tournaments', 15);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_user`
---
-
-CREATE TABLE `tbl_user` (
-  `user_id` mediumint(8) UNSIGNED NOT NULL,
-  `user_fname` varchar(30) NOT NULL,
-  `user_name` varchar(30) NOT NULL,
-  `user_pass` varchar(100) NOT NULL,
-  `user_email` varchar(50) NOT NULL,
-  `user_date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_level` varchar(2) NOT NULL DEFAULT '0',
-  `user_lname` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_user`
---
-
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_level`, `user_lname`) VALUES
-(1, 'Admin', 'Admin', '$2y$10$BzOPT4tkL1qIPuI/Tby8xepaOETyaAFiUUlhlJt1PZDyBjLk4xQWm', 'admin@lrg.ca', '2021-03-27 19:36:51', '172.26.0.1', '1', 'Admin'),
-(2, 'Test', 'Test', '$2y$10$wna42cBvBOmDES5td07osOT85bZe.x9.4DQD2mQ5wYBsJvRf77962', 'test@test.ca', '2021-02-25 03:44:11', '172.28.0.1', '0', 'Test'),
-(3, 'Elena', 'Lena', '$2y$10$.LL/xtaKJYylwPUpCgcFC.GCG6xQ843.VM6WRxkmYwAQj.A/wZbjS', 'chechulina.e@yahoo.com', '2021-03-25 19:33:31', '172.26.0.1', '0', 'Chechulina'),
-(4, 'Bob', 'bob', '$2y$10$n2e7aczTvl4hJW7.HCFCK.f6OBfeOWewxyg0GPCJi8mUzrHqPL1.u', 'bob@test.ca', '2021-03-27 17:19:56', '172.26.0.1', '0', 'Bobov');
+(28, 'Tournaments', 'We assure you a fair and safe game, we have years of experience in the field of referee hockey. Contact us and let\'s start the tournament in a big way.', 'Tournaments.jpg', 5, 'You are organizing a hockey tournament and you have everything ready, the teams, the prize and the hockey fields ready to go, but Do you have the best referees in London?', 'Tournaments', 'white', '', 'tournaments', 15),
+(29, 'Winter, spring and summer', 'We have availability during all seasons of the year and in any month of the seasons. LRG does not rest, we are committed to providing you with the best games for your hockey team at all times. Get in touch with us and you will have the best trained referee in your match.', 'WS&S.jpg', 5, 'Who said that hockey on ice can only be played in winter?', 'Winter Spring and Summer', 'black', '', 'winterSpringSummer', 16);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `tbl_employees`
---
-ALTER TABLE `tbl_employees`
-  ADD PRIMARY KEY (`employee_id`);
-
---
--- Indexes for table `tbl_pages`
---
-ALTER TABLE `tbl_pages`
-  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `tbl_sections`
@@ -165,39 +73,14 @@ ALTER TABLE `tbl_sections`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`user_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `tbl_employees`
---
-ALTER TABLE `tbl_employees`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `tbl_pages`
---
-ALTER TABLE `tbl_pages`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_sections`
 --
 ALTER TABLE `tbl_sections`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

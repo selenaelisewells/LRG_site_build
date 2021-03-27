@@ -1,36 +1,36 @@
 <?php
 
-function getSingleSection($id)
-{
-    $pdo = Database::getInstance()->getConnection();
+// function getSingleSection($id)
+// {
+//     $pdo = Database::getInstance()->getConnection();
 
-    $get_section_query = 'SELECT * FROM tbl_sections WHERE ID = :ID';
-    $get_section_set   = $pdo->prepare($get_section_query);
-    $results        = $get_section_set->execute(
-        array(
-            ':ID' => $id,
-        )
-    );
+//     $get_section_query = 'SELECT * FROM tbl_sections WHERE ID = :ID';
+//     $get_section_set   = $pdo->prepare($get_section_query);
+//     $results        = $get_section_set->execute(
+//         array(
+//             ':ID' => $id,
+//         )
+//     );
 
-    if ($results && $get_section_set->rowCount()) {
-        return $get_section_set;
-    } else {
-        return false;
-    }
-}
+//     if ($results && $get_section_set->rowCount()) {
+//         return $get_section_set;
+//     } else {
+//         return false;
+//     }
+// }
 
-function  getAllSections(){
-    $pdo = Database::getInstance()->getConnection();
+// function  getAllSections(){
+//     $pdo = Database::getInstance()->getConnection();
 
-    $get_section_query = 'SELECT * FROM tbl_sections';
-    $sections = $pdo->query($get_section_query);
+//     $get_section_query = 'SELECT * FROM tbl_sections';
+//     $sections = $pdo->query($get_section_query);
 
-    if($sections){
-        return $sections;
-    }else{
-        return false;
-    }
-}
+//     if($sections){
+//         return $sections;
+//     }else{
+//         return false;
+//     }
+// }
 
 
 
