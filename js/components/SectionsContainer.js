@@ -14,7 +14,7 @@ const SectionsContainer = {
                     image: 'referee.jpg',
                     tagline: 'Officials play a vital role in the game, they are often described as the third team on the ice.',
                     alt_text: 'The Referee',
-                    id: 7,
+                    id: 67,
                     component_type: 'white',
                     button_text: 'learn more',
                     section_id: 'test2'
@@ -36,7 +36,7 @@ const SectionsContainer = {
                     image: 'referee.jpg',
                     tagline: 'Officials play a vital role in the game, they are often described as the third team on the ice.',
                     alt_text: 'The Referee',
-                    id: 7,
+                    id: 65,
                     component_type: 'white',
                     button_text: 'learn more',
                     section_id: 'test2'
@@ -47,7 +47,7 @@ const SectionsContainer = {
                     image: 'referee.jpg',
                     tagline: 'Officials play a vital role in the game, they are often described as the third team on the ice.',
                     alt_text: 'The Referee',
-                    id: 7,
+                    id: 10,
                     component_type: 'black',
                     button_text: 'learn more',
                     section_id: 'test2'

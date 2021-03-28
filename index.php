@@ -54,13 +54,13 @@ include  './templates/head.php';?>
 <?php include './templates/header.php';?>
 <main class="mainContentWrap">
     <section id="heroWrap">
-        <video src="./images/HERO.mp4" loop autoplay playsinline muted></video>
+        <video src="./images/HERO_3.mp4" loop autoplay playsinline muted></video>
         <div class="heroContent">
             <h2 class="hidden">Hero Image</h2>
             <div class="heroTextWrap">
-                <div class="heroTitle">Ready to play it Safe?</div>
-                <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
-                <button class="button">Become A Referee</button>
+                <div class="heroTitle">Play it safe with LRG</div>
+                <div class="heroTagline">Looking for an organization to referee your hockey league?</div>
+                <div class="button"><a href="./hire.php">Hire Officials</a></div>
             </div>
         </div>
     </section>
@@ -141,7 +141,7 @@ include  './templates/head.php';?>
             <div class="campContent">
                 <!--put this heading in the database and include a span-->
                 <h2 class="campTitle"><span><span class="red">Don Koharski</span>Officiating and Development referee camp</span></h2>
-                <img src="./images/placeholder.jpg" alt="referee camp photo">
+                <img src="./images/DON.jpg" alt="referee camp photo">
                 <p class="text"> 
                     <?php echo $referee_camp_section['body'];?>
                 </p>

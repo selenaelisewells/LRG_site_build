@@ -36,6 +36,7 @@ if(!empty($_POST['message'])){
 //     $error_message .= "Are you sure you are not a robot? recaptcha failed!\n";
 //  }
 
+
 if($error_message){
     //set a status code and then return error as json. 
     http_response_code(400);
@@ -44,6 +45,16 @@ if($error_message){
     ]);
     exit;
 }
+
+$email_headers = array(
+    'From' =>'selenawells@selenawells.ca',
+    'Reply-To' => $visitor_email
+    //Best practise  but it may need to to have an email set up via your domaine - do it this way so that the emails are not flagged by the browser
+
+    //You can do this if the above is not possible
+    // 'From' => $visitor_email
+);
+
 $results['name'] = $visitor_name;
 $results['message'] = $visitor_message;
 
@@ -53,3 +64,8 @@ $email_subject = 'LRG Inquiry from'. $visitor_name;
 $email_recipient = 'selena.elise.wells@gmail.com';
 $email_message = sprintf('Name: %s, Email: %s, Message: %s', $visitor_name, $visitor_email, $visitor_message);
 //creates a template to insert the user data into a formated string
+
+mail($email_recipient, $email_subject, $email_message, $email_headers);
+//header('Location: ../../contact.php');
+
+//change page to thanks for sending us a message page - if successfully send an email

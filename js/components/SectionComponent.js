@@ -5,7 +5,7 @@ const SectionComponent = {
         'section'
     ],
     template: `
-        <section :id="section.section_id" 
+        <section :id="'section-'+section.section_id" 
                  :class="section.component_type === 'black' ? 'blackBanner bannerWrapper' : 'whiteBanner'" >
             <div class="banner">
                 <h2 class="bannerTitle"> 

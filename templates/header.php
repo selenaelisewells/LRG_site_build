@@ -26,7 +26,7 @@
                 <li class="navItem"><a href="jr-officials.php">Jr. Officials</a></li>
                 <li class="navItem"><a href="hire.php">Hire Officials</a></li>
                 <li class="navItem"><a href="contact.php">Contact</a></li>
-                <li class="navItem Login"><a href="login.php">Login</a></li>
+                <li class="navItem Login"><a href="admin/index.php">Login</a></li>
             </ul>
         </nav>   
         </div>       
@@ -47,7 +47,7 @@
         <li class="navItem"><a href="jr-officials.php">Jr. Officials</a></li>
         <li class="navItem"><a href="hire.php">Hire Officials</a></li>
         <li class="navItem"><a href="contact.php">Contact</a></li>
-        <li class="navItem Login"><a href="login.php">Login</a></li>
+        <li class="navItem Login"><a href="admin/index.php">Login</a></li>
     </ul>
  
     <ul class="headerRibbon">

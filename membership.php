@@ -43,7 +43,9 @@ $title = "Membership";?>
             <div class="titleWrap"><h2 class="miniHeaderTitle">Membership</h2></div>
         </div>
         <h3 class="miniHeaderTagline">An orangization of more than 200 hockey referees proudly serving london and surrounding areas</h3>        
-    </section>
+</section>
+
+<overview-component></overview-component>
 
 <section id="structure">
     <div class="banner">
@@ -56,6 +58,8 @@ $title = "Membership";?>
 
 
 <sections-container></sections-container>
+
+
 
 </div>
 
