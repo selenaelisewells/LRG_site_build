@@ -32,13 +32,13 @@ const OverviewComponent = {
         //     });
     },
     template: `
-        <section :id="'overview-'+overview.section_id">
+        <section class="overViewWrap" :id="'overview-'+overview.section_id">
             <div class="banner">
                 <h2 class="bannerTitle">
                     {{overview.title}}
                 </h2>
             </div>
-            <div class="sectionContent">
+            
                 <div class="sectionText">                
                     <p class="text">
                         {{overview.body}}
@@ -50,7 +50,7 @@ const OverviewComponent = {
                             :alt="overview.alt_text || overview.title">
                 </div>               
                 
-            </div>
+          
         </section>       
     `
 };

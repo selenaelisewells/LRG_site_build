@@ -96,6 +96,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    transition: all 300ms ease-in-out;
     &:focus {
         outline: none;
     }

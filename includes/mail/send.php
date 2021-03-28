@@ -1,4 +1,5 @@
 <?php
+include '../../load.php';
 
 header('Access-Control-Allow-Origin:*');
 header('Content-Type: application/json; charset=UTF-8');
@@ -65,7 +66,8 @@ $email_recipient = 'selena.elise.wells@gmail.com';
 $email_message = sprintf('Name: %s, Email: %s, Message: %s', $visitor_name, $visitor_email, $visitor_message);
 //creates a template to insert the user data into a formated string
 
-mail($email_recipient, $email_subject, $email_message, $email_headers);
-//header('Location: ../../contact.php');
+// mail($email_recipient, $email_subject, $email_message, $email_headers);
 
 //change page to thanks for sending us a message page - if successfully send an email
+$_SESSION['contact_form_submitted'] = true;
+header('Location: ../../contact.php');

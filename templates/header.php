@@ -35,12 +35,12 @@
 </header>
 
 <div class="overlayNav Toggle">
-    <button class="menuButton" data-toggle id="js-navbar-toggle-close"><img src="./images/BURGER.png" alt="menu button"></button>
+    <!-- <button class="menuButton" data-toggle id="js-navbar-toggle-close"><img src="./images/BURGER.png" alt="menu button"></button>
     <div class="mainLogo">
         <a href="index.php">
             <img src="./images/mainLogo.svg" alt="">
         </a>
-    </div>
+    </div> -->
     <ul class="mobileNav">
         <li class="navItem"><a href="about.php">About Us</a></li>
         <li class="navItem"><a href="membership.php">Membership</a></li>
