@@ -113,26 +113,26 @@ include  './templates/head.php';?>
     <section id="ourServices" class="whiteBanner">
         <div class="banner">
             <h2 class="bannerTitle">
-                <?php echo $our_services_section['title'];?>
+                Our Values
             </h2>
         </div>
         <div class="servicesContent">
             <div class="service">
                 
                 <div class="serviceTitle">
-                    <span>TITLE</span>
+                    <span>Respect</span>
                 </div>
             </div>
             <div class="service">
                 
                 <div class="serviceTitle">
-                    <span>TITLE</span>
+                    <span>Integrity</span>
                 </div>
             </div>
             <div class="service">
                
                 <div class="serviceTitle">
-                    <span>TITLE</span>
+                    <span>teamwork</span>
                 </div>
             </div>
         </div>
@@ -143,7 +143,8 @@ include  './templates/head.php';?>
                 <h2 class="campTitle"><span><span class="red">Don Koharski</span>Officiating and Development referee camp</span></h2>
                 <img src="./images/DON.jpg" alt="referee camp photo">
                 <p class="text"> 
-                    <?php echo $referee_camp_section['body'];?>
+                Whether your goal is to learn the basics to get you started, move up to the Pee Wee level, JR. hockey or go all the way up to the professional ranks, our camps are designed to provide you that exposure and the necessary tools to improve your officiating skills.
+
                 </p>
                 <button class="button">Sign Up Today</button> 
             </div>
