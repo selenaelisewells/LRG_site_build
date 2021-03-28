@@ -54,13 +54,13 @@ include  './templates/head.php';?>
 <?php include './templates/header.php';?>
 <main class="mainContentWrap">
     <section id="heroWrap">
-        <video src="./images/HERO.mp4" loop autoplay playsinline muted></video>
+        <video src="./images/HERO_3.mp4" loop autoplay playsinline muted></video>
         <div class="heroContent">
             <h2 class="hidden">Hero Image</h2>
             <div class="heroTextWrap">
-                <div class="heroTitle">Ready to play it Safe?</div>
-                <div class="heroTagline">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</div>
-                <button class="button">Become A Referee</button>
+                <div class="heroTitle">Play it safe with LRG</div>
+                <div class="heroTagline">Looking for an organization to referee your hockey league?</div>
+                <div class="button"><a href="./hire.php">Hire Officials</a></div>
             </div>
         </div>
     </section>
@@ -113,26 +113,26 @@ include  './templates/head.php';?>
     <section id="ourServices" class="whiteBanner">
         <div class="banner">
             <h2 class="bannerTitle">
-                <?php echo $our_services_section['title'];?>
+                Our Values
             </h2>
         </div>
         <div class="servicesContent">
             <div class="service">
                 
                 <div class="serviceTitle">
-                    <span>TITLE</span>
+                    <span>Respect</span>
                 </div>
             </div>
             <div class="service">
                 
                 <div class="serviceTitle">
-                    <span>TITLE</span>
+                    <span>Integrity</span>
                 </div>
             </div>
             <div class="service">
                
                 <div class="serviceTitle">
-                    <span>TITLE</span>
+                    <span>teamwork</span>
                 </div>
             </div>
         </div>
@@ -141,9 +141,10 @@ include  './templates/head.php';?>
             <div class="campContent">
                 <!--put this heading in the database and include a span-->
                 <h2 class="campTitle"><span><span class="red">Don Koharski</span>Officiating and Development referee camp</span></h2>
-                <img src="./images/placeholder.jpg" alt="referee camp photo">
+                <img src="./images/DON.jpg" alt="referee camp photo">
                 <p class="text"> 
-                    <?php echo $referee_camp_section['body'];?>
+                Whether your goal is to learn the basics to get you started, move up to the Pee Wee level, JR. hockey or go all the way up to the professional ranks, our camps are designed to provide you that exposure and the necessary tools to improve your officiating skills.
+
                 </p>
                 <button class="button">Sign Up Today</button> 
             </div>

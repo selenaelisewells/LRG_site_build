@@ -1,8 +1,16 @@
+body.navOverlayActive {
+    overflow-y: hidden;
+    .menuButton {
+        transform: rotate(270deg);
+    }
+}
+
 .overlayNav {
     // height: 100vh;
     // width: 100vw;
+    height: calc(100vh - 108px);
     visibility: hidden;
-    top: 0;
+    // top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -29,25 +37,28 @@
             padding: 5px;
         }
     }
-    .menuButton {
-        display: flex;
-        position: relative;
-        z-index: 600;
-        align-self: flex-end;
-        margin-top: 34px;
-    }
-    .mainLogo {
-        display: flex;
-        max-width: 100%;
-        align-self: center;
-        //margin-top: 40px;
-        justify-content: center;
-        img {
-            align-self: center;
-            width: 230px;
-            height: auto;
-        }
-    }
+    // .menuButton {
+    //     display: flex;
+    //     position: relative;
+    //     z-index: 600;
+    //     align-self: flex-end;
+    //     margin-top: 34px;
+    //     &:focus {
+    //         outline: none;
+    //     }
+    // }
+    // .mainLogo {
+    //     display: flex;
+    //     max-width: 100%;
+    //     align-self: center;
+    //     //margin-top: 40px;
+    //     justify-content: center;
+    //     img {
+    //         align-self: center;
+    //         width: 230px;
+    //         height: auto;
+    //     }
+    // }
     .mobileNav {
         width: 100%;
         max-width: 300px;

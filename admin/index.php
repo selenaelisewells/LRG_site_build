@@ -2,17 +2,12 @@
 require_once '../load.php';
 confirm_logged_in();
 
-?>
+//chang the title for each page
+$title = "Admin Login";?>
+<?php include  './templates/head.php';?>
+<?php include './templates/header.php';?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
-</head>
-<body>
+<main class="mainContentWrap">
     <h2>Welcome to dashboard, <?php echo $_SESSION['user_name'];?>!</h2>
     <p>Your last login time: <?php echo $_SESSION['user_date'];?></p>
     
@@ -26,5 +21,7 @@ confirm_logged_in();
     <li><?php if (isCurrentUserAdminAbove()):?><a href='admin_deleteuser.php'>Delete User</a><?php endif;?></li>
     </ul>    
     <a href="admin_logout.php">Sign Out</a>
-</body>
-</html>
+    </main>
+
+<?php include './templates/footer.php';?>
+<?php include './templates/foot.php';?>

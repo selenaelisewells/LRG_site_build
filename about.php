@@ -23,7 +23,7 @@ $title = "About Us";?>
 <h1 class="hidden">About Us</h1>
     <section class="miniHeader">
         <div class="imageBanner" style="background-image: url(./images/HEADER_01_ABOUT.jpg)">
-            <div class="titleWrap"><h2 class="miniHeaderTitle">About</h2></div>
+            <div class="titleWrap"><h2 class="miniHeaderTitle">About Us</h2></div>
         </div>
         <h3 class="miniHeaderTagline">An orangization of more than 200 hockey referees proudly serving london and surrounding areas</h3>        
     </section>
