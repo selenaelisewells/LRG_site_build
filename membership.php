@@ -1,35 +1,5 @@
 <?php 
-// $cert_clinics_section = [
-//     'id' => 25,
-//     'title' => 'TITLE PLACEHOLDER',
-//     'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-//     euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-//     minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
-//     molestie consequat, praesent luptatum ut laoreet dolore magna aliquam erat
-//     volutpatzzril delenit augue duis dolore te feugait nulla facilisi.
-//     Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
-//     veniam, quis tincidunt ut nostrud consequat.
-//     To know more about us and what we do, you can visit our About section',
-//     'image' => 'placeholder.jpg',
-//     'tagline' => 'INSERT SUPER CATCHY PHRASE',
-//     'alt' => 'My awesome image'
-// ];
-// $overview_section = [
-//     'id' => 25,
-//     'title' => 'TITLE PLACEHOLDER',
-//     'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-//     euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-//     minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
-//     molestie consequat, praesent luptatum ut laoreet dolore magna aliquam erat
-//     volutpatzzril delenit augue duis dolore te feugait nulla facilisi.
-//     Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
-//     veniam, quis tincidunt ut nostrud consequat.
-//     To know more about us and what we do, you can visit our About section',
-//     'image' => 'placeholder.jpg',
-//     'tagline' => 'INSERT SUPER CATCHY PHRASE',
-//     'alt' => 'My awesome image'
-// ];
-//chang the title for each page
+
 $title = "Membership";?>
 
 <?php include  './templates/head.php';?>
@@ -42,7 +12,7 @@ $title = "Membership";?>
         <div class="imageBanner" style="background-image: url(./images/HEADER_02_MEMBERSHIP.jpg)">
             <div class="titleWrap"><h2 class="miniHeaderTitle">Membership</h2></div>
         </div>
-        <h3 class="miniHeaderTagline">An orangization of more than 200 hockey referees proudly serving london and surrounding areas</h3>        
+        <h3 class="miniHeaderTagline">perseverance, respect & teamwork </h3>        
 </section>
 
 <overview-component></overview-component>
