@@ -28,7 +28,13 @@ confirm_logged_in();
     <?php endif;?>
 
     <h3>Edit Section's Text</h3>
+    <?php if (isCurrentUserAdminAbove()):?>
+    <li><a href='admin_addsections.php'>Add Section</a></li>
+    <?php endif;?>
     <li><a href="admin_editsections.php">Edit Section Text</a></li> 
+    <?php if (isCurrentUserAdminAbove()):?>
+    <li><a href='admin_deletesections.php'>Delete Section</a></li>
+    <?php endif;?>
     
     <h3>Edit Employee Info</h3>
     <li><a href="admin_addemployee.php">Add Employee Info</a></li>

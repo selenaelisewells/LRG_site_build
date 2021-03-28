@@ -1,7 +1,5 @@
 <?php
 require_once '../load.php';
-confirm_logged_in(true);
-
 
 
 if(isset($_GET['id'])){
@@ -10,7 +8,7 @@ if(isset($_GET['id'])){
     $delete_result = deleteContent($delete_content_id);
 
     if(!$delete_result){
-        $message = 'Failed to delete movie';
+        $message = 'Failed to delete Employee Info';
     }
 }
 
@@ -18,7 +16,7 @@ if(isset($_GET['id'])){
 $contents = getAllContent();
 
 if(!$contents){
-    $message = 'Failed to get movie list';
+    $message = 'Failed to get Employee Info list';
 }
 ?>
 
