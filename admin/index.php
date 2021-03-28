@@ -20,22 +20,26 @@ confirm_logged_in();
     <ul>
 
     <h3>Edit User</h3>
-    <li><a href="admin_edituser.php">Edit Users</a></li>
-
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href="admin_createuser.php">Create User</a></li>
+    <?php endif;?>
+    <li><a href="admin_edituser.php">Edit User</a></li>
+    <?php if (isCurrentUserAdminAbove()):?>
     <li><a href='admin_deleteuser.php'>Delete User</a></li>
     <?php endif;?>
 
-    <h3>Edit Section's Text</h3>
+    <h3>Edit Section</h3>
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href='admin_addsections.php'>Add Section</a></li>
     <?php endif;?>
-    <li><a href="admin_editsections.php">Edit Section Text</a></li> 
+
+    <li><a href="admin_editsectiontext.php">Edit Section Text</a></li>
+
     <?php if (isCurrentUserAdminAbove()):?>
+    <li><a href="admin_editsections.php">Edit Section</a></li>
     <li><a href='admin_deletesections.php'>Delete Section</a></li>
     <?php endif;?>
-    
+
     <h3>Edit Employee Info</h3>
     <li><a href="admin_addemployee.php">Add Employee Info</a></li>
     <li><a href="admin_editemployee.php">Edit Employee Info</a></li>

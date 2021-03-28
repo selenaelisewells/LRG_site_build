@@ -49,7 +49,7 @@ function addContent($content_data)
 
         # Insert into DB (tbl_employees)
         $insert_content_query = 'INSERT INTO tbl_employees(employee_name, employee_position, employee_email, employee_avatar)';
-        $insert_content_query .= ' VALUES(:name, :position, :email, :avatar)';
+        $insert_content_query .= ' VALUES( :avatar, :name, :position, :email)';
         $insert_content       = $pdo->prepare($insert_content_query);
         $insert_content_result = $insert_content->execute(
             array( 
