@@ -116,11 +116,11 @@ function editContent($content){
         $pdo = Database::getInstance()->getConnection();
 
         $update_content_query = 
-        'UPDATE tbl_employees SET employee_name=:name, employee_position=:position, employee_email=:email  WHERE employee_id = :id';
+        'UPDATE tbl_employees SET employee_name=:name, employee_position=:position, employee_email=:email WHERE employee_id = :id';
 
         $update_content_set = $pdo->prepare($update_content_query);
         $placeholders = array(
-            // ":avatar"    =>$content["avatar"],
+            // ":avatar"   => $generated_filename,
             ":name"    =>$content["name"],
             ":position" =>$content["position"],
             ":email"    =>$content["email"],
@@ -137,8 +137,7 @@ function editContent($content){
         }else{
             return 'Update did not go through.';
         }
-
-    //         redirect_to('index.php');
+            // redirect_to('index.php');
     // } catch (Exception $e) {
     //         $err = $e->getMessage();
     //         return $err;
