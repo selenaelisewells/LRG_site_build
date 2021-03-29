@@ -64,7 +64,7 @@ include  './templates/head.php';?>
     </section>
 
     <section class="ctaBanner">
-        <h2>Are you looking to sign your kids up to become a referee?</h2>
+        <h2>Are your kids interested in becoming a referee?</h2>
         <div class="button"><a href="./jr-officials.php">Learn More</a></div> 
     </section>
 

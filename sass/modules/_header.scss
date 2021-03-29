@@ -27,10 +27,9 @@
                 //background: whitesmoke;
                 //background-blend-mode: color-dodge;
             }
-            // img:hover {
-            //     -webkit-filter: none;
-            //     filter: none;
-            // }
+            img:hover {
+                -webkit-filter: contrast(100);
+            }
         }
     }
 }
@@ -56,7 +55,7 @@
         display: none;
         color: $main-black;
         height: 100%;
-        @media(min-width: 770px) {
+        @media(min-width: 900px) {
             display: flex;
         }
         .navItem {
@@ -100,7 +99,11 @@
     &:focus {
         outline: none;
     }
-    @media(min-width: 770px) {
+    @media(min-width: 900px) {
         display: none;
     }
+}
+
+.active {
+    color: $main-red;
 }

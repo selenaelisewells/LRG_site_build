@@ -1,0 +1,48 @@
+#LevelSystem {
+    .text {
+        margin: 0 auto;
+        max-width: $max-page-width-lg;
+    }
+}
+
+.levelInfographic {
+    display: flex;
+    flex-direction: column;
+    max-width: $max-page-width-lg;
+    margin: 50px auto;
+    @media (min-width: 1000px) {
+        flex-direction: row;
+    }
+}
+
+.step {
+    margin: 5px;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid $main-red;
+    border-radius: 6px;
+    @media (min-width: 1000px) {
+        max-width: 200px;
+        flex-direction: column;
+    }
+    //background-color: #32323232;
+    .stepTitle {
+        @include tagline;
+        text-transform: uppercase;
+        font-family: 'Gotham-Black';
+    }
+    img {
+        width: 95px;
+        height: 110px;
+    }
+    .text {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 20px 0;
+        // text-align: center;
+    }
+}

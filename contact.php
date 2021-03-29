@@ -13,7 +13,7 @@ include './templates/header.php';
         <div class="imageBanner" style="background-image: url(./images/HEADER_05_CONTACT.jpg)">
             <div class="titleWrap"><h2 class="miniHeaderTitle">Contact</h2></div>
         </div>
-        <h3 class="miniHeaderTagline">An orangization of more than 200 hockey referees proudly serving london and surrounding areas</h3>        
+        <h3 class="miniHeaderTagline">we would love to hear from you</h3>        
 </section>
 
 
