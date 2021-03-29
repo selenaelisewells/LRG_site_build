@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Mar 28, 2021 at 05:30 PM
+-- Generation Time: Mar 29, 2021 at 07:05 PM
 -- Server version: 10.3.27-MariaDB-1:10.3.27+maria~focal
 -- PHP Version: 7.4.11
 
@@ -32,7 +32,7 @@ CREATE TABLE `tbl_employees` (
   `employee_name` varchar(50) CHARACTER SET utf8 NOT NULL,
   `employee_position` varchar(100) CHARACTER SET utf8 NOT NULL,
   `employee_email` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `employee_avatar` varchar(30) CHARACTER SET utf8 NOT NULL
+  `employee_avatar` varchar(50) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -40,12 +40,13 @@ CREATE TABLE `tbl_employees` (
 --
 
 INSERT INTO `tbl_employees` (`employee_id`, `employee_name`, `employee_position`, `employee_email`, `employee_avatar`) VALUES
-(1, 'Josh Ackworth', 'President ', 'president@londonrefereesgroup.com', ''),
+(1, 'Harry Potter', 'Mug', 'Harry@londonrefereesgroup.com', ''),
 (2, 'Joe Masse', 'VP', 'vp@londonrefereesgroup.com', ''),
-(3, 'Bobby Wright', 'Referee In Chief', 'ric@londonrefereesgroup.com', ''),
+(3, 'Bobby Wright', 'Cook', 'ric@londonrefereesgroup.com', ''),
 (4, 'Mark Lemieux', 'Secretary', 'secretary@londonrefereesgroup.com', ''),
 (5, 'Rob Neable', 'Treasurer', 'treasurer@londonrefereesgroup.com', ''),
-(13, 'dcea3f6f89441038517f494f4102942e.jpg', 'Elena Chechulina', 'Grand Master', 'chechulina.e@yahoo.com');
+(20, 'Elena Chechulina344e', 'Grand Master ererr', 'chechulina.e@yahoo.com', '7e92c51ea486dd88282f29ec42600d38.jpg'),
+(21, 'RON', 'ROla', 'chechulina.e@yahoo.com', '46a5be77cf6fe28b0430847195a61574.jpg');
 
 -- --------------------------------------------------------
 
@@ -123,24 +124,25 @@ INSERT INTO `tbl_sections` (`ID`, `title`, `body`, `image`, `page_id`, `tagline`
 CREATE TABLE `tbl_user` (
   `user_id` mediumint(8) UNSIGNED NOT NULL,
   `user_fname` varchar(30) NOT NULL,
+  `user_lname` varchar(30) NOT NULL,
   `user_name` varchar(30) NOT NULL,
   `user_pass` varchar(100) NOT NULL,
   `user_email` varchar(50) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_level` varchar(2) NOT NULL DEFAULT '0',
-  `user_lname` varchar(30) NOT NULL
+  `user_level` varchar(2) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_level`, `user_lname`) VALUES
-(1, 'Admin', 'Admin', '$2y$10$BzOPT4tkL1qIPuI/Tby8xepaOETyaAFiUUlhlJt1PZDyBjLk4xQWm', 'admin@lrg.ca', '2021-03-28 14:59:28', '172.26.0.1', '1', 'Admin'),
-(2, 'Test', 'Test', '$2y$10$wna42cBvBOmDES5td07osOT85bZe.x9.4DQD2mQ5wYBsJvRf77962', 'test@test.ca', '2021-02-25 03:44:11', '172.28.0.1', '0', 'Test'),
-(3, 'Elena', 'Lena', '$2y$10$.LL/xtaKJYylwPUpCgcFC.GCG6xQ843.VM6WRxkmYwAQj.A/wZbjS', 'chechulina.e@yahoo.com', '2021-03-25 19:33:31', '172.26.0.1', '0', 'Chechulina'),
-(4, 'Bob', 'bob', '$2y$10$UezFezwcf9rGJ34lPD2lb.uwXT7mc094aGq3Uzj8Cb7P9tPjbGGb.', 'bob@test.ca', '2021-03-28 14:57:16', '172.26.0.1', '0', 'Bobov');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_lname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_level`) VALUES
+(1, 'Admin', 'Admin', 'admin', '$2y$10$nSfb1VJgAoa0B0RjnMcv4.7FNObHT2k9OuMJ8AfGdmCM8aXiJwSiK', 'admin@lrg.ca', '2021-03-29 17:26:02', '172.28.0.1', '1'),
+(2, 'Test', 'Test', 'Test', '$2y$10$vD6ftJbvKgeUfzvEoHqXreiR7bWb3u8OnXQmYIx3uzjaeiugdFVOG', 'test@test.ca', '2021-02-25 03:44:11', '172.28.0.1', '0'),
+(3, 'Elena', 'Chechulina', 'Lena', '$2y$10$.LL/xtaKJYylwPUpCgcFC.GCG6xQ843.VM6WRxkmYwAQj.A/wZbjS', 'chechulina.e@yahoo.com', '2021-03-25 19:33:31', '172.26.0.1', '0'),
+(4, 'Bob', 'Bobov', 'bob', '$2y$10$UezFezwcf9rGJ34lPD2lb.uwXT7mc094aGq3Uzj8Cb7P9tPjbGGb.', 'bob@test.ca', '2021-03-29 17:24:29', '172.28.0.1', '0'),
+(7, 'Elena', 'Chechulina', 'guest_test', '$2y$10$M6kWKQ05zOdYVcxyGAkVPuZgIjCgZOhtL.Wmgz0EfyWt0DO.Fuc72', 'chechulina.e@yahoo.com', '2021-03-29 16:37:43', 'no', '0');
 
 --
 -- Indexes for dumped tables
@@ -178,7 +180,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_employees`
 --
 ALTER TABLE `tbl_employees`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_pages`
@@ -196,7 +198,7 @@ ALTER TABLE `tbl_sections`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

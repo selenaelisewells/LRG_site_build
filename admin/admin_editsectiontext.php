@@ -1,25 +1,25 @@
 <?php
 require_once '../load.php';
 confirm_logged_in();
-
-// ini_set('display_errors', 1);
-$all_sections = getAllSectionsForCMS();
-$id = $_SESSION['ID'];
+$all_sectiontexts = getAllSectionTexts();
+$id           = $_SESSION['ID'];
 
 
+if(isset($_GET['ID'])) {
+    $id = $_GET['ID'];
+}
 
-$current_section= getSingleSectionForCMS($id);
+$current_sectiontext = getSingleSectionText($id);
 
-if (empty($current_section)) {
-    $message = 'Failed to get section text info!';
+if (empty($current_sectiontext)) {
+    $message = 'Failed to get sextiontext info!';
 }
 
 if (isset($_POST['submit'])) {
     $data = array(
         'title'      => trim($_POST['title']),
-        'body'   => trim($_POST['body']),
-        'ID'     => trim($_POST['current_section_id'])
-        
+        'body'   => trim($_POST['body']),        
+        'id'         => trim($_POST['current_ID'])
     );
 
     $message = editSectionText($data);
@@ -32,37 +32,38 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Body Text</title>
+    <title>Edit Section Text</title>
 </head>
 <body>
-    <h2>Edit Section Body Text</h2>
+    <h2>Edit Section Text</h2>
     <?php echo !empty($message) ? $message : ''; ?>
-
+    
         <form action="admin_editsectiontext.php" method="get">
             <label for="ID">Selected Section</label>
             <select name="ID" id="ID">
-                <?php foreach ($all_sections as $section): ?>
-                    <option value="<?php echo $section["ID"] ?>" <?php echo $section["ID"] === $id ?"selected":"" ?>>
-                        <?php echo $section["section_id"] ?>
+                <?php foreach ($all_sectiontexts as $sectiontext): ?>
+                    <option value="<?php echo $sectiontext["ID"] ?>" <?php echo $sectiontext["ID"] === $id ?"selected":"" ?>>
+                        <?php echo $sectiontext["section_id"] ?>
                     </option>
                 <?php endforeach ?>        
             </select>
             <button type="submit" name="submit">Select Section</button>
         </form>  
         <hr>
-    
+   
 
-    <?php if (!empty($current_section)): ?>
-    <form action="admin_editsections.php" method="post">
-        <?php while ($section_info = $current_section->fetch(PDO::FETCH_ASSOC)): ?>
-            <input style="display: none;" type="text" id="current_section_id" name="current_section_id" value="<?php echo $id?>">
-            <label for="title">Title</label>
-            <input id="title" type="text" name="title" value="<?php echo $section_info['title']; ?>"><br><br>
+    <?php if (!empty($current_sectiontext)): ?>
+    <form action="admin_editsectiontext.php" method="post">
+        <?php while ($sectiontext_info = $current_sectiontext->fetch(PDO::FETCH_ASSOC)): ?>
+            <input style="display: none;" type="text" id="current_ID" name="current_ID" value="<?php echo $id?>">
+            
+            <label for="title">Title:</label><br>
+            <input id="title" type="text" name="title" value="<?php echo $sectiontext_info['title']; ?>"><br><br>
 
-            <label for="body">Body Text</label>
-            <textarea id="body" type="text" name="body" value="<?php echo $section_info['body']; ?>"></textarea><<br><br>
-
-            <button type="submit" name="submit">Update Body Text</button>
+            <label for="body">Body:</label><br>
+            <textarea id="body" name="body" value="<?php echo $sectiontext_info['body']; ?>"></textarea><br><br>
+                      
+            <button type="submit" name="submit">Update Section</button>
         <?php endwhile;?>
     </form>
     <?php endif;?>

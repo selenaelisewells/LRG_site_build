@@ -46,26 +46,30 @@ if (isset($_POST['submit'])) {
         <input id="image" type="file" name="image" value=""><br><br>
 
         <label for="page_id">Page ID:</label><br>
-        <input id="page_id" type="text" name="page_id" value=""><br><br>
+        <input id="page_id" type="number" name="page_id" value=""><br><br>
 
         <label for="tagline">Tagline:</label><br>
         <textarea id="tagline"  name="tagline" value=""></textarea><br><br>
 
-        <label for="alt_text">All text:</label><br>
+        <label for="alt_text">Alt text:</label><br>
         <input id="alt_text" name="alt_text" value=""><br><br>
 
         <label for="component_type">Component type:</label><br>
-        <input id="component_type" type="text" name="component_type" value="">
-        <h4>*choose black or white</h4>
+            <select id="component_type" name="component_type">
+                <option value="white">white</option>
+                <option value="black">black</option>
+            </select><br><br>
+      
+        
 
         <label for="section_id">Section Name:</label><br>
         <input id="section_id" type="text" name="section_id" value=""><br><br>
 
         <label for="section_order">Section order:</label><br>
-        <input id="section_order" type="text" name="section_order" value=""><br><br>
+        <input id="section_order" type="number" name="section_order" value=""><br><br>
 
         <label for="is_overview">is overview:</label><br>
-        <input id="is_overview" type="text" name="is_overview" value=""><br><br>
+        <input id="is_overview" type="checkbox" name="is_overview" value=""><br><br>
         
         <button type="submit" name="submit">Add Section</button>
     </form>

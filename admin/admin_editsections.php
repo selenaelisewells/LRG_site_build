@@ -3,10 +3,14 @@ require_once '../load.php';
 confirm_logged_in();
 
 // ini_set('display_errors', 1);
-$all_sections = getAllSections();
-$id = $_SESSION['ID'];
+$all_sections = getAllSectionsForCMS();
+$id = $_SESSION['section_id'];
 
-$current_section= getSingleSection($id);
+if(isset($_GET['section_id'])) {
+    $id = $_GET['section_id'];
+}
+
+$current_section= getSingleSectionForCMS($id);
 
 if (empty($current_section)) {
     $message = 'Failed to get section info!';
@@ -16,7 +20,7 @@ if (isset($_POST['submit'])) {
     $data = array(
         'title'=>trim($_POST['title']),
         'body'=> trim($_POST['body']),
-        'image'=> trim($_FILES['image']),
+        // 'image'=> trim($_FILES['image']),
         'page_id'=> trim($_POST['page_id']),
         'tagline'=> trim($_POST['tagline']),
         'alt_text'=> trim($_POST['alt_text']),
@@ -69,21 +73,24 @@ if (isset($_POST['submit'])) {
             <label for="body">Body:</label><br>
             <textarea id="body" name="body" value="<?php echo $section_info['body']; ?>"></textarea><br><br>
 
-            <label for="image">Image:</label><br>
-            <input id="image" type="file" name="image" value=""><br><br>
+            <!-- <label for="image">Image:</label><br>
+            <input id="image" type="file" name="image" value=""><br><br> -->
 
             <label for="page_id">Page ID:</label><br>
-            <input id="page_id" type="text" name="page_id" value="<?php echo $section_info['page_id']; ?>"><br><br>
+            <input id="page_id" type="number" name="page_id" value="<?php echo $section_info['page_id']; ?>"><br><br>
 
             <label for="tagline">Tagline:</label><br>
             <textarea id="tagline"  name="tagline" value="<?php echo $section_info['tagline']; ?>"></textarea><br><br>
 
             <label for="alt_text">All text:</label><br>
-            <textarea id="alt_text" name="alt_text" value="<?php echo $section_info['all_text']; ?>"></textarea><br><br>
+            <input id="alt_text" name="alt_text" value="<?php echo $section_info['all_text']; ?>"><br><br>
 
             <label for="component_type">Component type:</label><br>
-            <input id="component_type" type="text" name="component_type" value="<?php echo $section_info['component_type']; ?>">
-           
+            <select id="component_type" name="component_type">
+                <option value="white">white</option>
+                <option value="black">black</option>
+            </select><br><br>
+      
             <label for="button_text">Button text:</label><br>
             <input id="button_text" type="text" name="button_text" value="<?php echo $section_info['button_text']; ?>"><br><br>
 
@@ -91,10 +98,10 @@ if (isset($_POST['submit'])) {
             <input id="section_id" type="text" name="section_id" value="<?php echo $section_info['section_id']; ?>"><br><br>
 
             <label for="section_order">Section order:</label><br>
-            <input id="section_order" type="text" name="section_order" value="<?php echo $section_info['section_order']; ?>"><br><br>
+            <input id="section_order" type="number" name="section_order" value="<?php echo $section_info['section_order']; ?>"><br><br>
 
             <label for="is_overview">is overview:</label><br>
-            <input id="is_overview" type="text" name="is_overview" value="<?php echo $section_info['is_overview']; ?>"><br><br>
+            <input id="is_overview" type="checkbox" name="is_overview" value="<?php echo $section_info['is_overview']; ?>"><br><br>
             
             <button type="submit" name="submit">Update Section</button>
 
