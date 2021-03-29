@@ -1,7 +1,12 @@
 #LevelSystem {
-    .text {
-        margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    .levelText {
+        align-self: center;
         max-width: $max-page-width-lg;
+        @include global-margin;
+        padding-bottom: 50px;
     }
 }
 
@@ -9,9 +14,10 @@
     display: flex;
     flex-direction: column;
     max-width: $max-page-width-lg;
-    margin: 50px auto;
+    @include global-margin;
     @media (min-width: 1000px) {
         flex-direction: row;
+        margin: 0 auto 50px auto;
     }
 }
 
@@ -21,7 +27,7 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     border: 2px solid $main-red;
     border-radius: 6px;
@@ -43,6 +49,6 @@
         font-size: 16px;
         line-height: 22px;
         padding: 20px 0;
-        // text-align: center;
+        text-align: center;
     }
 }

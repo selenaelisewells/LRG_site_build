@@ -20,7 +20,7 @@
                The level system
             </h2>
         </div>
-        <p class="text">Hockey referees adhere to a tiered system that has six levels in total where each increment aims to be a proper representation of an official’s experience. This system is the foundation for the training and development of officials across Canada. Hockey Canada has categorized the hockey played in Canada into four basic streams, each with different priorities. They include:
+        <p class="text levelText">Hockey referees adhere to a tiered system that has six levels in total where each increment aims to be a proper representation of an official’s experience. This system is the foundation for the training and development of officials across Canada. Hockey Canada has categorized the hockey played in Canada into four basic streams, each with different priorities. They include:
         </p>
         <div class="levelInfographic">
             <div class="step">
@@ -29,11 +29,13 @@
                 <p class="text">To prepare a young or new official to officiate minor hockey.</p>
             </div>
             <div class="step">
+                <div class="stepTitleWrap"></div>
                 <img src="./images/LEVEL_2.svg" alt="level 2 hockey">
                 <h2 class="stepTitle">Level II</h2>
                 <p class="text">To further enhance the training and skills of minor hockey officials.</p>
             </div>
             <div class="step">
+            <div class="stepTitleWrap"></div>
                 <img src="./images/LEVEL_3.svg" alt="level 3 hockey">
                 <h2 class="stepTitle">Level III</h2>
                 <p class="text">To prepare officials capable of refereeing minor hockey playoffs (league and regional) and women’s national championships, or being a linesperson in Junior B, Junior C, Junior D, Senior and U15 or U18 regional championships</p>

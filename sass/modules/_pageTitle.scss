@@ -33,7 +33,6 @@
         font-family: $page-title;
         align-self: flex-end;
         transform: translateY(8px);
-        @include global-margin;
         @media(min-width: 700px) {
             font-size: 65px;
             transform: translateY(10px);
