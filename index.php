@@ -1,50 +1,5 @@
 <?php
-$who_we_are_section = [
-    'id' => 25,
-    'title' => 'who we are',
-    'body' => '  They are often described as the third team on the ice.The basic role of the on-ice officials can be broken down into two simple words – safe and fair. For a referee to view and officiate the game with these two words in mind, they should be able to call a game that is acceptable to all of the participants.',
-    'image' => 'referee.jpg',
-    'tagline' => 'Officials play a vital role in the game.',
-    'alt' => 'My awesome image'
-];
-$the_referee_section = [
-    'id' => 25,
-    'title' => 'the referee',
-    'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-    minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
-    molestie consequat, praesent luptatum ut laoreet dolore magna aliquam erat
-    volutpatzzril delenit augue duis dolore te feugait nulla facilisi.
-    Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
-    veniam, quis tincidunt ut nostrud consequat.
-    To know more about us and what we do, you can visit our About section',
-    'image' => 'placeholder.jpg',
-    'tagline' => 'INSERT SUPER CATCHY PHRASE',
-    'alt' => 'My awesome image'
-];
-$our_services_section = [
-    'id' => 25,
-    'title' => 'TITLE PLACEHOLDER',
-    'body' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-    minim veniam, quis nostrud consequat. Duis autem dolor in hendrerit velit esse
-    molestie consequat, praesent luptatum ut laoreet dolore magna aliquam erat
-    volutpatzzril delenit augue duis dolore te feugait nulla facilisi.
-    Ut wisi enim aderat volutpat. Ut wisi enim consectetuer adipiscing elit, ad minim
-    veniam, quis tincidunt ut nostrud consequat.
-    To know more about us and what we do, you can visit our About section',
-    'image' => 'placeholder.jpg',
-    'tagline' => 'INSERT SUPER CATCHY PHRASE',
-    'alt' => 'My awesome image'
-];
-$referee_camp_section = [
-    'id' => 25,
-    'title' => 'TITLE PLACEHOLDER',
-    'body' => 'Officials play a vital role in the game, they are often described as the third team on the ice. The basic role of the on-ice officials can be broken down into two simple words – safe and fair. For a referee to view and officiate the game with these two words in mind, they should be able to call a game that is acceptable to all of the participants.',
-    'image' => 'placeholder.jpg',
-    'tagline' => 'INSERT SUPER CATCHY PHRASE',
-    'alt' => 'My awesome image'
-];
+
  
  
 $title = "London Referees Group";
@@ -65,50 +20,7 @@ include  './templates/head.php';?>
         </div>
     </section>
 
-
-        <section id="whoWeAre" class="whiteBanner bannerWrapper">
-            <div class="banner">
-                <h2 class="bannerTitle">
-                    <?php echo $who_we_are_section['title']; ?>
-                </h2>
-            </div>
-            <div class="sectionContent">
-                <div class="sectionText">
-                    <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
-                    <p class="text"><?php echo $who_we_are_section['body']; ?></p>
-                </div>
-                
-                <div class="Image">
-                    <img src="./images/<?php echo $who_we_are_section['image']; ?>" 
-                    alt="<?php echo $who_we_are_section['alt'] ?? $who_we_are_section['title']; ?>">
-                </div>
-                <button class="button">Learn More</button>
-                
-            </div>
-        </section>
-        
-        <section id="theReferee" class="blackBanner bannerWrapper">
-            <div class="banner blackBanner">
-                <h2 class="bannerTitle"> 
-                    <?php echo $the_referee_section['title']; ?>
-                </h2>
-            </div>
-            <div class="sectionContent">
-            <div class="Image">
-                <img src="./images/<?php echo $the_referee_section['image']; ?>" 
-                    alt="<?php echo $the_referee_section['alt'] ?? $the_referee_section['title']; ?>">
-            </div>
-       
-            <div class="sectionText">
-                <h3 class="tagline"><?php echo $who_we_are_section['tagline']; ?></h3>
-                <p class="text">
-                    <?php echo $the_referee_section['body'];?>
-                </p>
-            </div>
-            <button class="button">Learn More</button>  
-         
-        </div>
-    </section>
+    <sections-container></sections-container>
 
     <section id="ourServices" class="whiteBanner">
         <div class="banner">
@@ -146,14 +58,14 @@ include  './templates/head.php';?>
                 Whether your goal is to learn the basics to get you started, move up to the Pee Wee level, JR. hockey or go all the way up to the professional ranks, our camps are designed to provide you that exposure and the necessary tools to improve your officiating skills.
 
                 </p>
-                <button class="button">Sign Up Today</button> 
+                <div class="button"><a href="https://dkrefcamps.com/">Sign up today</a></div> 
             </div>
         </div>
     </section>
 
     <section class="ctaBanner">
-        <h2>Are you looking to sign your kids up to become a referee?</h2>
-        <button class="button">Learn More</button> 
+        <h2>Are your kids interested in becoming a referee?</h2>
+        <div class="button"><a href="./jr-officials.php">Learn More</a></div> 
     </section>
 
     <section id="partners">

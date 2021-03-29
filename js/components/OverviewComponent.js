@@ -38,17 +38,18 @@ const OverviewComponent = {
                     {{overview.title}}
                 </h2>
             </div>
+           
+            <div class="sectionText">                
+                <p class="text">
+                    {{overview.body}}
+                </p>
+            </div>
             
-                <div class="sectionText">                
-                    <p class="text">
-                        {{overview.body}}
-                    </p>
-                </div>
-                
-                <div class="Image">
-                    <img :src='"./images/" + overview.image' 
-                            :alt="overview.alt_text || overview.title">
-                </div>               
+            <div class="Image">
+                <img :src='"./images/" + overview.image' 
+                        :alt="overview.alt_text || overview.title">
+            </div>  
+                           
                 
           
         </section>       

@@ -1,0 +1,54 @@
+#LevelSystem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    .levelText {
+        align-self: center;
+        max-width: $max-page-width-lg;
+        @include global-margin;
+        padding-bottom: 50px;
+    }
+}
+
+.levelInfographic {
+    display: flex;
+    flex-direction: column;
+    max-width: $max-page-width-lg;
+    @include global-margin;
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        margin: 0 auto 50px auto;
+    }
+}
+
+.step {
+    margin: 5px;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid $main-red;
+    border-radius: 6px;
+    @media (min-width: 1000px) {
+        max-width: 200px;
+        flex-direction: column;
+    }
+    //background-color: #32323232;
+    .stepTitle {
+        @include tagline;
+        text-transform: uppercase;
+        font-family: 'Gotham-Black';
+    }
+    img {
+        width: 95px;
+        height: 110px;
+    }
+    .text {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
