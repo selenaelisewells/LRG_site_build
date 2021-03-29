@@ -1,6 +1,6 @@
 <?php
 
-function getSingleSection($id)
+function getSingleSectionForCMS($id)
 {
     $pdo = Database::getInstance()->getConnection();
 
@@ -19,7 +19,7 @@ function getSingleSection($id)
     }
 }
 
-function  getAllSections()
+function  getAllSectionsForCMS()
 {
     $pdo = Database::getInstance()->getConnection();
 
@@ -63,8 +63,8 @@ function addSection($section_data)
         }
 
         # Insert into DB (tbl_employees)
-        $insert_section_query = 'INSERT INTO tbl_sections(title, body, image, page_id, tagline, all_text, component_type, section_id, section_order, is_overview)';
-        $insert_section_query .= ' VALUES(:title, :body, :image, :page_id, :tagline, :all_text, :component_type, :section_id, :section_order, :is_overview)';
+        $insert_section_query = 'INSERT INTO tbl_sections(title, body, image, page_id, tagline, alt_text, component_type, section_id, section_order, is_overview)';
+        $insert_section_query .= ' VALUES(:title, :body, :image, :page_id, :tagline, :alt_text, :component_type, :section_id, :section_order, :is_overview)';
         $insert_section       = $pdo->prepare($insert_section_query);
         $insert_section_result = $insert_section->execute(
             array( 
@@ -73,7 +73,7 @@ function addSection($section_data)
                 ':image'     => $generated_filename,
                 ':page_id'    => $section_data['page_id'],
                 ':tagline'    => $section_data['tagline'],
-                ':all_text'    => $section_data['all_text'],
+                ':alt_text'    => $section_data['alt_text'],
                 ':component_type'    => $section_data['component_type'],
                 ':section_id'    => $section_data['section_id'],
                 ':section_order'    => $section_data['section_order'],
@@ -142,7 +142,7 @@ function editSection($section)
     $pdo = Database::getInstance()->getConnection(); 
 
     $update_section_query = 
-        'UPDATE tbl_sections SET title=:title, boby=:body, image=:image, page_id=:page_id, tagline=:tagline, al_text=:all_text, component_type=:component_type, button_text=:button_text, section_id=:section_id, section_order=:section_order, is_overview=:is_overview WHERE ID = :ID';
+        'UPDATE tbl_sections SET title=:title, boby=:body, image=:image, page_id=:page_id, tagline=:tagline, alt_text=:alt_text, component_type=:component_type, button_text=:button_text, section_id=:section_id, section_order=:section_order, is_overview=:is_overview WHERE ID = :ID';
     
     $update_section_set = $pdo->prepare($update_section_query);
     $placeholders = array(
@@ -151,7 +151,7 @@ function editSection($section)
         ':image'=> $section['image'],
         ':page_id'=> $section['page_id'],
         ':tagline'=> $section['tagline'],
-        ':all_text'=> $section['all_text'],
+        ':alt_text'=> $section['alt_text'],
         ':component_type'=> $section['component_type'],
         ':button_text'=> $section['button_text'],
         ':section_id'=> $section['section_id'],

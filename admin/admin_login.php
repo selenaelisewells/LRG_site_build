@@ -32,16 +32,17 @@
 </head>
 <body>
     <h2>Please, enter your username and password.</h2>
-<?php echo !empty($message)?$message:'';?>
-<form action="admin_login.php" method="post">
-<label for="username">Username</label>
-<input id="username" type="text" name="username" value="">
-<br><br>
-<label for="password">Password:</label>
-<input id="password" type="password" name="password">
-<br><br>
-<button type="submit" name="submit" >LOGIN</button>
-</form>
+    <?php echo !empty($message)?$message:'';?>
+  
+    <form action="admin_login.php" method="post">
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username" value="">
+    <br><br>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password">
+    <br><br>
+    <button type="submit" name="submit" >LOGIN</button>
+    </form>
     
 </body>
 </html>

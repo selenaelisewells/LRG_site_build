@@ -51,7 +51,9 @@ function createUser($user_data){
  
 
     if($create_user_result){
-        
+
+        sendRegistrationEmail($user_data["username"], $random_password, $user_data["email"]);
+
         var_dump($random_password);
         die;
         redirect_to('index.php');
@@ -59,10 +61,6 @@ function createUser($user_data){
         return 'The user did not go through!!';
     }
 }
-
-
-
-
 
 function createRandomPassword(){
     $characterOptions = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -83,7 +81,19 @@ function createEncryptedPassword($password){
 }
 
 
+function sendRegistrationEmail($username, $password, $email){
+   
+   $email_subject = 'New User Credentials for '. $username;
+   $email_message = sprintf('Username: %s, Password: %s', $username, $password);
 
+   $email_headers = array(
+       'From' =>'donotreply@lrg.ca',
+       'Reply-To'=> $email
+   );
+
+  return mail($email,$email_subject,$email_message,$email_headers);  
+
+}
 
 function getSingleUser($id)
 {

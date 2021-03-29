@@ -14,7 +14,7 @@ if(isset($_GET['ID'])){
 }
 
 
-$sections = getAllSections();
+$sections = getAllSectionsForCMS();
 
 if(!$sections){
     $message = 'Failed to get section list';

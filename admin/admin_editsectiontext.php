@@ -3,12 +3,12 @@ require_once '../load.php';
 confirm_logged_in();
 
 // ini_set('display_errors', 1);
-$all_sections = getAllSections();
+$all_sections = getAllSectionsForCMS();
 $id = $_SESSION['ID'];
 
 
 
-$current_section= getSingleSection($id);
+$current_section= getSingleSectionForCMS($id);
 
 if (empty($current_section)) {
     $message = 'Failed to get section text info!';

@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
         'image'=>$_FILES['image'],
         'page_id'=>$_POST['page_id'],
         'tagline'=>$_POST['tagline'],
-        'all_text'=>$_POST['all_text'],
+        'alt_text'=>$_POST['alt_text'],
         'component_type'=>$_POST['component_type'],
         'section_id'=>$_POST['section_id'],
         'section_order'=>$_POST['section_order'],
@@ -51,8 +51,8 @@ if (isset($_POST['submit'])) {
         <label for="tagline">Tagline:</label><br>
         <textarea id="tagline"  name="tagline" value=""></textarea><br><br>
 
-        <label for="all_text">All text:</label><br>
-        <textarea id="all_text" name="all_text" value=""></textarea><br><br>
+        <label for="alt_text">All text:</label><br>
+        <input id="alt_text" name="alt_text" value=""><br><br>
 
         <label for="component_type">Component type:</label><br>
         <input id="component_type" type="text" name="component_type" value="">

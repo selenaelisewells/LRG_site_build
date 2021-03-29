@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         'image'=> trim($_FILES['image']),
         'page_id'=> trim($_POST['page_id']),
         'tagline'=> trim($_POST['tagline']),
-        'all_text'=> trim($_POST['all_text']),
+        'alt_text'=> trim($_POST['alt_text']),
         'component_type'=> trim($_POST['component_type']),
         'section_id'=> trim($_POST['section_id']),
         'section_order'=> trim($_POST['section_order']),
@@ -78,8 +78,8 @@ if (isset($_POST['submit'])) {
             <label for="tagline">Tagline:</label><br>
             <textarea id="tagline"  name="tagline" value="<?php echo $section_info['tagline']; ?>"></textarea><br><br>
 
-            <label for="all_text">All text:</label><br>
-            <textarea id="all_text" name="all_text" value="<?php echo $section_info['all_text']; ?>"></textarea><br><br>
+            <label for="alt_text">All text:</label><br>
+            <textarea id="alt_text" name="alt_text" value="<?php echo $section_info['all_text']; ?>"></textarea><br><br>
 
             <label for="component_type">Component type:</label><br>
             <input id="component_type" type="text" name="component_type" value="<?php echo $section_info['component_type']; ?>">
