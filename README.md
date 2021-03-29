@@ -1,3 +1,5 @@
+![LRG Logo](http://sgs-design.com/temp/imgs/LOGO_V2.svg)
+
 # London Referees Group - Site Redesign
 
 #### Front-End Development - Selena Wells
