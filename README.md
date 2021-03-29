@@ -20,6 +20,12 @@ This repo is synced to Heroku for testing purposes, you can see what that looks 
 
 [HEROKU TEST SITE](https://london-referees-group.herokuapp.com/)
 
+## Prototypes
+
+WEB: https://xd.adobe.com/view/d222f6ef-6349-4aa3-b077-e26b7fd315dd-8771/
+
+MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
+
 
 ## Useful Links
 ### Project Planning
@@ -45,13 +51,6 @@ This repo is synced to Heroku for testing purposes, you can see what that looks 
 [Meeting NOTES Mar 27](https://docs.google.com/document/d/1s_mpJRsvzPDaZi3OHgc1gmksHZTiwUYVd-D_yoA4Nwo/edit)
 
 [Meeting NOTES Mar 28](https://docs.google.com/document/d/1iwwV4d_9SFBiJLaoyA-ozpG0OhPksSNJ-Aat3HZTKPs/edit)
-
-
-## Prototypes
-
-WEB: https://xd.adobe.com/view/d222f6ef-6349-4aa3-b077-e26b7fd315dd-8771/
-
-MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
 
 
 ## Additional Resources:
