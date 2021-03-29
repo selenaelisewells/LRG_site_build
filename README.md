@@ -8,14 +8,6 @@
 
 While we all had our set roles, this project was a collective collaboration of creativity and developement. 
 
-[Project Roadmap - Development](https://docs.google.com/document/d/1jKIRC5lcCswV4oYbWX_9gKDXRhS4yAtBTiNUOvjJfyc/edit?usp=sharing)
-
-[Marketing Plan - Development](https://docs.google.com/document/d/1mXgVSh-t-D2KV3_ycXga1dkLhaD8fwbzfEb9f9763lo/edit)
-
-[Site's Text Content - Development](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
-
-[Sorting Content for the Site](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
-
 
 ## Description
 A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
@@ -27,7 +19,17 @@ This repo is synced to Heroku for testing purposes, you can see what that looks 
 [HEROKU TEST SITE](https://london-referees-group.herokuapp.com/)
 
 
-## Meetings
+## Useful Links
+### Project Planning
+[Project Roadmap - Development](https://docs.google.com/document/d/1jKIRC5lcCswV4oYbWX_9gKDXRhS4yAtBTiNUOvjJfyc/edit?usp=sharing)
+
+[Marketing Plan - Development](https://docs.google.com/document/d/1mXgVSh-t-D2KV3_ycXga1dkLhaD8fwbzfEb9f9763lo/edit)
+
+[Site's Text Content - Development](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
+
+[Sorting Content for the Site](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
+
+### Group Meetings
 [Meeting NOTES Feb 17](https://docs.google.com/document/d/1ufjK0t2ib5CgUB48CiGjx5CjOTLOJMI6bJh7QMMoPdI/edit?usp=sharing)
 
 [Meeting NOTES Feb 22](https://docs.google.com/document/d/1JXk8sp-JowswwIr3EKPb8rQCac5NEShnfKaCwbxyoNg/edit)
@@ -37,6 +39,10 @@ This repo is synced to Heroku for testing purposes, you can see what that looks 
 [Meeting NOTES Mar 17](https://docs.google.com/document/d/1m77js28Qy9HIKKT3DTVqp3PPR91-zth3w0Xs9ywdmHM/edit)
 
 [Meeting NOTES Mar 22](https://docs.google.com/document/d/1o7dtYS9odcDAIB0CcF3NuML71CcB0ZxZHxojAxiwW-k/edit)
+
+[Meeting NOTES Mar 27](https://docs.google.com/document/d/1s_mpJRsvzPDaZi3OHgc1gmksHZTiwUYVd-D_yoA4Nwo/edit)
+
+[Meeting NOTES Mar 28](https://docs.google.com/document/d/1iwwV4d_9SFBiJLaoyA-ozpG0OhPksSNJ-Aat3HZTKPs/edit)
 
 
 ## Prototypes
