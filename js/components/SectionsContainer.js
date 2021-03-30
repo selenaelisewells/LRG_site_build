@@ -65,11 +65,11 @@ const SectionsContainer = {
         this.path = urlSegments[urlSegments.length - 1];
 
         // Get our sections (REPLACE WITH ACTUAL API ROUTE)---- This depends on Elena
-        // fetch(`/api/sections/${this.path}`)
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         this.sections = data;
-        //     });
+        fetch(`${urlSegments.slice(0, urlSegments.length - 1).join('/')}/api/read.php?path=${this.path}`)
+            .then(res => res.json())
+            .then(data => {
+                this.sections = data;
+            });
     },
     template: `
     <div>

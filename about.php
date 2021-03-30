@@ -11,12 +11,14 @@ $title = "About Us";?>
         <div class="imageBanner" style="background-image: url(./images/HEADER_01_ABOUT.jpg)">
             <div class="titleWrap"><h2 class="miniHeaderTitle">About Us</h2></div>
         </div>
-        <h3 class="miniHeaderTagline">An orangization of more than 250 hockey referees proudly serving london and surrounding areas</h3>        
+        <h3 class="miniHeaderTagline">An orangization of more than 200 hockey referees proudly serving london and surrounding areas</h3>        
     </section>
 
     <overview-component></overview-component>
 
+    <sections-container></sections-container>
 
+<!-- 
     <section id="history">
         <div class="banner">
             <h2 class="bannerTitle">
@@ -24,7 +26,7 @@ $title = "About Us";?>
             </h2>
         </div>
         <div class="historyInfographic"></div>
-    </section>
+    </section> -->
 
 
 </div>

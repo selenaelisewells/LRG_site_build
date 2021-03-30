@@ -19,11 +19,10 @@ const SectionComponent = {
                 </div>
         
                 <div class="sectionText">
-                    <!-- <h3 class="tagline">{{ section.tagline.toUpperCase() }}</h3> -->
-                    <p class="text">
-                        {{ section.body }}
-                    </p>
-                    <button class="button">{{ section.button_text }}</button>
+                    <h3 class="tagline">{{ section.tagline }}</h3>
+                    <p class="text" v-html="section.body"></p>                
+                   
+                    <div class="button"><a :href="section.button_link">{{section.button_text}}</a></div>
                 </div>
 
                 <div class="Image" v-if="section.component_type === 'white'">

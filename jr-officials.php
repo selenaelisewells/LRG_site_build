@@ -13,6 +13,14 @@
     </section>
     
     <overview-component></overview-component>
+       <!-- this will be skill building -->
+       <sections-container></sections-container>
+
+       <section class="ctaBanner">
+        <h2>Ready to join our ever growing roster of junior officials?</h2>
+        <div class="button"><a href="https://www.surveymonkey.com/r/3SZVJ7S">Sign Up Today</a></div> 
+    </section>
+
 
     <section id="LevelSystem">
         <div class="banner">
@@ -64,13 +72,8 @@ To prepare officials capable of refereeing at national championships and designa
         </div>
     </section>
     
-    <section class="ctaBanner">
-        <h2>Ready to sign up to become a Junior Referee?</h2>
-        <div class="button"><a href="https://www.surveymonkey.com/r/3SZVJ7S">Sign Up Today</a></div> 
-    </section>
-
-    <!-- this will be skill building -->
-    <sections-container></sections-container>
+    
+ 
 
  
 
