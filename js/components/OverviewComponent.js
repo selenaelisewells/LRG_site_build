@@ -25,12 +25,14 @@ const OverviewComponent = {
         this.path = urlSegments[urlSegments.length - 1];
 
         // Get our sections (REPLACE WITH ACTUAL API ROUTE)---- This depends on Elena
-        // fetch(`/api/sections/${this.path}`)
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         this.sections = data;
-        //     });
+        fetch(`${urlSegments.slice(0, urlSegments.length - 1).join('/')}/api/read.php?path=${this.path}&overview=true`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                this.overview = data[0];
+            });
     },
+
     template: `
         <section class="overViewWrap" :id="'overview-'+overview.section_id">
             <div class="banner">
@@ -40,16 +42,13 @@ const OverviewComponent = {
             </div>
            
             <div class="sectionText">                
-                <p class="text">
-                    {{overview.body}}
-                </p>
+            <p class="text" v-html="overview.body"></p> 
             </div>
             
             <div class="Image">
                 <img :src='"./images/" + overview.image' 
                         :alt="overview.alt_text || overview.title">
-            </div>  
-                           
+            </div>                          
                 
           
         </section>       

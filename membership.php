@@ -16,6 +16,10 @@ $title = "Membership";?>
 </section>
 
 <overview-component></overview-component>
+<section class="ctaBanner">
+        <h2>Interested in becoming a member of LRG? </h2>
+        <div class="button"><a href="https://www.surveymonkey.com/r/3SZVJ7S">apply today</a></div> 
+</section>
 
 <section id="structure">
     <div class="banner">

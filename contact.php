@@ -13,7 +13,11 @@ include './templates/header.php';
         <div class="imageBanner" style="background-image: url(./images/HEADER_05_CONTACT.jpg)">
             <div class="titleWrap"><h2 class="miniHeaderTitle">Contact</h2></div>
         </div>
-        <h3 class="miniHeaderTagline">we would love to hear from you</h3>        
+        <?php if(isset($_SESSION['contact_form_submitted']) && $_SESSION['contact_form_submitted']): ?>
+
+        <?php else: ?>
+        <h3 class="miniHeaderTagline">we would love to hear from you</h3> 
+        <?php endif; ?>       
 </section>
 
 
@@ -22,7 +26,11 @@ include './templates/header.php';
 <section class="contactFormWrap">
     <?php if(isset($_SESSION['contact_form_submitted']) && $_SESSION['contact_form_submitted']): ?> 
             <!-- HTML FOR THANK YOU GOES HERE -->
-         <h1>Thanks</h1>
+         <div class="contactSubmitted">
+             <img src="./images/Thanks.png" alt="">
+         <h1 class="submittedTitle">Thanks for Contacting LRG!</h1>
+         <p class="submittedText">We will get back to you soon.</p>
+         </div>
     <?php else: ?>
         <form  action="./includes/mail/send.php" method="POST" id="mail-form">
         
