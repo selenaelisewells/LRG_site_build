@@ -15,7 +15,7 @@ include  './templates/head.php';?>
             <div class="heroTextWrap">
                 <div class="heroTitle">Play it safe with LRG</div>
                 <div class="heroTagline">Looking for an organization to referee your hockey league?</div>
-                <div class="button"><a href="./hire.php">Hire Officials</a></div>
+               <a class="button" href="./hire.php">Hire Officials</a>
             </div>
         </div>
     </section>
@@ -62,14 +62,14 @@ include  './templates/head.php';?>
                 Whether your goal is to learn the basics to get you started, move up to the Pee Wee level, JR. hockey or go all the way up to the professional ranks, our camps are designed to provide you that exposure and the necessary tools to improve your officiating skills.
 
                 </p>
-                <div class="button"><a href="https://dkrefcamps.com/">Sign up today</a></div> 
+                <div><a class="button" href="https://dkrefcamps.com/">Sign up today</a></div> 
             </div>
         </div>
     </section>
 
     <section class="ctaBanner">
         <h2>Are your kids interested in becoming a referee?</h2>
-        <div class="button"><a href="./jr-officials.php">Learn More</a></div> 
+        <a class="button" href="./jr-officials.php">Learn More</a>
     </section>
 
     <section id="partners">

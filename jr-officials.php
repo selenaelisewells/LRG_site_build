@@ -18,7 +18,7 @@
 
        <section class="ctaBanner">
         <h2>Ready to join our ever growing roster of junior officials?</h2>
-        <div class="button"><a href="https://www.surveymonkey.com/r/3SZVJ7S">Sign Up Today</a></div> 
+        <div><a class="button" href="https://www.surveymonkey.com/r/3SZVJ7S">Sign Up Today</a></div> 
     </section>
 
 

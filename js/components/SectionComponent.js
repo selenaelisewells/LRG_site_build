@@ -22,7 +22,7 @@ const SectionComponent = {
                     <h3 class="tagline">{{ section.tagline }}</h3>
                     <p class="text" v-html="section.body"></p>                
                    
-                    <div class="button"><a :href="section.button_link">{{section.button_text}}</a></div>
+                    <a class="button" :href="section.button_link">{{section.button_text}}</a>
                 </div>
 
                 <div class="Image" v-if="section.component_type === 'white'">
