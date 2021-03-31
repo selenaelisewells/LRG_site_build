@@ -1,3 +1,68 @@
 .employeeStructureContainer {
+    margin: 0 auto;
+    max-width: $max-page-width-lg;
+    //justify-content: space-around;
     display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    font-family: $main-font;
+    color: $main-white;
+    box-sizing: border-box;
+    //background-color: purple;
+    padding: 0 34px;
+    @media (min-width: 900px) {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.employeeCardWrap {
+    //background-color: $main-gray;
+    //width: 100%;
+    //flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    @media (min-width: 900px) {
+        flex-basis: 50%;
+    }
+    .employeeCard {
+        box-sizing: border-box;
+        //background-color: teal;
+        max-width: 500px;
+        width: 100%;
+        @media (min-width: 900px) {
+            padding: 20px;
+        }
+        //margin: 25px;
+        .avatar {
+            width: 100%;
+            margin-bottom: -2px;
+            order: -10;
+        }
+        // background-color: lightblue;
+    }
+}
+
+.infoWrap {
+    box-sizing: border-box;
+    background-color: $main-red;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .line {
+        margin: 10px;
+        height: 2px;
+        width: 60%;
+        width: 100%;
+        background-color: $main-white;
+    }
 }

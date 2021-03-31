@@ -8,21 +8,22 @@ const EmployeeContainer = {
     },
     data: () => {
         return {
-            employees: [{
-                    employee_name: 'Harry Potter',
-                    employee_position: 'Wizard',
-                    employee_avatar: 'VICEPRESIDENT.svg'
-                },
-                {
-                    employee_name: 'Sandy Rivers',
-                    employee_position: 'Assignor Cheif',
-                    employee_avatar: 'ASSIGNOR1.svg'
-                },
-                {
-                    employee_name: 'Potato Sam',
-                    employee_position: 'Potato',
-                    employee_avatar: 'SECRETARY.svg'
-                }
+            employees: [
+                // {
+                //     employee_name: 'Harry Potter',
+                //     employee_position: 'Wizard',
+                //     employee_avatar: 'VICEPRESIDENT.svg'
+                // },
+                // {
+                //     employee_name: 'Sandy Rivers',
+                //     employee_position: 'Assignor Cheif',
+                //     employee_avatar: 'ASSIGNOR1.svg'
+                // },
+                // {
+                //     employee_name: 'Potato Sam',
+                //     employee_position: 'Potato',
+                //     employee_avatar: 'SECRETARY.svg'
+                // }
 
 
             ],
