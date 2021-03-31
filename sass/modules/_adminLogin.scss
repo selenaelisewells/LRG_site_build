@@ -4,6 +4,13 @@
     max-width: $max-page-width-lg;
     margin: 0 auto;
     padding-bottom: 100px;
+    .loginErrMessage {
+        align-self: center;
+        text-align: center;
+        padding-bottom: 10px;
+        // background-color: purple;
+        font-family: 'Gotham-Light', Arial, Helvetica, sans-serif;
+    }
     .loginForm {
         display: flex;
         flex-direction: column;

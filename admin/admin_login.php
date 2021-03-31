@@ -17,7 +17,7 @@
             $result = login($username, $password, $ip);
             $message = $result;
         } else {
-            $message = 'Please fill out the requaired fields.';
+            $message = 'Please fill out the required fields.';
         }
     }
 ?>
@@ -75,7 +75,7 @@
 </header>
 <div id="app" class="loginWrapper">
     <h2 class="miniHeaderTagline">Fill out the form below to login to LRG</h2>
-    <?php echo !empty($message)?$message:'';?>
+    <div class="loginErrMessage"><?php echo !empty($message)?$message:'';?></div>
     <form class="loginForm" action="admin_login.php" method="post">
     <label for="username" class="hidden">Username</label>
     <input placeholder="username" class="loginInput" id="username" type="text" name="username" value="">

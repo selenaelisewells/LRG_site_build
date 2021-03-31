@@ -6,7 +6,9 @@ include './load.php';
 include  './templates/head.php';
 include './templates/header.php';
 // RESET SESSION FOR TESTING
-// $_SESSION['contact_form_submitted'] = false;
+//$_SESSION['contact_form_submitted'] = false;
+
+//if(isset($_SESSION['contact_form_submitted'])) &&
 ?>
 
 <section class="miniHeader">
@@ -22,15 +24,16 @@ include './templates/header.php';
 
 
 
-
 <section class="contactFormWrap">
     <?php if(isset($_SESSION['contact_form_submitted']) && $_SESSION['contact_form_submitted']): ?> 
             <!-- HTML FOR THANK YOU GOES HERE -->
-         <div class="contactSubmitted">
+            <div class="contactSubmitted">
              <img src="./images/Thanks.png" alt="">
          <h1 class="submittedTitle">Thanks for Contacting LRG!</h1>
          <p class="submittedText">We will get back to you soon.</p>
-         </div>
+</div>
+
+         
     <?php else: ?>
         <form  action="./includes/mail/send.php" method="POST" id="mail-form">
         
@@ -64,3 +67,5 @@ include './templates/header.php';
 
 <?php include './templates/footer.php';?>
 <?php include './templates/foot.php';?>
+
+<?php $_SESSION['contact_form_submitted'] = false; ?>

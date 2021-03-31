@@ -1,5 +1,33 @@
 .contactSubmitted {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: $max-page-width-lg;
     width: 100%;
-    height: 100%;
-    background-color: $main-gray;
+    margin: 0 auto;
+    //background: $main-gray;
+    img {
+        width: 300px;
+        height: auto;
+        margin-top: 50px;
+        @media (min-width: 900px) {
+            width: 500px;
+        }
+    }
+    .submittedTitle {
+        @include banner-title;
+        @media (min-width: 900px) {
+            @include banner-title($font-size: $heading-font-size-lg);
+        }
+        //background: purple;
+    }
+    .submittedText {
+        padding-top: 15px;
+        @include banner-title($font: $p-font);
+        @media (min-width: 900px) {
+            @include banner-title($font-size: 30px, $font: $p-font);
+        }
+    }
 }

@@ -1,0 +1,40 @@
+.jumpToButtonsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px 0;
+    max-width: $max-page-width-lg;
+    margin: 0 auto;
+    .linkButton {
+        width: 150px;
+        // height: 100px;
+        padding: 5px;
+        margin: 10px;
+        //background-color: purple;
+        // background: var(--background-image);
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:focus,
+            &:hover {
+                .jumpbuttonImage {
+                    background: var(--background-image-hover);
+                }
+            }
+        }
+        .jumpbuttonImage {
+            background: var(--background-image);
+            width: 125px;
+            height: 125px;
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        .btnTitle {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: $tagline-font-size;
+        }
+    }
+}

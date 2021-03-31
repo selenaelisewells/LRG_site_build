@@ -18,12 +18,17 @@
     }
     .service {
         display: flex;
+        flex-direction: column;
         align-items: flex-end;
-        height: 250px;
+        height: 100%;
         width: 100%;
         max-width: 100%;
-        background-size: cover;
-        background-image: url(../images/placeholder.jpg);
+        // background-size: cover;
+        //background-image: url(../images/placeholder.jpg);
+        img {
+            width: 200px;
+            height: 200px;
+        }
         @media (min-width: 500px) {
             height: 300px;
             max-width: 100%;
@@ -37,9 +42,10 @@
             margin: 0;
         }
         .serviceTitle {
+            align-self: baseline;
             width: 100%;
             background-color: rgba($main-red, .90);
-            height: 42px;
+            //height: 42px;
             align-items: center;
             display: flex;
             justify-content: center;
