@@ -1,9 +1,9 @@
 <?php
 require_once '../load.php';
-confirm_logged_in();
+
 
 $all_contents = getAllContent();
-$id           = $_SESSION['employee_id'];
+$id = $_SESSION['employee_id']??1;
 
 
 if(isset($_GET['employee_id'])) {
@@ -18,7 +18,7 @@ if (empty($current_content)) {
 
 if (isset($_POST['submit'])) {
     $data = array(
-        // 'avatar'      => trim($_FILES['avatar']),
+        'avatar'      => $_FILES['avatar'],
         'name'      => trim($_POST['name']),
         'position'   => trim($_POST['position']),      
         'email'      => trim($_POST['email']),    
@@ -56,12 +56,12 @@ if (isset($_POST['submit'])) {
     
 
     <?php if (!empty($current_content)): ?>
-    <form action="admin_editemployee.php" method="post">
+    <form action="admin_editemployee.php" method="post" enctype="multipart/form-data">
         <?php while ($content_info = $current_content->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_employee_id" name="current_employee_id" value="<?php echo $id?>">
             
-            <!-- <label for="avatar">Image:</label><br>
-            <input id="avatar" type="file" name="avatar" value=""><br><br> -->
+            <label for="avatar">Image:</label><br>
+            <input id="avatar" type="file" name="avatar" value=""><br><br>
 
             <label for="name">Name:</label><br>
             <input id="name" type="text" name="name" value="<?php echo $content_info['employee_name']; ?>"><br><br>

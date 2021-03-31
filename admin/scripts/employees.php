@@ -85,42 +85,39 @@ function getAllContent(){
 }
 
 function editContent($content){
-    // try {
-    //         $pdo = Database::getInstance()->getConnection();
+    try {
+            $pdo = Database::getInstance()->getConnection();
 
-    //         $avatar         = $content['avatar'];
-    //         $upload_file    = pathinfo($avatar['name']);
-    //         $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
-    //         if (!in_array($upload_file['extension'], $accepted_types)) {
-    //             throw new Exception('Wrong file types!');
-    //         }
+            $avatar         = $content['avatar'];
+            $upload_file    = pathinfo($avatar['name']);
+            $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
+            if (!in_array($upload_file['extension'], $accepted_types)) {
+                throw new Exception('Wrong file types!');
+            }
 
-    //         # Move the uploaded file around (move the file from the tmp path to the /images)
-    //         $image_path         = '../images/';
-    //         $generated_name     = md5($upload_file['filename'] . time());
-    //         $generated_filename = $generated_name . '.' . $upload_file['extension'];
-    //         $target_path        = $image_path . $generated_filename;
-    //         if (!move_uploaded_file($avatar['tmp_name'], $target_path)) {
-    //             throw new Exception('Failed to move uploaded file, check permission!');
-    //         }
+            # Move the uploaded file around (move the file from the tmp path to the /images)
+            $image_path         = '../images/';
+            $generated_name     = md5($upload_file['filename'] . time());
+            $generated_filename = $generated_name . '.' . $upload_file['extension'];
+            $target_path        = $image_path . $generated_filename;
+            if (!move_uploaded_file($avatar['tmp_name'], $target_path)) {
+                throw new Exception('Failed to move uploaded file, check permission!');
+            }
 
             
-    //         # Generate an thumbnail from the original image
-    //         $th_copy = $image_path . 'TH_' . $avatar['name'];
-    //         if (!copy($target_path, $th_copy)) {
-    //             throw new Exception('Whoooops, that thumbnail copy did not work!!');
-    //         }
+            # Generate an thumbnail from the original image
+            $th_copy = $image_path . 'TH_' . $avatar['name'];
+            if (!copy($target_path, $th_copy)) {
+                throw new Exception('Whoooops, that thumbnail copy did not work!!');
+            }
 
-
-    
-        $pdo = Database::getInstance()->getConnection();
-
+        
         $update_content_query = 
-        'UPDATE tbl_employees SET employee_name=:name, employee_position=:position, employee_email=:email WHERE employee_id = :id';
+        'UPDATE tbl_employees SET employee_name=:name, employee_position=:position, employee_email=:email, employee_avatar=:avatar WHERE employee_id = :id';
 
         $update_content_set = $pdo->prepare($update_content_query);
         $placeholders = array(
-            // ":avatar"   => $generated_filename,
+            ":avatar"   => $generated_filename,
             ":name"    =>$content["name"],
             ":position" =>$content["position"],
             ":email"    =>$content["email"],
@@ -130,19 +127,16 @@ function editContent($content){
        
         $update_content_result = $update_content_set->execute($placeholders);
     
-        if($update_content_result){
+        
             $_SESSION['employee_name'] = $content['name'];
        
             redirect_to('index.php');
-        }else{
-            return 'Update did not go through.';
-        }
-            // redirect_to('index.php');
-    // } catch (Exception $e) {
-    //         $err = $e->getMessage();
-    //         return $err;
-    // }
-    
+        
+    } catch (Exception $e) {
+                $err = $e->getMessage();
+                return $err;
+    };
+          
 }
 
 function deleteContent($content_id){

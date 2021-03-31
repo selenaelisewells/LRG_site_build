@@ -2,12 +2,12 @@
 require_once '../load.php';
 confirm_logged_in();
 $all_sectiontexts = getAllSectionTexts();
-$id           = $_SESSION['ID'];
+// $id           = $_SESSION['ID']??1;
 
 
-if(isset($_GET['ID'])) {
-    $id = $_GET['ID'];
-}
+// if(isset($_GET['ID'])) {
+//     $id = $_GET['ID'];
+// }
 
 $current_sectiontext = getSingleSectionText($id);
 
