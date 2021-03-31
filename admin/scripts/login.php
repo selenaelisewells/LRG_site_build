@@ -45,7 +45,7 @@ function login($username, $password, $ip)
 
 
         } else {
-                return 'Wrong password, try again';
+                return 'Incorrect username or password, try again';
         }
 
 }

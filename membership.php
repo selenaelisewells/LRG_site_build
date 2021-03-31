@@ -27,7 +27,8 @@ $title = "Membership";?>
             Stucture
         </h2>
     </div>
-    <div class="structureInfographic"></div>
+    <employee-container></employee-container>
+
 </section>
 
 

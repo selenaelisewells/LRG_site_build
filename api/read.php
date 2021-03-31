@@ -6,7 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 // include database and object files
 include_once '../config/database.php';
 include_once './sections.php';
-
+include_once './employees.php';
 // instantiate database and movie object
 $database = Database::getInstance();
 $db       = $database->getConnection();
@@ -21,7 +21,9 @@ if (isset($_GET['path'])) {
     } else {
         $stmt = getSectionsbyPages($path);
     }
-}  
+}  elseif(isset($_GET['employees'])){
+    $stmt = getEmployees();
+}
 else {
     echo json_encode(
         array(

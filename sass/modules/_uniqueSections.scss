@@ -1,0 +1,9 @@
+#section-history {
+    img {
+        object-fit: contain;
+        object-position: center;
+        @media (min-width: 900px) {
+            object-position: top;
+        }
+    }
+}

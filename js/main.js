@@ -3,6 +3,7 @@ import BackToTopBtn from './components/TheBackToTopBtnComponent.js';
 import SectionsContainer from './components/SectionsContainer.js';
 import OverviewComponent from './components/OverviewComponent.js';
 import JumpToContainer from './components/JumpToContainer';
+import EmployeeComponent from './components/TheEmployeeContainer';
 
 
 (() => {
@@ -11,7 +12,8 @@ import JumpToContainer from './components/JumpToContainer';
         components: {
             'sections-container': SectionsContainer,
             'overview-component': OverviewComponent,
-            'jump-to-container': JumpToContainer
+            'jump-to-container': JumpToContainer,
+            'employee-container': EmployeeComponent
         }
     }).$mount('#app');
 })();

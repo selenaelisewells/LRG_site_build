@@ -30,18 +30,22 @@ include  './templates/head.php';?>
         </div>
         <div class="servicesContent">
             <div class="service">
+            <img src="./images/TEAM.svg" alt="teamwork">
                 
                 <div class="serviceTitle">
                     <span>Respect</span>
                 </div>
             </div>
             <div class="service">
+            <img src="./images/SHAKEHAND.svg" alt="teamwork">
                 
                 <div class="serviceTitle">
+
                     <span>Integrity</span>
                 </div>
             </div>
             <div class="service">
+            <img src="./images/SCALES.svg" alt="teamwork">
                
                 <div class="serviceTitle">
                     <span>teamwork</span>
