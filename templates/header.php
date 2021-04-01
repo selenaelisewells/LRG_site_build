@@ -34,7 +34,7 @@
         <nav class="navListWrap">
             <div class="mainLogo">
                 <a href="index.php">
-                    <img src="./images/mainLogo.svg" alt="">
+                    <img src="./images/mainLogo.svg" alt="London Referees Group">
                 </a>
             </div>
             <button class="menuButton" data-toggle id="js-navbar-toggle"><img src="./images/BURGER.svg" alt="menu button"></button>
