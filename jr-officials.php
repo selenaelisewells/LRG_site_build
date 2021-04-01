@@ -16,8 +16,12 @@
        <!-- this will be skill building -->
     <sections-container></sections-container>
 
-    <section class="blackBanner">
-        <video controls src="./images/LRG_final.mp4"></video>
+    <section class="blackBanner videoElement">
+     
+        <video controls
+        poster="./images/videoCover.jpg"
+        src="./images/LRG_final.mp4"></video>
+      
     </section>
 
     <section class="ctaBanner">
