@@ -111,68 +111,59 @@ function deleteSection($section_id)
 
 function editSection($section)
 {
-    // try {
+    try {
        
-        // $pdo = Database::getInstance()->getConnection();
-
-        // $image         = $section['image'];
-        // $upload_file    = pathinfo($image['name']);
-        // $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
-        // if (!in_array($upload_file['extension'], $accepted_types)) {
-        //     throw new Exception('Wrong file types!');
-        // }
-
-        // # Move the uploaded file around (move the file from the tmp path to the /images)
-        // $image_path         = '../images/';
-        // $generated_name     = md5($upload_file['filename'] . time());
-        // $generated_filename = $generated_name . '.' . $upload_file['extension'];
-        // $target_path        = $image_path . $generated_filename;
-        // if (!move_uploaded_file($image['tmp_name'], $target_path)) {
-        //     throw new Exception('Failed to move uploaded file, check permission!');
-        // }
+        $pdo = Database::getInstance()->getConnection();
 
         
-        // # Generate an thumbnail from the original image
-        // $th_copy = $image_path . 'TH_' . $image['name'];
-        // if (!copy($target_path, $th_copy)) {
-        //     throw new Exception('Whoooops, that thumbnail copy did not work!!');
-        // }
- 
-    $pdo = Database::getInstance()->getConnection(); 
+        $image       = $section['image'];
+        $upload_file    = pathinfo($image['name']);
+        $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
+        if (!in_array($upload_file['extension'], $accepted_types)) {
+            throw new Exception('Wrong file types!');
+        }
 
-    $update_section_query = 
-        'UPDATE tbl_sections SET title=:title, boby=:body, page_id=:page_id, tagline=:tagline, alt_text=:alt_text, component_type=:component_type, button_text=:button_text, section_id=:section_id, section_order=:section_order, is_overview=:is_overview WHERE ID = :ID';
+        # Move the uploaded file around (move the file from the tmp path to the /images)
+        $image_path         = '../images/';
+        $generated_name     = md5($upload_file['filename'] . time());
+        $generated_filename = $generated_name . '.' . $upload_file['extension'];
+        $target_path        = $image_path . $generated_filename;
+        if (!move_uploaded_file($image['tmp_name'], $target_path)) {
+            throw new Exception('Failed to move uploaded file, check permission!');
+        }
+
+        
+        # Generate an thumbnail from the original image
+        $th_copy = $image_path . 'TH_' . $image['name'];
+        if (!copy($target_path, $th_copy)) {
+            throw new Exception('Whoooops, that thumbnail copy did not work!!');
+        }
+ 
     
-    $update_section_set = $pdo->prepare($update_section_query);
-    $placeholders = array(
-        ':title'=> $section['title'],
-        ':body'=> $section['body'],
-        // ':image'=> $section['image'],
-        ':page_id'=> $section['page_id'],
-        ':tagline'=> $section['tagline'],
-        ':alt_text'=> $section['alt_text'],
-        ':component_type'=> $section['component_type'],
-        ':button_text'=> $section['button_text'],
-        ':section_id'=> $section['section_id'],
-        ':ection_order'=> $section['section_order'],
-        ':is_overview'=> $section['is_overview'],
-        ":ID"=>$section["ID"]
-    );
+
+        $update_section_query = 
+            'UPDATE tbl_sections SET title=:title, boby=:body, image=:image, button_text=:button_text, button_link=:button_link WHERE ID = :ID';
+        
+        $update_section_set = $pdo->prepare($update_section_query);
+        $placeholders = array(
+            ':title'=> $section['title'],
+            ':body'=> $section['body'],
+            ':image'=> $generated_filename,
+            ':button_text'=> $section['button_text'],
+            ':button_link'=> $section['button_link'],
+            ":ID"=>$section["ID"]
+        );
+    
+
+        $update_section_result = $update_section_set->execute($placeholders);
  
+            $_SESSION['title'] = $section['title'];
+        
+            redirect_to('index.php');
 
-    $update_section_result = $update_section_set->execute($placeholders);
-
-    if($update_section_result){
-        $_SESSION['tagline'] = $section['tagline'];
-     
-        redirect_to('index.php');
-    }else{
-        return 'Update did not go through.';
+    } catch (Exception $e) {
+            $err = $e->getMessage();
+            return $err;
     }
-
-     //         redirect_to('index.php');
-    // } catch (Exception $e) {
-    //         $err = $e->getMessage();
-    //         return $err;
-    // }
 }
+

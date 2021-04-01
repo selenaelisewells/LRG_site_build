@@ -1,10 +1,10 @@
 <?php
 require_once '../load.php';
 
+confirm_logged_in();
 
-
-if(isset($_GET['ID'])){
-    $delete_section_id = $_GET['ID'];
+if(isset($_GET['id'])){
+    $delete_section_id = $_GET['id'];
 
     $delete_result = deleteSection($delete_section_id);
 

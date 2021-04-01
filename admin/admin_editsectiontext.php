@@ -20,7 +20,8 @@ if (isset($_POST['submit'])) {
     $data = array(
         
         'title'   => trim($_POST['title']),      
-        'body'      => trim($_POST['body']),    
+        'body'      => trim($_POST['body']),   
+        'tagline'      => trim($_POST['tagline']),     
         'id'         => trim($_POST['current_section_id'])
     );
 
@@ -62,6 +63,9 @@ if (isset($_POST['submit'])) {
            
             <label for="title">Title:</label><br>
             <input id="title" type="text" name="title" value="<?php echo $sectiontext_info['title']; ?>"><br><br>
+
+            <label for="tagline">Tagline:</label><br>
+            <input id="tagline" type="text" name="tagline" value="<?php echo $sectiontext_info['tagline']; ?>"><br><br>
 
             <label for="body">Section Text:</label><br>
             <textarea id="body" type="text" name="body" value="<?php echo $sectiontext_info['body']; ?>"></textarea><br><br>

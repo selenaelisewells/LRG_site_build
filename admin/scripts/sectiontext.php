@@ -40,12 +40,13 @@ function editSectionText($section_text)
     $pdo = Database::getInstance()->getConnection(); 
 
     $update_sectiontext_query = 
-        'UPDATE tbl_sections SET title=:title, body=:body WHERE ID = :id';
+        'UPDATE tbl_sections SET title=:title, body=:body, tagline=:tagline WHERE ID = :id';
     // var_dump($update_user_query); die;
     $update_sectiontext_set = $pdo->prepare($update_sectiontext_query);
     $placeholders = array(
         ":title"    =>$section_text["title"],
         ":body" =>$section_text["body"],
+        ":tagline" =>$section_text["tagline"],
         ":id"=>$section_text["id"]
     );
 
