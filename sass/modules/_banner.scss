@@ -48,11 +48,11 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr auto;
         column-gap: 30px;
-        padding: 0 34px 50px 34px;
+        padding: 0 34px 100px 34px;
         //flex-wrap: wrap;
     }
     @media(min-width:1220px) {
-        padding: 0 0 50px 0;
+        padding: 0 0 100px 0;
     }
     .Image {
         width: 100%;

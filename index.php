@@ -54,7 +54,7 @@ include  './templates/head.php';?>
         </div>
 
         <div class="refereeCamp">
-            <div class="campContent">
+            <div class="campContent blackBanner">
                 <!--put this heading in the database and include a span-->
                 <h2 class="campTitle"><span><span class="red">Don Koharski</span>Officiating and Development referee camp</span></h2>
                 <img src="./images/DON.jpg" alt="referee camp photo">

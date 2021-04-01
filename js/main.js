@@ -2,8 +2,8 @@ import HamburgerMenu from './components/TheBurgerMenuComponent.js';
 import BackToTopBtn from './components/TheBackToTopBtnComponent.js';
 import SectionsContainer from './components/SectionsContainer.js';
 import OverviewComponent from './components/OverviewComponent.js';
-import JumpToContainer from './components/JumpToContainer';
-import EmployeeComponent from './components/TheEmployeeContainer';
+import JumpToContainer from './components/JumpToContainer.js';
+import EmployeeComponent from './components/TheEmployeeContainer.js';
 
 
 (() => {

@@ -1,4 +1,4 @@
-import EmployeeComponent from './TheEmployeeComponent';
+import EmployeeComponent from './TheEmployeeComponent.js';
 
 // SectionsContainer
 const EmployeeContainer = {
