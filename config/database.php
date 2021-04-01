@@ -19,9 +19,10 @@ class Database
     private function __construct()
     {
         # Heroku database configs
-        $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
+        $clear_db_url = getenv('CLEARDB_DATABASE_URL');
+        $url = parse_url($clear_db_url);
 
-        if(!empty($url)) {
+        if($clear_db_url && !empty($url)) {
             $this->host = $url['host'];
             $this->username = $url['user'];
             $this->password = $url['pass'];
