@@ -18,9 +18,14 @@
 
     <section class="blackBanner videoElement">
      
-        <video controls
-        poster="./images/videoCover.jpg"
-        src="./images/LRG_final.mp4"></video>
+        <video controls poster="./images/videoCover.jpg" >
+            <source src="./images/LRG_final.webm" 
+                    type="video/webm">
+            <source src="./images/LRG_final.mp4" 
+                    type="video/mp4">
+            <source src="./images/LRG_final.ogg" 
+                    type="video/ogg">    
+        </video>
       
     </section>
 

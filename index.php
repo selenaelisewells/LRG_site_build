@@ -9,7 +9,16 @@ include  './templates/head.php';?>
 <?php include './templates/header.php';?>
 <main class="mainContentWrap">
     <section id="heroWrap">
-        <video src="./images/HERO_3.mp4" loop autoplay playsinline muted></video>
+        <video  loop autoplay playsinline muted>
+       
+            <source src="./images/hero.webm" 
+                    type="video/webm">
+            <source src="./images/hero.mp4" 
+                    type="video/mp4">
+            <source src="./images/hero.ogg" 
+                    type="video/ogg">    
+        
+        </video>
         <div class="heroContent">
             <h2 class="hidden">Hero Image</h2>
             <div class="heroTextWrap">
