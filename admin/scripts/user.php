@@ -54,8 +54,8 @@ function createUser($user_data){
 
         sendRegistrationEmail($user_data["username"], $random_password, $user_data["email"]);
 
-        var_dump($random_password);
-        die;
+        // var_dump($random_password);
+        // die;
         redirect_to('index.php');
     }else{
         return 'The user did not go through!!';

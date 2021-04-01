@@ -63,8 +63,8 @@ function addSection($section_data)
         }
 
         # Insert into DB (tbl_sections)
-        $insert_section_query = 'INSERT INTO tbl_sections(title, body, image, page_id, tagline, alt_text, component_type, section_id, section_order, is_overview)';
-        $insert_section_query .= ' VALUES(:title, :body, :image, :page_id, :tagline, :alt_text, :component_type, :section_id, :section_order, :is_overview)';
+        $insert_section_query = 'INSERT INTO tbl_sections(title, body, image, page_id, tagline, alt_text, component_type, button_text, button_link, section_id, section_order, is_overview)';
+        $insert_section_query .= ' VALUES(:title, :body, :image, :page_id, :tagline, :alt_text, :component_type, :button_text, :button_link, :section_id, :section_order, :is_overview)';
         $insert_section       = $pdo->prepare($insert_section_query);
         $insert_section_result = $insert_section->execute(
             array( 
@@ -75,6 +75,8 @@ function addSection($section_data)
                 ':tagline'    => $section_data['tagline'],
                 ':alt_text'    => $section_data['alt_text'],
                 ':component_type'    => $section_data['component_type'],
+                ':button_text'=> $section_data['button_text'],
+                ':button_link'=> $section_data['button_link'],
                 ':section_id'    => $section_data['section_id'],
                 ':section_order'    => $section_data['section_order'],
                 ':is_overview'    => $section_data['is_overview']

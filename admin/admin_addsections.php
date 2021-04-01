@@ -13,6 +13,8 @@ if (isset($_POST['submit'])) {
         'tagline'=>$_POST['tagline'],
         'alt_text'=>$_POST['alt_text'],
         'component_type'=>$_POST['component_type'],
+        'button_text'=>$_POST['button_text'],
+        'button_link'=>$_POST['button_link'],
         'section_id'=>$_POST['section_id'],
         'section_order'=>$_POST['section_order'],
         'is_overview'=>$_POST['is_overview']
@@ -60,7 +62,11 @@ if (isset($_POST['submit'])) {
                 <option value="black">black</option>
             </select><br><br>
       
-        
+        <label for="button_text">Button text:</label><br>
+        <input id="button_text" type="text" name="button_text" value=""><br><br>
+
+        <label for="button_link">Button link:</label><br>
+        <input id="button_link" type="text" name="button_link" value=""><br><br>
 
         <label for="section_id">Section Name:</label><br>
         <input id="section_id" type="text" name="section_id" value=""><br><br>

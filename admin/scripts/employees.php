@@ -92,7 +92,7 @@ function editContent($content){
             $upload_file    = pathinfo($avatar['name']);
             $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
             if (!in_array($upload_file['extension'], $accepted_types)) {
-                throw new Exception('Wrong file types!');
+                throw new Exception('Wrong file types! Choose the image');
             }
 
             # Move the uploaded file around (move the file from the tmp path to the /images)
