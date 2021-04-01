@@ -18,6 +18,16 @@ class Database
     # 2. Add a new function __construct
     private function __construct()
     {
+        # Heroku database configs
+        $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
+
+        if(!empty($url)) {
+            $this->host = $url['host'];
+            $this->username = $url['user'];
+            $this->password = $url['pass'];
+            $this->db_name = substr($url['path'], 1);
+        }
+
         $db_dsn = array(
             'host'    => $this->host,
             'dbname'  => $this->db_name,

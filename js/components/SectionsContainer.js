@@ -64,6 +64,10 @@ const SectionsContainer = {
         const urlSegments = window.location.toString().split('/')
         this.path = urlSegments[urlSegments.length - 1];
 
+        if (this.path === '') {
+            this.path = 'index.php';
+        }
+
         // Get our sections (REPLACE WITH ACTUAL API ROUTE)---- This depends on Elena
         fetch(`${urlSegments.slice(0, urlSegments.length - 1).join('/')}/api/read.php?path=${this.path}`)
             .then(res => res.json())

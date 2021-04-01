@@ -14,9 +14,13 @@
     
     <overview-component></overview-component>
        <!-- this will be skill building -->
-       <sections-container></sections-container>
+    <sections-container></sections-container>
 
-       <section class="ctaBanner">
+    <section class="blackBanner">
+        <video controls src="./images/LRG_final.mp4"></video>
+    </section>
+
+    <section class="ctaBanner">
         <h2>Ready to join our ever growing roster of junior officials?</h2>
         <div><a class="button" href="https://www.surveymonkey.com/r/3SZVJ7S">Sign Up Today</a></div> 
     </section>
