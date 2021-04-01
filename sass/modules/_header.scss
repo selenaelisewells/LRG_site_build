@@ -29,6 +29,7 @@
             }
             img:hover {
                 -webkit-filter: contrast(100);
+                filter: contrast(100);
             }
         }
     }
@@ -66,7 +67,7 @@
             padding: 10px 15px;
             &:hover {
                 color: $main-red;
-                transition: all .5s ease-in-out;
+                transition: all .2s ease-in-out;
                 // background-color: rgba($color: $main-gray, $alpha: .5);
             }
         }

@@ -24,9 +24,12 @@ $title = "Membership";?>
 <section id="structure">
     <div class="banner">
         <h2 class="bannerTitle">
-            Stucture
+            Structure
         </h2>
+
     </div>
+    <p class="text"> The executive leadership of LRG supports ongoing development of its members by promoting education and training programs that advance the skills of hockey officials. As well as providing informational programs to coaches, parents and community that advocate for a stronger understanding for the role of on-ice officials and the competence of these individuals. </p>
+
     <employee-container></employee-container>
 
 </section>

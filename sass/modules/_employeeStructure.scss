@@ -1,15 +1,14 @@
 .employeeStructureContainer {
     margin: 0 auto;
     max-width: $max-page-width-lg;
-    //justify-content: space-around;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    //flex-wrap: wrap;
+    // flex-direction: column;
+    flex-wrap: wrap;
     font-family: $main-font;
     color: $main-white;
     box-sizing: border-box;
     //background-color: purple;
-    padding: 0 34px;
     @media (min-width: 900px) {
         justify-content: center;
         flex-direction: row;
@@ -19,50 +18,73 @@
 
 .employeeCardWrap {
     //background-color: $main-gray;
-    //width: 100%;
+    width: 100%;
     //flex-basis: 100%;
+    max-width: 240px;
+    //height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     @media (min-width: 900px) {
-        flex-basis: 50%;
+        // flex-basis: 50%;
     }
     .employeeCard {
         box-sizing: border-box;
-        //background-color: teal;
-        max-width: 500px;
+        // background-color: teal;
+        max-width: 240px;
+        max-height: 240px;
         width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
         @media (min-width: 900px) {
-            padding: 20px;
+            padding: 10px;
         }
         //margin: 25px;
         .avatar {
             width: 100%;
+            height: 100%;
+            max-height: 140px;
             margin-bottom: -2px;
             order: -10;
+            img {
+                max-height: 140px;
+                max-width: 220px;
+            }
         }
         // background-color: lightblue;
     }
 }
 
 .infoWrap {
+    order: 1;
     box-sizing: border-box;
     background-color: $main-red;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
-    font-size: 22px;
+    font-size: 16px;
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     .line {
+        align-self: center;
         margin: 10px;
         height: 2px;
-        width: 60%;
-        width: 100%;
+        width: 80%;
         background-color: $main-white;
+    }
+}
+
+#structure {
+    p {
+        margin: 0 auto 50px auto;
+        max-width: $max-page-width-lg;
+        @media (max-width: 1280px) {
+            @include global-margin;
+        }
     }
 }
