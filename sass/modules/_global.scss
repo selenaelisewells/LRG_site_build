@@ -25,3 +25,13 @@ a:active {
 html {
     scroll-behavior: smooth;
 }
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1; // hide images
+    background: url(./images/jumpbuttons/ACTIVE_CITYOFLONDON.svg) url(./images/jumpbuttons/ACTIVE_MINORHOCKEY.svg) url(./images/jumpbuttons/ACTIVE_RECHOCKEY.svg) url(./images/jumpbuttons/ACTIVE_SEASONS.svg) url(./images/jumpbuttons/ACTIVE_SLEDGEHOCKEY.svg) url(./images/jumpbuttons/ACTIVE_TOURNAMENTS.svg) url(./images/jumpbuttons/CITYOFLONDON.svg) url(./images/jumpbuttons/MINORHOCKEY.svg) url(./images/jumpbuttons/RECHOCKEY.svg) url(./images/jumpbuttons/SEASONS.svg) url(./images/jumpbuttons/SLEDGEHOCKEY.svg) url(./images/jumpbuttons/TOURNAMENTS.svg);
+    // load images
+}
