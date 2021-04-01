@@ -18,15 +18,18 @@ $title = "Membership";?>
 <overview-component></overview-component>
 <section class="ctaBanner">
         <h2>Interested in becoming a member of LRG? </h2>
-        <div class="button"><a href="https://www.surveymonkey.com/r/3SZVJ7S">apply today</a></div> 
+        <div><a class="button" href="https://www.surveymonkey.com/r/3SZVJ7S">apply today</a></div> 
 </section>
 
 <section id="structure">
     <div class="banner">
         <h2 class="bannerTitle">
-            Stucture
+            Structure
         </h2>
+
     </div>
+    <p class="text"> The executive leadership of LRG supports ongoing development of its members by promoting education and training programs that advance the skills of hockey officials. As well as providing informational programs to coaches, parents and community that advocate for a stronger understanding for the role of on-ice officials and the competence of these individuals. </p>
+
     <employee-container></employee-container>
 
 </section>

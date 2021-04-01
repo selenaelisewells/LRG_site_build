@@ -19,7 +19,7 @@ body.navOverlayActive {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     .headerRibbon {
         align-self: center;
@@ -60,6 +60,7 @@ body.navOverlayActive {
     //     }
     // }
     .mobileNav {
+        //background-color: $main-red;
         width: 100%;
         max-width: 300px;
         z-index: 600;
