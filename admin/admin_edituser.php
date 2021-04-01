@@ -2,7 +2,8 @@
 require_once '../load.php';
 confirm_logged_in();
 $all_users = getAllUsers();
-$id = $_SESSION['user_id'];
+$id           = $_SESSION['user_id'];
+
 
 if(isset($_GET['user_id']) && isCurrentUserAdminAbove()) {
     $id = $_GET['user_id'];
@@ -17,6 +18,7 @@ if (empty($current_user)) {
 if (isset($_POST['submit'])) {
     $data = array(
         'fname'      => trim($_POST['fname']),
+        'lname'      => trim($_POST['lname']),
         'username'   => trim($_POST['username']),
         'password'   => trim($_POST['password']),
         'email'      => trim($_POST['email']),

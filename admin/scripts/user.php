@@ -146,24 +146,21 @@ function deleteUser($user_id){
 
 function editUser($user_data)
 {
- 
     $pdo = Database::getInstance()->getConnection(); 
-
 
     $updated_password = $user_data["password"];
     
-  
     $encrypted_password_update = createEncryptedPassword($updated_password);
-
     $is_new_password = $updated_password !== '';
 
     $password_sql_snippet = $is_new_password ? ', user_pass=:password ' : '';
     $update_user_query = 
-        'UPDATE tbl_user SET user_fname=:fname, user_name=:username, user_email=:email, user_level=:user_level '. $password_sql_snippet .'WHERE user_id = :id';
+        'UPDATE tbl_user SET user_fname=:fname, user_lname=:lname, user_name=:username, user_email=:email, user_level=:user_level '. $password_sql_snippet .'WHERE user_id = :id';
     // var_dump($update_user_query); die;
     $update_user_set = $pdo->prepare($update_user_query);
     $placeholders = array(
         ":fname"    =>$user_data["fname"],
+        ":lname"    =>$user_data["lname"],
         ":username" =>$user_data["username"],
         ":email"    =>$user_data["email"],
         ":user_level"=>$user_data["user_level"],
