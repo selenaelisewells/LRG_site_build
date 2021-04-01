@@ -1,6 +1,12 @@
 .videoElement {
-    max-width: $max-page-width-lg;
-    video {
-        width: 1200px;
-    }
+    width: 100%;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    max-height: 675px;
+    width: 100%;
+    height: 100%;
 }
