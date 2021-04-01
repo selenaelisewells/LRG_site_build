@@ -1,0 +1,53 @@
+.admin {
+    background-color: $main-gray;
+}
+
+.adminPanelWrap {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid $main-red;
+    background-color: $main-white;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 34px;
+    border-radius: 20px;
+    //justify-content: center;
+    //align-items: center;
+    li {
+        padding: 10px 0;
+        &:hover {
+            color: $main-red;
+        }
+    }
+    //background-color: purple;
+}
+
+.loginTitle {
+    @include banner-title($font-size: 30px);
+    margin: 20px 0;
+}
+
+.loginInfo {
+    margin-top: 10px;
+    @include tagline;
+    @include padding;
+}
+
+.editTitle {
+    text-transform: uppercase;
+    border-bottom: 2px solid $main-red;
+    margin: 34px 0 10px 0;
+    padding-bottom: 5px;
+    @include tagline;
+    font-weight: 700;
+}
+
+.status {
+    @include tagline;
+    //color: $main-red;
+}
+
+.adminLogout {
+    align-self: center;
+    margin-top: 34px;
+}

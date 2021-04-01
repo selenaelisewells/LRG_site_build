@@ -16,14 +16,17 @@ confirm_logged_in();
     
     <title>Admin Panel</title>
 </head>
-<body>
-    <h2 class="heroTitle">Welcome to the dashboard, <?php echo $_SESSION['user_name'];?>!</h2>
-    <p>Your last login time: <?php echo $_SESSION['user_date'];?></p>
+<body class="admin">
+<div class="adminPanelWrap">
+    <h2 class="loginTitle">Welcome to the dashboard, <?php echo $_SESSION['user_name'];?>!</h2>
+    <p class="loginInfo">Your last login time: <?php echo $_SESSION['user_date'];?></p>
+    <div class="status">
+    <h3 >Your Role: <span class="red"><?php echo getCurrentUserLevel();?></span>
+    </div>
     
-    <h3>Your status is <?php echo getCurrentUserLevel();?>
     <ul>
 
-    <h3>Edit User</h3>
+    <h3 class="editTitle">Edit User</h3>
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href="admin_createuser.php">Create User</a></li>
     <?php endif;?>
@@ -32,7 +35,7 @@ confirm_logged_in();
     <li><a href='admin_deleteuser.php'>Delete User</a></li>
     <?php endif;?>
 
-    <h3>Edit Section</h3>
+    <h3 class="editTitle">Edit Section</h3>
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href='admin_addsections.php'>Add Section</a></li>
     <?php endif;?>
@@ -44,12 +47,13 @@ confirm_logged_in();
     <li><a href='admin_deletesections.php'>Delete Section</a></li>
     <?php endif;?>
 
-    <h3>Edit Employee Info</h3>
+    <h3 class="editTitle">Edit Employee Info</h3>
     <li><a href="admin_addemployee.php">Add Employee Info</a></li>
     <li><a href="admin_editemployee.php">Edit Employee Info</a></li>
     <li><a href="admin_deleteemployee.php">Delete Employee Info</a></li> 
 
     </ul>    
-    <a href="admin_logout.php">Sign Out</a>
+    <a class="adminLogout button" href="admin_logout.php">Sign Out</a>
+    </div>
 </body>
 </html>
