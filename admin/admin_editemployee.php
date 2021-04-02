@@ -3,11 +3,18 @@ require_once '../load.php';
 
 
 $all_contents = getAllContent();
-$id = $_SESSION['employee_id']??1;
+$id = 1;
 
 
+if(!isset($_SESSION['employee_id'])) {
+    $_SESSION['employee_id'] = $id;
+}
+
+// Initialize session variable
 if(isset($_GET['employee_id'])) {
     $id = $_GET['employee_id'];
+    // Update Session variable based of new value
+    $_SESSION = $_GET['employee_id'];
 }
 
 $current_content = getSingleContent($id);

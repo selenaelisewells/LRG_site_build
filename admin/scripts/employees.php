@@ -32,7 +32,7 @@ function addContent($content_data)
         }
 
         # Move the uploaded file around (move the file from the tmp path to the /images)
-        $image_path         = '../images/';
+        $image_path         = '../images/avatars/';
         $generated_name     = md5($upload_file['filename'] . time());
         $generated_filename = $generated_name . '.' . $upload_file['extension'];
         $target_path        = $image_path . $generated_filename;
@@ -87,48 +87,58 @@ function getAllContent(){
 function editContent($content){
     try {
             $pdo = Database::getInstance()->getConnection();
+            $has_new_image = $content['avatar']['name'] !== '';
+        
+            // Verify we have uploaded an image to prevent array errors
+            if ($has_new_image) {
+                $avatar         = $content['avatar'];
+                $upload_file    = pathinfo($avatar['name']);
+                $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
+                if (!in_array($upload_file['extension'], $accepted_types)) {
+                    throw new Exception('Wrong file types! Choose the image');
+                }
 
-            $avatar         = $content['avatar'];
-            $upload_file    = pathinfo($avatar['name']);
-            $accepted_types = array('gif', 'jpg', 'jpe', 'jpeg', 'png', 'svg');
-            if (!in_array($upload_file['extension'], $accepted_types)) {
-                throw new Exception('Wrong file types! Choose the image');
-            }
-
-            # Move the uploaded file around (move the file from the tmp path to the /images)
-            $image_path         = '../images/';
-            $generated_name     = md5($upload_file['filename'] . time());
-            $generated_filename = $generated_name . '.' . $upload_file['extension'];
-            $target_path        = $image_path . $generated_filename;
-            if (!move_uploaded_file($avatar['tmp_name'], $target_path)) {
-                throw new Exception('Failed to move uploaded file, check permission!');
-            }
+                # Move the uploaded file around (move the file from the tmp path to the /images)
+                $image_path         = '../images/avatars/';
+                $generated_name     = md5($upload_file['filename'] . time());
+                $generated_filename = $generated_name . '.' . $upload_file['extension'];
+                $target_path        = $image_path . $generated_filename;
+                if (!move_uploaded_file($avatar['tmp_name'], $target_path)) {
+                    throw new Exception('Failed to move uploaded file, check permission!');
+                }
 
             
-            # Generate an thumbnail from the original image
-            $th_copy = $image_path . 'TH_' . $avatar['name'];
-            if (!copy($target_path, $th_copy)) {
-                throw new Exception('Whoooops, that thumbnail copy did not work!!');
+                # Generate an thumbnail from the original image
+                $th_copy = $image_path . 'TH_' . $avatar['name'];
+                if (!copy($target_path, $th_copy)) {
+                    throw new Exception('Whoooops, that thumbnail copy did not work!!');
+                }
             }
 
-        
+        $sql_fragment = $has_new_image ? ', employee_avatar=:avatar' : '';
         $update_content_query = 
-        'UPDATE tbl_employees SET employee_name=:name, employee_position=:position, employee_email=:email, employee_avatar=:avatar WHERE employee_id = :id';
+            'UPDATE tbl_employees SET employee_name=:name, employee_position=:position, employee_email=:email'.$sql_fragment.' WHERE employee_id = :id';
+
+
+            // var_dump($content);die;
 
         $update_content_set = $pdo->prepare($update_content_query);
         $placeholders = array(
-            ":avatar"   => $generated_filename,
             ":name"    =>$content["name"],
             ":position" =>$content["position"],
             ":email"    =>$content["email"],
-            ":id"=>$content["id"]
+            ":id"=> (int) $content["id"]
         );
+        // Only bind placeholder when it is used
+        if($has_new_image) {
+            $placeholders[':avatar'] = $generated_filename;
+        }
     
        
         $update_content_result = $update_content_set->execute($placeholders);
     
         
-            $_SESSION['employee_name'] = $content['name'];
+            // $_SESSION['employee_name'] = $content['name'];
        
             redirect_to('index.php');
         

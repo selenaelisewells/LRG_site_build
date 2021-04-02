@@ -28,7 +28,7 @@ confirm_logged_in();
     <li><a href='admin_addsections.php'>Add Section</a></li>
     <?php endif;?>
 
-    <li><a href="admin_editsectiontext.php">Edit Section Text</a></li>
+    <!-- <li><a href="admin_editsectiontext.php">Edit Section Text</a></li> -->
 
     <?php if (isCurrentUserAdminAbove()):?>
     <li><a href="admin_editsections.php">Edit Section</a></li>

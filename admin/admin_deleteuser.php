@@ -30,7 +30,7 @@ $results = getAllUsers();
         while ($row = $results->fetch(PDO::FETCH_ASSOC)) : ?>
             <tr>
                 <td><?php echo $row['user_id']; ?></td>
-                <td><?php echo $row['user_fname']; ?></td>
+                <td><?php echo $row['user_name']; ?></td>
                 <td><?php echo $row['user_email']; ?></td>
                 
                 <td><a href="admin_deleteuser.php?id=<?php echo $row['user_id']; ?>">Delete</a></td>
