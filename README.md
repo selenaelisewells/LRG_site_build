@@ -71,13 +71,13 @@ MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
 
 ## Installation
 You need to use MAMP, WAMP or Docker to run the site on your local computer. Follow the instructions to install:
-### MAMP
+#### MAMP
 [https://www.mamp.info/en/downloads/]
 
-### WAMP
+#### WAMP
 [https://www.wampserver.com/en/]
 
-### Docker
+#### Docker
 
 #### Prerequisites
 1. Install `Docker` from [https://docs.docker.com/install/] 
