@@ -29,11 +29,13 @@ confirm_logged_in();
     <?php endif;?>
 
     <!-- <li><a href="admin_editsectiontext.php">Edit Section Text</a></li> -->
-
-    <?php if (isCurrentUserAdminAbove()):?>
     <li><a href="admin_editsections.php">Edit Section</a></li>
+    <?php if (isCurrentUserAdminAbove()):?>
     <li><a href='admin_deletesections.php'>Delete Section</a></li>
     <?php endif;?>
+
+   
+
 
     <h3 class="editTitle">Edit Employee Info</h3>
     <li><a href="admin_addemployee.php">Add Employee Info</a></li>

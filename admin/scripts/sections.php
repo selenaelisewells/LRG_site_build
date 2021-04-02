@@ -144,11 +144,12 @@ function editSection($section)
         }
         $sql_fragment = $has_new_image ? ' image=:image,' : '';
         $update_section_query = 
-        'UPDATE tbl_sections SET title=:title, body=:body,'.$sql_fragment.' button_text=:button_text, button_link=:button_link WHERE ID = :ID';
+        'UPDATE tbl_sections SET title=:title, tagline=:tagline, body=:body,'.$sql_fragment.' button_text=:button_text, button_link=:button_link WHERE ID = :ID';
         
         $update_section_set = $pdo->prepare($update_section_query);
         $placeholders = array(
             ':title'=> $section['title'],
+            ':tagline'=> $section['tagline'],
             ':body'=> $section['body'],
             ':button_text'=> $section['button_text'],
             ':button_link'=> $section['button_link'],
