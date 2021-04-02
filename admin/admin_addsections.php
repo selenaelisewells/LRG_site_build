@@ -24,19 +24,12 @@ if (isset($_POST['submit'])) {
     $message = addSection($data);
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Section</title>
-</head>
-<body>
-<h2>Add Section</h2>
-<?php echo !empty($message) ? $message : ''; ?>
+<?php include  './admin_head.php';?>
+<body class="admin">
+    <h2 class="loginTitle">Add Section</h2>
+    <?php echo !empty($message) ? $message : ''; ?>
     
-    <form action="admin_addsections.php" method="post" enctype="multipart/form-data">
+    <form class="adminform" action="admin_addsections.php" method="post" enctype="multipart/form-data">
 
         <label for="title">Title:</label><br>
         <input id="title" type="text" name="title" value=""><br><br>

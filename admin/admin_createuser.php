@@ -20,18 +20,11 @@ confirm_logged_in();
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Create User</title>
-</head>
-<body>
-<h2>Create User</h2>
+<?php include  './admin_head.php';?>
+<body class="admin">
+<h2 class="loginTitle">Create User</h2>
 <?php echo !empty($message)?$message:'';?>
-<form action="admin_createuser.php" method="post">
+<form class="adminform" action="admin_createuser.php" method="post">
     <label for="first_name">First name</label>
     <input id="first_name" type="text" name="fname" value=""><br><br>
 
@@ -40,6 +33,7 @@ confirm_logged_in();
 
     <label for="username">Username</label>
     <input id="username" type="text" name="username" value=""><br><br>
+    
 
     <label for="email">Email</label>
     <input id="email" type="email" name="email" value=""><br><br> 

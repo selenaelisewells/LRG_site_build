@@ -37,19 +37,12 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Sections</title>
-</head>
-<body>
-    <h2>Edit Sections</h2>
+<?php include  './admin_head.php';?>
+<body class="admin">
+    <h2 class="loginTitle">Edit Sections</h2>
     <?php echo !empty($message) ? $message : ''; ?>
 
-        <form action="admin_editsections.php" method="get">
+        <form class="adminform" action="admin_editsections.php" method="get">
             <label for="ID">Selected Section</label>
             <select name="ID" id="ID">
                 <?php foreach ($all_sections as $section): ?>
@@ -64,7 +57,7 @@ if (isset($_POST['submit'])) {
     
 
     <?php if (!empty($current_section)): ?>
-    <form action="admin_editsections.php" method="post"  enctype="multipart/form-data">
+    <form class="adminform" action="admin_editsections.php" method="post"  enctype="multipart/form-data">
         <?php while ($section_info = $current_section->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_ID" name="current_ID" value="<?php echo $id?>">
 

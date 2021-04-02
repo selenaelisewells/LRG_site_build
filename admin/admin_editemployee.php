@@ -29,19 +29,12 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit User</title>
-</head>
-<body>
-    <h2>Edit Employee Info</h2>
+<?php include  './admin_head.php';?>
+<body class="admin">
+    <h2 class="loginTitle">Edit Employee Info</h2>
     <?php echo !empty($message) ? $message : ''; ?>
  
-        <form action="admin_editemployee.php" method="get">
+        <form class="adminform" action="admin_editemployee.php" method="get">
             <label for="employee_id">Selected User</label>
             <select name="employee_id" id="employee_id">
                 <?php foreach ($all_contents as $content): ?>
@@ -56,7 +49,7 @@ if (isset($_POST['submit'])) {
     
 
     <?php if (!empty($current_content)): ?>
-    <form action="admin_editemployee.php" method="post" enctype="multipart/form-data">
+    <form class="adminform" action="admin_editemployee.php" method="post" enctype="multipart/form-data">
         <?php while ($content_info = $current_content->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_employee_id" name="current_employee_id" value="<?php echo $id?>">
             

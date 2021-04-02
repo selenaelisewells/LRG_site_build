@@ -29,19 +29,12 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Section Text</title>
-</head>
-<body>
-    <h2>Edit Section Text</h2>
+<?php include  './admin_head.php';?>
+<body class="admin">
+    <h2 class="loginTitle">Edit Section Text</h2>
     <?php echo !empty($message) ? $message : ''; ?>
  
-        <form action="admin_editsectiontext.php" method="get">
+        <form class="adminform" action="admin_editsectiontext.php" method="get">
             <label for="ID">Selected Section</label>
             <select name="ID" id="ID">
                 <?php foreach ($all_sectiontexts as $sectiontext): ?>
@@ -56,7 +49,7 @@ if (isset($_POST['submit'])) {
     
 
     <?php if (!empty($current_sectiontext)): ?>
-    <form action="admin_editsectiontext.php" method="post">
+    <form class="adminform" action="admin_editsectiontext.php" method="post">
         <?php while ($sectiontext_info = $current_sectiontext->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_section_id" name="current_section_id" value="<?php echo $id?>">
             
