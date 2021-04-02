@@ -36,6 +36,10 @@
     color: $main-black;
 }
 
+@mixin padding {
+    padding: 10px 0;
+}
+
 // h1 {
 //     @include banner-title($banner-colour: purple, $text-colour: red);
 // }

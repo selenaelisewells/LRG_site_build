@@ -1,0 +1,90 @@
+.adminPanelWrap {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $main-red;
+    background-color: $main-white;
+    margin: 34px auto 0 auto;
+    max-width: 500px;
+    padding: 34px;
+    border-radius: 20px;
+    //justify-content: center;
+    //align-items: center;
+    li {
+        padding: 10px 0;
+        &:hover {
+            color: $main-red;
+        }
+    }
+    //background-color: purple;
+}
+
+.loginTitle {
+    @include banner-title($font-size: 30px);
+    margin: 20px 0;
+}
+
+.loginInfo {
+    margin-top: 10px;
+    @include tagline;
+    @include padding;
+}
+
+.editTitle {
+    text-transform: uppercase;
+    border-bottom: 2px solid $main-red;
+    margin: 34px 0 10px 0;
+    padding-bottom: 5px;
+    @include tagline;
+    font-weight: 700;
+}
+
+.status {
+    @include tagline;
+    //color: $main-red;
+}
+
+.adminLogout {
+    align-self: center;
+    margin-top: 34px;
+}
+
+.adminform {
+    // max-width: $max-page-width-lg;
+    // margin: 0 auto;
+    @include paragraph;
+    display: flex;
+    flex-direction: column;
+    input {
+        max-width: 500px;
+        padding: 10px;
+    }
+}
+
+.admin {
+    max-width: $max-page-width-lg;
+    margin: 0 auto;
+    button {
+        margin: 10px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        background-color: $main-red;
+        color: white !important;
+        text-transform: uppercase;
+        border: 1px solid $main-white;
+        padding: 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        width: 260px;
+        height: 65px;
+        font-size: 1rem;
+        &:hover {
+            color: $main-red !important;
+            background-color: $main-white;
+            border: 1px solid $main-red;
+            transition: all .2s ease-in-out;
+        }
+    }
+}

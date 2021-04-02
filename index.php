@@ -10,11 +10,11 @@ include  './templates/head.php';?>
 <main class="mainContentWrap">
     <section id="heroWrap">
         <video  loop autoplay playsinline muted>
-       
-            <source src="./images/hero.webm" 
-                    type="video/webm">
             <source src="./images/hero.mp4" 
                     type="video/mp4">
+            <source src="./images/hero.webm" 
+                    type="video/webm">
+           
             <source src="./images/hero.ogg" 
                     type="video/ogg">    
         
@@ -39,14 +39,14 @@ include  './templates/head.php';?>
         </div>
         <div class="servicesContent">
             <div class="service">
-            <img src="./images/TEAM.svg" alt="teamwork">
+            <img src="./images/TEAM.svg" alt="respect value">
                 
                 <div class="serviceTitle">
                     <span>Respect</span>
                 </div>
             </div>
             <div class="service">
-            <img src="./images/SHAKEHAND.svg" alt="teamwork">
+            <img src="./images/SHAKEHAND.svg" alt="integrity value">
                 
                 <div class="serviceTitle">
 
@@ -54,7 +54,7 @@ include  './templates/head.php';?>
                 </div>
             </div>
             <div class="service">
-            <img src="./images/SCALES.svg" alt="teamwork">
+            <img src="./images/SCALES.svg" alt="teamwork value">
                
                 <div class="serviceTitle">
                     <span>teamwork</span>
