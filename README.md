@@ -89,7 +89,7 @@ You need to use MAMP, WAMP or Docker to run the site on your local computer. Fol
 2. Open the folder and run docker-compose
    ```
    docker-compose up
-   ``
+   ```
 3. When you finished work, you can turn if off by doing 
    ```
    docker-compose down
