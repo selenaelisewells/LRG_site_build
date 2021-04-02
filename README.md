@@ -1,23 +1,43 @@
+![LRG Logo](http://sgs-design.com/temp/imgs/LOGO_V2.svg)
+
 # London Referees Group - Site Redesign
 
 #### Front-End Development - Selena Wells
-
 #### Back-End Development - Elena Chechulina
-
 #### Project Management - Andres Gallo
-
 #### Graphic Design - Sandro Guedes
-
 #### Motion Graphics - Viktoria Tyschuk
 
 While we all had our set roles, this project was a collective collaboration of creativity and developement. 
 
+
+## Description
+A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
+
+
+## Demo
+This repo is synced to Heroku for testing purposes, you can see what that looks like by using the following link:
+
+[HEROKU TEST SITE](https://london-referees-group.herokuapp.com/)
+
+## Prototypes
+
+WEB: https://xd.adobe.com/view/d222f6ef-6349-4aa3-b077-e26b7fd315dd-8771/
+
+MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
+
+
+## Useful Links
+### Project Planning
 [Project Roadmap - Development](https://docs.google.com/document/d/1jKIRC5lcCswV4oYbWX_9gKDXRhS4yAtBTiNUOvjJfyc/edit?usp=sharing)
 
 [Marketing Plan - Development](https://docs.google.com/document/d/1mXgVSh-t-D2KV3_ycXga1dkLhaD8fwbzfEb9f9763lo/edit)
 
+[Site's Text Content - Development](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
+
 [Sorting Content for the Site](https://docs.google.com/document/d/1XaXf30Eo71wDD2VIfIVFIPhlPmaU2bTSTbgVZOId1wY/edit)
 
+### Group Meetings
 [Meeting NOTES Feb 17](https://docs.google.com/document/d/1ufjK0t2ib5CgUB48CiGjx5CjOTLOJMI6bJh7QMMoPdI/edit?usp=sharing)
 
 [Meeting NOTES Feb 22](https://docs.google.com/document/d/1JXk8sp-JowswwIr3EKPb8rQCac5NEShnfKaCwbxyoNg/edit)
@@ -26,22 +46,66 @@ While we all had our set roles, this project was a collective collaboration of c
 
 [Meeting NOTES Mar 17](https://docs.google.com/document/d/1m77js28Qy9HIKKT3DTVqp3PPR91-zth3w0Xs9ywdmHM/edit)
 
-## Description:
-A site redesign for the London Referees Group. A collaborative effort to create a more up-to-date and user friendly experience for referees and people looking to get information about hiring referees, becoming referees, and referee mentorship programs.
+[Meeting NOTES Mar 22](https://docs.google.com/document/d/1o7dtYS9odcDAIB0CcF3NuML71CcB0ZxZHxojAxiwW-k/edit)
 
-## Prototypes
+[Meeting NOTES Mar 27](https://docs.google.com/document/d/1s_mpJRsvzPDaZi3OHgc1gmksHZTiwUYVd-D_yoA4Nwo/edit)
 
-WEB: https://xd.adobe.com/view/d222f6ef-6349-4aa3-b077-e26b7fd315dd-8771/
+[Meeting NOTES Mar 28](https://docs.google.com/document/d/1iwwV4d_9SFBiJLaoyA-ozpG0OhPksSNJ-Aat3HZTKPs/edit)
 
-MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
 
-## Additional Resources:
-TO DO
+## Tools:
 
-## Installation:
-TO DO 
+* PHP
 
-## MIT License:
+* HTML5
+
+* CSS
+
+* SASS
+
+* JavaScript
+
+* MySQL
+
+* Vue.js
+
+## Installation
+You need to use MAMP, WAMP or Docker to run the site on your local computer. Follow the instructions to install:
+#### MAMP
+[https://www.mamp.info/en/downloads/]
+
+#### WAMP
+[https://www.wampserver.com/en/]
+
+#### Docker
+
+#### Prerequisites
+1. Install `Docker` from [https://docs.docker.com/install/] 
+2. IF you are in Linux, install `docker-compose` from [https://docs.docker.com/install/]
+
+#### Set up
+1. Clone the repo
+
+2. Open the folder and run docker-compose
+   ```
+   docker-compose up
+   ```
+3. When you finished work, you can turn if off by doing 
+   ```
+   docker-compose down
+   ```
+#### URLs
+1. Your project is up in `http://localhost:8010` which is mapping to the `LRG_site_build` folder
+2. The phpMyAdmin is in `http://localhost:8011` with the credential of 
+```
+Username: docker_u
+Password: docker_p
+```
+
+We also used to create styles
+#### SASS [https://sass-lang.com/]
+
+## License
 ### MIT License
 
 Copyright © [2021] [Andres Gallo, Elena Chechulina, Sandro Guedes, Selena Wells, Viktoria Tyschuk]
