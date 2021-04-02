@@ -52,7 +52,7 @@ if(!$sections){
     </tbody>
 </table>
 
-<a href="index.php">Back</a>
+<a class="back" href="index.php">Back</a>
 
 </body>
 </html>

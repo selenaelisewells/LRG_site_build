@@ -60,22 +60,22 @@ if (isset($_POST['submit'])) {
         <?php while ($content_info = $current_content->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_employee_id" name="current_employee_id" value="<?php echo $id?>">
             
-            <label for="avatar">Image:</label><br>
-            <input id="avatar" type="file" name="avatar" value=""><br><br>
+            <label for="avatar">Image:</label>
+            <input id="avatar" type="file" name="avatar" value=""><br>
 
-            <label for="name">Name:</label><br>
-            <input id="name" type="text" name="name" value="<?php echo $content_info['employee_name']; ?>"><br><br>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" value="<?php echo $content_info['employee_name']; ?>"><br>
 
-            <label for="position">Position:</label><br>
-            <input id="position" type="text" name="position" value="<?php echo $content_info['employee_position']; ?>"><br><br>
+            <label for="position">Position:</label>
+            <input id="position" type="text" name="position" value="<?php echo $content_info['employee_position']; ?>"><br>
 
-            <label for="email">Email:</label><br>
-            <input id="email" type="email" name="email" value="<?php echo $content_info['employee_email']; ?>"><br><br>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" value="<?php echo $content_info['employee_email']; ?>"><br>
             
             <button type="submit" name="submit">Update Employee Info</button>
         <?php endwhile;?>
     </form>
     <?php endif;?>
-    <a href="index.php">Back</a>
+    <a class="back" href="index.php">Back</a>
 </body>
 </html>

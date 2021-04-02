@@ -54,19 +54,19 @@ if (isset($_POST['submit'])) {
         <?php while ($user_info = $current_user->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_user_id" name="current_user_id" value="<?php echo $id?>">
             <label for="first_name">First Name</label>
-            <input id="first_name" type="text" name="fname" value="<?php echo $user_info['user_fname']; ?>"><br><br>
+            <input id="first_name" type="text" name="fname" value="<?php echo $user_info['user_fname']; ?>"><br>
 
             <label for="last_name">Last Name</label>
-            <input id="last_name" type="text" name="lname" value="<?php echo $user_info['user_lname']; ?>"><br><br>
+            <input id="last_name" type="text" name="lname" value="<?php echo $user_info['user_lname']; ?>"><br>
 
             <label for="username">Username</label>
-            <input id="username" type="text" name="username" value="<?php echo $user_info['user_name']; ?>"><br><br>
+            <input id="username" type="text" name="username" value="<?php echo $user_info['user_name']; ?>"><br>
            
             <label for="password">Password</label>
-            <input id="password" type="text" name="password" value=""><br><br>
+            <input id="password" type="text" name="password" value=""><br>
 
             <label for="email">Email</label>
-            <input id="email" type="email" name="email" value="<?php echo $user_info['user_email']; ?>"><br><br>
+            <input id="email" type="email" name="email" value="<?php echo $user_info['user_email']; ?>"><br>
 
             <?php if (isCurrentUserAdminAbove()): ?>
                 <label for="user_level">User Level</label>
@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
                     <option value="<?php echo $val; ?>" <?php echo ((int) $user_info['user_level'] === $val) ? 'selected' : ''; ?>><?php echo $label; ?>
                     </option>
                     <?php endforeach;?>
-                </select><br><br>
+                </select><br>
             <?php endif;?>
 
             <button type="submit" name="submit">Update User</button>
@@ -84,6 +84,6 @@ if (isset($_POST['submit'])) {
     </form>
     <?php endif;?>
 
-    <a href="index.php">Back</a>
+    <a class="back" href="index.php">Back</a>
 </body>
 </html>

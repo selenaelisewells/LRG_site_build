@@ -61,20 +61,20 @@ if (isset($_POST['submit'])) {
         <?php while ($section_info = $current_section->fetch(PDO::FETCH_ASSOC)): ?>
             <input style="display: none;" type="text" id="current_ID" name="current_ID" value="<?php echo $id?>">
 
-            <label for="title">Title:</label><br>
-            <input id="title" type="text" name="title" value="<?php echo $section_info['title']; ?>"><br><br>
+            <label for="title">Title:</label>
+            <input id="title" type="text" name="title" value="<?php echo $section_info['title']; ?>"><br>
 
-            <label for="body">Body:</label><br>
-            <textarea id="body" name="body"><?php echo $section_info['body']; ?></textarea><br><br>
+            <label for="body">Body:</label>
+            <textarea id="body" name="body"><?php echo $section_info['body']; ?></textarea><br>
 
-            <label for="image">Image:</label><br>
-            <input id="image" type="file" name="image" value=""><br><br>
+            <label for="image">Image:</label>
+            <input id="image" type="file" name="image" value=""><br>
 
-            <label for="button_text">Button text:</label><br>
-            <input id="button_text" type="text" name="button_text" value="<?php echo $section_info['button_text']; ?>"><br><br>
+            <label for="button_text">Button text:</label>
+            <input id="button_text" type="text" name="button_text" value="<?php echo $section_info['button_text']; ?>"><br>
 
-            <label for="button_link">Button link:</label><br>
-            <input id="button_link" type="text" name="button_link" value="<?php echo $section_info['button_link']; ?>"><br><br>
+            <label for="button_link">Button link:</label>
+            <input id="button_link" type="text" name="button_link" value="<?php echo $section_info['button_link']; ?>"><br>
             
             <button type="submit" name="submit">Update Section</button>
 
@@ -82,6 +82,6 @@ if (isset($_POST['submit'])) {
     </form>
     <?php endif;?>
 
-    <a href="index.php">Back</a>
+    <a class="back" href="index.php">Back</a>
 </body>
 </html>

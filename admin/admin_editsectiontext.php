@@ -67,6 +67,6 @@ if (isset($_POST['submit'])) {
         <?php endwhile;?>
     </form>
     <?php endif;?>
-    <a href="index.php">Back</a>
+    <a class="back" href="index.php">Back</a>
 </body>
 </html>
