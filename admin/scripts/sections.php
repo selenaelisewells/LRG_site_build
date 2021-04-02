@@ -142,12 +142,9 @@ function editSection($section)
                 throw new Exception('Whoooops, that thumbnail copy did not work!!');
             }
         }
-        
+        $sql_fragment = $has_new_image ? ' image=:image,' : '';
         $update_section_query = 
-        'UPDATE tbl_sections SET title=:title, boby=:body,'.
-            // Only insert an image when one has been uploaded
-            $has_new_image ? ' image=:image,' : ''.
-            ' button_text=:button_text, button_link=:button_link WHERE ID = :ID';
+        'UPDATE tbl_sections SET title=:title, body=:body,'.$sql_fragment.' button_text=:button_text, button_link=:button_link WHERE ID = :ID';
         
         $update_section_set = $pdo->prepare($update_section_query);
         $placeholders = array(
@@ -166,9 +163,6 @@ function editSection($section)
         }
 
         $update_section_result = $update_section_set->execute($placeholders);
- 
-            $_SESSION['title'] = $section['title'];
-        
             redirect_to('index.php');
 
     } catch (Exception $e) {

@@ -26,17 +26,17 @@ confirm_logged_in();
 <?php echo !empty($message)?$message:'';?>
 <form class="adminform" action="admin_createuser.php" method="post">
     <label for="first_name">First name</label>
-    <input id="first_name" type="text" name="fname" value=""><br><br>
+    <input id="first_name" type="text" name="fname" value=""><br>
 
     <label for="last_name">Last name</label>
-    <input id="last_name" type="text" name="lname" value=""><br><br>
+    <input id="last_name" type="text" name="lname" value=""><br>
 
     <label for="username">Username</label>
-    <input id="username" type="text" name="username" value=""><br><br>
+    <input id="username" type="text" name="username" value=""><br>
     
 
     <label for="email">Email</label>
-    <input id="email" type="email" name="email" value=""><br><br> 
+    <input id="email" type="email" name="email" value=""><br> 
 
     <h4>The password will be generated automatically.</h4>
 
@@ -54,7 +54,7 @@ confirm_logged_in();
     
     <button class="log" type="submit" name="submit">Create User</button>
 
-    <a href="index.php">Back</a>
+    <a class="back" href="index.php">Back</a>
     
 
 </form>

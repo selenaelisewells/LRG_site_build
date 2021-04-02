@@ -22,21 +22,21 @@ if (isset($_POST['submit'])) {
 <?php echo !empty($message) ? $message : ''; ?>
     
     <form class="adminform" action="admin_addemployee.php" method="post" enctype="multipart/form-data">
-        <label for="avatar">Image:</label><br>
-        <input id="avatar" type="file" name="avatar" value=""><br><br>
+        <label for="avatar">Image:</label>
+        <input id="avatar" type="file" name="avatar" value=""><br>
 
-        <label for="name">Name:</label><br>
-        <input id="name" type="text" name="name" value=""><br><br>
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" value=""><br>
 
-        <label for="position">Position:</label><br>
-        <input id="position" type="text" name="position" value=""><br><br>
+        <label for="position">Position:</label>
+        <input id="position" type="text" name="position" value=""><br>
 
-        <label for="email">Email:</label><br>
-        <input id="email" type="email" name="email" value=""><br><br>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" value=""><br>
         
         <button type="submit" name="submit">Add Employee</button>
     </form>
 
-    <a href="index.php">Back</a>
+    <a class="back" class="back" href="index.php">Back</a>
 </body>
 </html>

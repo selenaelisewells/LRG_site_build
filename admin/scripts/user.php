@@ -174,8 +174,10 @@ function editUser($user_data)
     $update_user_result = $update_user_set->execute($placeholders);
 
     if($update_user_result){
-        $_SESSION['user_name'] = $user_data['fname'];
-        $_SESSION['user_level'] = $user_data['user_level'];
+        if ($user_data['id'] === $_SESSION['user_id']) {
+            $_SESSION['user_name'] = $user_data['fname'];
+            $_SESSION['user_level'] = $user_data['user_level'];
+        }
         redirect_to('index.php');
     }else{
         return 'Update did not go through.';
