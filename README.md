@@ -53,13 +53,57 @@ MOBILE: https://xd.adobe.com/view/248fd11e-d8a3-4884-b6c5-7ebca21d1cdd-71dc/
 [Meeting NOTES Mar 28](https://docs.google.com/document/d/1iwwV4d_9SFBiJLaoyA-ozpG0OhPksSNJ-Aat3HZTKPs/edit)
 
 
-## Additional Resources:
-TO DO
+## Tools:
 
+* PHP
+
+* HTML5
+
+* CSS
+
+* SASS
+
+* JavaScript
+
+* MySQL
+
+* Vue.js
 
 ## Installation
-TO DO 
+You need to use MAMP, WAMP or Docker to run the site on your local computer. Follow the instructions to install:
+### MAMP
+[https://www.mamp.info/en/downloads/]
 
+### WAMP
+[https://www.wampserver.com/en/]
+
+### Docker
+
+#### Prerequisites
+1. Install `Docker` from [https://docs.docker.com/install/] 
+2. IF you are in Linux, install `docker-compose` from [https://docs.docker.com/install/]
+
+#### Set up
+1. Clone the repo
+
+2. Open the folder and run docker-compose
+   ```
+   docker-compose up
+   ``
+3. When you finished work, you can turn if off by doing 
+   ```
+   docker-compose down
+   ```
+#### URLs
+1. Your project is up in `http://localhost:8010` which is mapping to the `LRG_site_build` folder
+2. The phpMyAdmin is in `http://localhost:8011` with the credential of 
+```
+Username: docker_u
+Password: docker_p
+```
+
+We also used to create styles
+### SASS [https://sass-lang.com/]
 
 ## License
 ### MIT License
